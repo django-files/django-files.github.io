@@ -1,74 +1,29 @@
-<!doctype html>
-<html lang="en" class="h-100">
-<head>
+---
+title: Home
+layout: default
+---
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Django Files</title>
-
-    <meta name="author" content="Shane"/>
-    <meta name="title" content="Django Files"/>
-    <meta name="description" content="Django Files - A Django File, plural style."/>
-
-    <meta property="og:author" content="Shane">
-    <meta property="og:title" content="Django Files">
-    <meta property="og:description" content="Django Files - A Django File, plural style.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://django-files.github.io/">
-    <meta property="og:image" content="https://django-files.github.io/images/logo.png">
-
-    <script type="text/javascript" src="js/theme.js"></script>
-
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
-<body class="d-flex flex-column h-100">
-
-<header>
-    <nav class="navbar navbar-expand-sm bg-dark border-bottom" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="https://github.com/django-files/django-files">
-                <img src="images/logo.png" width="30" height="30" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="shots.html">Screen Shots</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://github.com/django-files/django-files">Source Code</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main class="flex-shrink-0 p-3">
-    <h1>Django Files</h1>
-    <p dir="auto">A Self-Hosted Django File Manager for Uploading and Sharing;
-        designed to work with client apps such as <a href="https://github.com/ShareX/ShareX">ShareX</a> and
-        <a href="https://github.com/flameshot-org/flameshot">Flameshot</a>. Django Files is currently
-        functional but <strong>Under Active Development</strong>. Expect breaking changes until an official
-        <a href="https://github.com/django-files/django-files/releases">release</a> is made.</p>
-    <p dir="auto">Please open a <a href="https://github.com/django-files/django-files/discussions/new?category=feature-requests">Feature Request</a>
-        or submit an <a href="https://github.com/cssnr/zipline-cli/issues/new">Issue</a> for any bugs.</p>
-    <h2>Running</h2>
-    <p>Django Files is designed to run with Docker.</p>
-    <h3>Docker Run</h3>
-    <pre class="border border-success rounded-3 px-3"><code id="docker-run-inline">
+<h1>Django Files</h1>
+<p dir="auto">A Self-Hosted Django File Manager for Uploading and Sharing;
+    designed to work with client apps such as <a href="https://github.com/ShareX/ShareX">ShareX</a> and
+    <a href="https://github.com/flameshot-org/flameshot">Flameshot</a>. Django Files is currently
+    functional but <strong>Under Active Development</strong>. Expect breaking changes until an official
+    <a href="https://github.com/django-files/django-files/releases">release</a> is made.</p>
+<p dir="auto">Please open a <a href="https://github.com/django-files/django-files/discussions/new?category=feature-requests">
+    Feature Request</a> or submit an <a href="https://github.com/cssnr/zipline-cli/issues/new">Issue</a> for any bugs.</p>
+<h2>Running</h2>
+<p>Django Files is designed to run with Docker.</p>
+<h3>Docker Run</h3>
+<pre class="border border-success rounded-3 px-3"><code id="docker-run-inline">
 docker run --name "django-files" -d --restart unless-stopped  \
   -p 80:80  -v /data/django-files:/data/media  \
   -e SECRET=07Y5uGMWF8icYIJXsKPpbdMm  \
   -e USERNAME=testuser  \
   -e PASSWORD=testpass  \
     ghcr.io/django-files/django-files:latest
-    </code></pre>
-    <h3>Docker Compose</h3>
-    <pre class="border border-success rounded-3 px-3"><code id="docker-compose-inline">
+</code></pre>
+<h3>Docker Compose</h3>
+<pre class="border border-success rounded-3 px-3"><code id="docker-compose-inline">
 version: '3'
 
 services:
@@ -85,32 +40,4 @@ services:
 
 volumes:
   media_dir:
-    </code></pre>
-</main>
-
-<footer class="footer mt-auto p-2">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-sm-4">
-                <p><a class="text-decoration-none" href="https://github.com/django-files/django-files" target="_blank">
-                    <i class="fab fa-github"></i> Django Files</a></p>
-            </div>
-            <div class="col-12 col-sm-8 text-sm-end">
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="index.html">Home</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><a href="shots.html">Screen Shots</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><a href="https://github.com/django-files/django-files">Source Code</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
-</body>
-</html>
+</code></pre>
