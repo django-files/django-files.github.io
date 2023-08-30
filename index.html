@@ -4,16 +4,22 @@ layout: default
 ---
 
 <h1>Django Files</h1>
-<p dir="auto">A Self-Hosted Django File Manager for Uploading and Sharing;
-    designed to work with client apps such as <a href="https://github.com/ShareX/ShareX">ShareX</a> and
-    <a href="https://github.com/flameshot-org/flameshot">Flameshot</a>. Django Files is currently
+
+<p>A Self-Hosted Django File Manager for Uploading and Sharing;
+    designed to work with client apps such as <a href="https://github.com/ShareX/ShareX" target="_blank">ShareX</a> and
+    <a href="https://github.com/flameshot-org/flameshot" target="_blank">Flameshot</a>. Django Files is currently
     functional but <strong>Under Active Development</strong>. Expect breaking changes until an official
-    <a href="https://github.com/django-files/django-files/releases">release</a> is made.</p>
-<p dir="auto">Please open a <a href="https://github.com/django-files/django-files/discussions/new?category=feature-requests">
-    Feature Request</a> or submit an <a href="https://github.com/cssnr/zipline-cli/issues/new">Issue</a> for any bugs.</p>
+    <a href="https://github.com/django-files/django-files/releases" target="_blank">release</a> is made.</p>
+
+<p>Please open a <a href="https://github.com/django-files/django-files/discussions/new?category=feature-requests" target="_blank">
+    Feature Request</a> or submit an <a href="https://github.com/cssnr/zipline-cli/issues/new" target="_blank">Issue</a> for any bugs.</p>
+
 <h2>Running</h2>
+
 <p>Django Files is designed to run with Docker.</p>
+
 <h3>Docker Run</h3>
+
 <pre class="border border-success rounded-3 px-3"><code id="docker-run-inline">
 docker run --name "django-files" -d --restart unless-stopped  \
   -p 80:80  -v /data/django-files:/data/media  \
@@ -22,7 +28,9 @@ docker run --name "django-files" -d --restart unless-stopped  \
   -e PASSWORD=testpass  \
     ghcr.io/django-files/django-files:latest
 </code></pre>
+
 <h3>Docker Compose</h3>
+
 <pre class="border border-success rounded-3 px-3"><code id="docker-compose-inline">
 version: '3'
 
