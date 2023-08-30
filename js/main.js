@@ -1,0 +1,14 @@
+$(document).ready(function () {
+
+    // Open Links in New Window
+    $('a').each(function() {
+        if (!this.href.includes('index.html')) {
+            $(this).click(function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                window.open(this.href, '_blank');
+            });
+        }
+    });
+
+})
