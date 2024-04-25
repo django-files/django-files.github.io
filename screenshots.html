@@ -19,165 +19,27 @@
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <style>
-        html,
-        body {
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100%;
-            background: #111;
-            color: #111;
-        }
-        body {
-            background: #343432;
-            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            color: #111;
-            margin: 0;
-            padding: 0;
-        }
-        .swiper {
-            width: 100%;
-            height: 300px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-size: cover;
-            background: #343432 center;
-        }
-        .swiper-slide img {
-            display: block;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
-        .mySwiper2 {
-            height: 80%;
-            width: 100%;
-        }
-        .mySwiper {
-            height: 20%;
-            box-sizing: border-box;
-            padding: 8px 0;
-        }
-        .mySwiper .swiper-slide {
-            width: 25%;
-            height: 100%;
-            opacity: 0.4;
-        }
-        .mySwiper .swiper-slide-thumb-active {
-            opacity: 1;
-        }
-        .swiper-pagination {
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/screenshots.css">
 
 </head>
 <body>
 
 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>
-        <div class="swiper-slide"><img src="screenshots/02_Home.png" alt="02_Home.png"></div>
-        <div class="swiper-slide"><img src="screenshots/03_Stats.png" alt="03_Stats.png"></div>
-        <div class="swiper-slide"><img src="screenshots/04_Gallery.png" alt="04_Gallery.png"></div>
-        <div class="swiper-slide"><img src="screenshots/05_Upload.png" alt="05_Upload.png"></div>
-        <div class="swiper-slide"><img src="screenshots/06_Files.png" alt="06_Files.png"></div>
-        <div class="swiper-slide"><img src="screenshots/07_Files-delete-click.png" alt="07_Files-delete-click.png"></div>
-        <div class="swiper-slide"><img src="screenshots/08_Files-delete-deleted.png" alt="08_Files-delete-deleted.png"></div>
-        <div class="swiper-slide"><img src="screenshots/09_Shorts.png" alt="09_Shorts.png"></div>
-        <div class="swiper-slide"><img src="screenshots/10_Shorts-create.png" alt="10_Shorts-create.png"></div>
-        <div class="swiper-slide"><img src="screenshots/11_Shorts-delete-click.png" alt="11_Shorts-delete-click.png"></div>
-        <div class="swiper-slide"><img src="screenshots/12_Shorts-delete-deleted.png" alt="12_Shorts-delete-deleted.png"></div>
-        <div class="swiper-slide"><img src="screenshots/13_Settings.png" alt="13_Settings.png"></div>
-        <div class="swiper-slide"><img src="screenshots/14_Settings-save-settings.png" alt="14_Settings-save-settings.png"></div>
-        <div class="swiper-slide"><img src="screenshots/15_Settings-flush-cache.png" alt="15_Settings-flush-cache.png"></div>
-        <div class="swiper-slide"><img src="screenshots/16_Preview-gps2.jpg.png" alt="16_Preview-gps2.jpg.png"></div>
-        <div class="swiper-slide"><img src="screenshots/17_Raw-gps2.jpg.png" alt="17_Raw-gps2.jpg.png"></div>
-        <div class="swiper-slide"><img src="screenshots/18_Preview-README.md.png" alt="18_Preview-README.md.png"></div>
-        <div class="swiper-slide"><img src="screenshots/19_Preview-requirements.txt.png" alt="19_Preview-requirements.txt.png"></div>
-        <div class="swiper-slide"><img src="screenshots/20_Preview-main.html.png" alt="20_Preview-main.html.png"></div>
-        <div class="swiper-slide"><img src="screenshots/21_Preview-home_tags.py.png" alt="21_Preview-home_tags.py.png"></div>
-        <div class="swiper-slide"><img src="screenshots/22_Preview-an225.jpg.png" alt="22_Preview-an225.jpg.png"></div>
-        <div class="swiper-slide"><img src="screenshots/23_logout.png" alt="23_logout.png"></div>
+    <div class="swiper-wrapper" id="swiper-shots">
+<!--        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>-->
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
 </div>
 <div thumbsSlider="" class="swiper mySwiper">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>
-        <div class="swiper-slide"><img src="screenshots/02_Home.png" alt="02_Home.png"></div>
-        <div class="swiper-slide"><img src="screenshots/03_Stats.png" alt="03_Stats.png"></div>
-        <div class="swiper-slide"><img src="screenshots/04_Gallery.png" alt="04_Gallery.png"></div>
-        <div class="swiper-slide"><img src="screenshots/05_Upload.png" alt="05_Upload.png"></div>
-        <div class="swiper-slide"><img src="screenshots/06_Files.png" alt="06_Files.png"></div>
-        <div class="swiper-slide"><img src="screenshots/07_Files-delete-click.png" alt="07_Files-delete-click.png"></div>
-        <div class="swiper-slide"><img src="screenshots/08_Files-delete-deleted.png" alt="08_Files-delete-deleted.png"></div>
-        <div class="swiper-slide"><img src="screenshots/09_Shorts.png" alt="09_Shorts.png"></div>
-        <div class="swiper-slide"><img src="screenshots/10_Shorts-create.png" alt="10_Shorts-create.png"></div>
-        <div class="swiper-slide"><img src="screenshots/11_Shorts-delete-click.png" alt="11_Shorts-delete-click.png"></div>
-        <div class="swiper-slide"><img src="screenshots/12_Shorts-delete-deleted.png" alt="12_Shorts-delete-deleted.png"></div>
-        <div class="swiper-slide"><img src="screenshots/13_Settings.png" alt="13_Settings.png"></div>
-        <div class="swiper-slide"><img src="screenshots/14_Settings-save-settings.png" alt="14_Settings-save-settings.png"></div>
-        <div class="swiper-slide"><img src="screenshots/15_Settings-flush-cache.png" alt="15_Settings-flush-cache.png"></div>
-        <div class="swiper-slide"><img src="screenshots/16_Preview-gps2.jpg.png" alt="16_Preview-gps2.jpg.png"></div>
-        <div class="swiper-slide"><img src="screenshots/17_Raw-gps2.jpg.png" alt="17_Raw-gps2.jpg.png"></div>
-        <div class="swiper-slide"><img src="screenshots/18_Preview-README.md.png" alt="18_Preview-README.md.png"></div>
-        <div class="swiper-slide"><img src="screenshots/19_Preview-requirements.txt.png" alt="19_Preview-requirements.txt.png"></div>
-        <div class="swiper-slide"><img src="screenshots/20_Preview-main.html.png" alt="20_Preview-main.html.png"></div>
-        <div class="swiper-slide"><img src="screenshots/21_Preview-home_tags.py.png" alt="21_Preview-home_tags.py.png"></div>
-        <div class="swiper-slide"><img src="screenshots/22_Preview-an225.jpg.png" alt="22_Preview-an225.jpg.png"></div>
-        <div class="swiper-slide"><img src="screenshots/23_logout.png" alt="23_logout.png"></div>
+    <div class="swiper-wrapper" id="swiper-thumbs">
+<!--        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>-->
     </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        freeMode: true,
-        grabCursor: true,
-        loop: true,
-        mousewheel: true,
-        slidesPerView: 5,
-        spaceBetween: 10,
-        watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-        grabCursor: true,
-        effect: 'fade',
-        loop: true,
-        mousewheel: true,
-        spaceBetween: 10,
-        zoom: true,
-        keyboard: {
-            enabled: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-    });
-</script>
+<script type="text/javascript" src="/js/screenshots.js"></script>
 
 </body>
 </html>
