@@ -1,1 +1,7 @@
 timezone: America/Los_Angeles
+encoding: utf-8
+
+author: Shane/Ralph
+site_name: Django Files
+site_url: https://django-files.github.io/
+github_url: https://github.com/django-files/django-files
