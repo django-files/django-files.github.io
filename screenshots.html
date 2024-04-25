@@ -1,21 +1,27 @@
+---
+permalink: /screenshots/
+title: Screen Shots
+description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/Docker File Manager for Sharing Files.
+---
+
 <!doctype html>
 <html lang="en">
 <head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Django Files Screen Shots</title>
+    <title>Django Files - {{ page.title }}</title>
 
-    <meta name="author" content="Shane"/>
-    <meta name="title" content="Django Files Screen Shots"/>
-    <meta name="description" content="Django Files - Browse Screen Shots."/>
+    <meta name="author" content="{{ site.author }}"/>
+    <meta name="title" content="{{ site.site_name }} - {{ page.title }}"/>
+    <meta name="description" content="{{ site.site_name }} - {{ page.description }}"/>
 
-    <meta property="og:author" content="Shane">
-    <meta property="og:title" content="Django Files Screen Shots">
-    <meta property="og:description" content="Django Files - Browse Screen Shots.">
+    <meta property="og:author" content="{{ site.author }}">
+    <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
+    <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://django-files.github.io/shots.html">
-    <meta property="og:image" content="https://django-files.github.io/images/logo.png">
+    <meta property="og:url" content="{{ site.site_url }}">
+    <meta property="og:image" content="{{ site.site_url }}/media/logo.png">
 
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -39,6 +45,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="/js/vars.js"></script>
 <script type="text/javascript" src="/js/screenshots.js"></script>
 
 </body>
