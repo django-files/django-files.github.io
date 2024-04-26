@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Django Files - {{ page.title }}</title>
+    <title>{{ site.site_name }} - {{ page.title }}</title>
 
     <meta name="author" content="{{ site.author }}"/>
     <meta name="title" content="{{ site.site_name }} - {{ page.title }}"/>
@@ -61,7 +61,7 @@
         <div class="row">
             <div class="col-12 col-sm-4">
                 <p><a class="text-decoration-none" href="{{ site.github_url }}" target="_blank">
-                    <i class="fab fa-github"></i> Django Files</a></p>
+                    <i class="fab fa-github"></i> {{ site.site_name }}</a></p>
             </div>
             <div class="col-12 col-sm-8 text-sm-end">
                 <ul class="list-inline">

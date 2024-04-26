@@ -1,7 +1,5 @@
 // JS for screenshots.html
 
-// const baseDir = '/screenshots/'
-
 const shotsEl = document.getElementById('swiper-shots')
 const thumbsEl = document.getElementById('swiper-thumbs')
 
@@ -28,7 +26,7 @@ const swiper = new Swiper('.mySwiper', {
     watchSlidesProgress: true,
 })
 
-const swiper2 = new Swiper('.mySwiper2', {
+new Swiper('.mySwiper2', {
     grabCursor: true,
     effect: 'fade',
     loop: true,
