@@ -10,7 +10,7 @@ description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/D
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Django Files - {{ page.title }}</title>
+    <title>{{ site.site_name }} - {{ page.title }}</title>
 
     <meta name="author" content="{{ site.author }}"/>
     <meta name="title" content="{{ site.site_name }} - {{ page.title }}"/>
@@ -20,7 +20,7 @@ description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/D
     <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
     <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.site_url }}">
+    <meta property="og:url" content="{{ site.site_url }}{{ page.dir }}">
     <meta property="og:image" content="{{ site.site_url }}/media/logo.png">
 
     <link rel="icon" href="favicon.ico" sizes="any">
@@ -32,7 +32,7 @@ description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/D
 
 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
     <div class="swiper-wrapper" id="swiper-shots">
-<!--        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>-->
+        {% comment %}<div class="swiper-slide"><img src="01_Login.png" alt="01_Login.png"></div>{% endcomment %}
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
@@ -40,7 +40,7 @@ description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/D
 </div>
 <div thumbsSlider="" class="swiper mySwiper">
     <div class="swiper-wrapper" id="swiper-thumbs">
-<!--        <div class="swiper-slide"><img src="screenshots/01_Login.png" alt="01_Login.png"></div>-->
+        {% comment %}<div class="swiper-slide"><img src="01_Login.png" alt="01_Login.png"></div>{% endcomment %}
     </div>
 </div>
 
