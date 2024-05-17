@@ -54,6 +54,8 @@
                             Home</a></li>
                     <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="/docs/">
                             Docs</a></li>
+                    <li class="nav-item"><a class="nav-link {% if page.title == 'Web Extension' %}active{% endif %}" href="/extension/">
+                            Web Extension</a></li>
                     <li class="nav-item"><a class="nav-link" href="/screenshots/" target="_blank">
                             Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ site.github_url }}" target="_blank" rel="noopener">
@@ -72,15 +74,17 @@
 <footer class="footer mt-auto p-2 flex-shrink-0">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-sm-4">
+            <div class="col-12 col-md-4">
                 <p><a class="link-body-emphasis text-decoration-none" href="{{ site.github_url }}#readme" target="_blank" rel="noopener">
                         <i class="fab fa-github"></i> {{ site.site_name }}</a></p>
             </div>
-            <div class="col-12 col-sm-8 text-sm-end">
+            <div class="col-12 col-md-8 text-md-end">
                 <ul class="list-inline">
                     <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="/">Home</a></li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="/docs/">Docs</a></li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none {% if page.title == 'Web Extension' %}fw-bold{% endif %}" href="/docs/">Extension</a></li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none" href="/screenshots/" target="_blank">Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 </ul>
