@@ -1,0 +1,135 @@
+---
+permalink: /extension/
+layout: default
+title: Web Extension
+description: Django Files Chrome Web Extension and Firefox Browser Addon.
+---
+
+<h1>{{ site.site_name }} - {{ page.title }}</h1>
+
+<div class="mb-2" style="min-height: 20px;">
+    <a href="{{ site.chrome_url }}" rel="nofollow" target="_blank">
+        <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users" style="max-width: 100%;"></a>
+    <a href="{{ site.firefox_url }}" rel="nofollow" target="_blank">
+        <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users" style="max-width: 100%;"></a>
+        <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version" style="max-width: 100%;"></a>
+    <a href="{{ site.firefox_url }}" rel="nofollow" target="_blank">
+        <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version" style="max-width: 100%;"></a>
+    <a href="{{ site.github_url }}/releases/latest" rel="nofollow" target="_blank">
+        <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version" style="max-width: 100%;"></a>
+    <a href="{{ site.github_url }}/blob/master/manifest.json" rel="nofollow" target="_blank">
+        <img src="https://img.shields.io/github/manifest-json/v/{{ site.github_name }}?filename=manifest.json&logo=json&label=manifest" alt="Manifest Version" style="max-width: 100%;"></a>
+</div>
+
+<p class="lead">
+    Modern Chrome Web Extension and Firefox Browser Addon for Django Files to view recent uploads, shorten URLs, and upload Images, Video or Audio files with a right click.
+</p>
+
+<div class="ms-1 mb-3">
+    <a href="{{ site.chrome_url }}" target="_blank">
+        <img alt="Chrome" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.firefox_url }}" target="_blank">
+        <img alt="Firefox" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.chrome_url }}" target="_blank">
+        <img alt="Edge" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.chrome_url }}" target="_blank">
+        <img alt="Chromium" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chromium/chromium_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.chrome_url }}" target="_blank">
+        <img alt="Opera" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.chrome_url }}" target="_blank">
+        <img alt="Brave" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/brave/brave_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.chrome_url }}" target="_blank">
+        <img alt="Vivaldi" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/vivaldi/vivaldi_48x48.png" width="42" height="42" /></a>
+</div>
+
+<ul>
+    <li>View Recent Uploads on Popup</li>
+    <li>Preview Popup Images on Hover.</li>
+    <li>Right Click any Image, Video, or Audio to Upload.</li>
+    <li>Right Click any URL to Shorten.</li>
+    <li>Automatically Auth with Django Files.</li>
+    <li>Automatic Dark/Light Mode based on Browser Settings.</li>
+</ul>
+
+<div class="mb-2">
+    <img src="/images/extension/popup.jpg" class="img-thumbnail" alt="Chrome Pin Extension" width="380">
+</div>
+
+<h2>Install</h2>
+
+<p class="ms-3">
+    <i class="fa-brands fa-chrome me-1"></i>
+    <a href="{{ site.chrome_url }}" target="_blank">Google Chrome Web Store</a>
+    <br>
+    <i class="fa-brands fa-firefox-browser me-1"></i>
+    <a href="{{ site.firefox_url }}" target="_blank">Mozilla Firefox Add-ons</a>
+</p>
+
+<p>
+    All <strong>Chromium</strong> Based Browsers can install the extension from the
+    <a href="{{ site.chrome_url }}" target="_blank">Chrome Web Store</a>.
+</p>
+
+<h2 id="configure">Configure</h2>
+<hr class="mt-0">
+
+<p>You can access Link Extractor through the Icon on the Extension Toolbar or Right Click Context Menu.</p>
+<p>You can pin the Addon by locating the Link Extractor icon on the Extension Toolbar, then;</p>
+<ul>
+    <li><strong>Firefox</strong>, click the Settings Wheel and Pin to Toolbar.<br></li>
+    <li><strong>Chrome</strong>, click the Pin icon.<br></li>
+</ul>
+
+<div class="mb-2">
+    <img src="/images/extension/pin-chrome.jpg" class="img-thumbnail" alt="Chrome Pin Extension" width="350">
+    <img src="/images/extension/pin-firefox.jpg" class="img-thumbnail" alt="Chrome Pin Extension" width="320">
+</div>
+
+<h2>Setup</h2>
+<p>
+    To automatically configure the web extension to work with your Django Files instance do the following:
+</p>
+<ul>
+    <li>Log in to your Django Files Instance</li>
+    <li>Click the Popup Icon (from above)</li>
+    <li>Click Add Auth from Current Site</li>
+</ul>
+<div class="mb-2">
+    <img src="/images/extension/setup.jpg" class="img-thumbnail" alt="Chrome Pin Extension" width="350">
+</div>
+<p>
+    The addon should now be configured to work with your Django Files instance.
+</p>
+<p>
+    You can now click the Django Files icon to view your recent uploads or open Options.
+    Right-click on any Image, Video, Audio, or URL upload to Django Files or Shorten URL.
+</p>
+
+<p>
+    Alternatively, you can open the Options page and add your URL and Token.
+</p>
+
+<h2 id="usage">Usage</h2>
+<hr class="mt-0">
+
+<p>Activate 1 of 3 ways:</p>
+<ul>
+    <li>Toolbar Icon Popup</li>
+    <li>Keyboard Shortcuts</li>
+    <li>Right Click Context Menu</li>
+</ul>
+
+<h2>Support</h2>
+
+<p>
+    Please submit an
+    <a href="{{ site.github_url }}/issues" target="_blank">Issue</a>
+    if you find bugs and open a
+    <a href="{{ site.github_url }}/discussions/categories/feature-requests" target="_blank">Feature Request</a>
+    if you have any ideas, suggestions, or requests.
+</p>
+
+<p>
+    More information can be found on GitHub,
+    <a href="https://github.com/django-files/web-extension" target="_blank" rel="noopener">django-files/web-extension</a>.
+</p>
