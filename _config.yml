@@ -6,6 +6,7 @@ site_name: Django Files
 site_url: https://django-files.github.io/
 github_url: https://github.com/django-files/django-files
 
+extension_github: https://github.com/django-files/web-extension
 chrome_url: https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej
 firefox_url: https://addons.mozilla.org/en-US/firefox/addon/django-files/
 chrome_id: abpbiefojfkekhkjnpakpekkpeibnjej

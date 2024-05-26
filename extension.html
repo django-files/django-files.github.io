@@ -12,14 +12,17 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
         <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users" style="max-width: 100%;"></a>
     <a href="{{ site.firefox_url }}" rel="nofollow" target="_blank">
         <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users" style="max-width: 100%;"></a>
+    <a href="{{ site.chrome_url }}" rel="nofollow" target="_blank">
         <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version" style="max-width: 100%;"></a>
     <a href="{{ site.firefox_url }}" rel="nofollow" target="_blank">
         <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version" style="max-width: 100%;"></a>
-    <a href="{{ site.github_url }}/releases/latest" rel="nofollow" target="_blank">
+    <a href="{{ site.extension_github }}/releases/latest" rel="nofollow" target="_blank">
         <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version" style="max-width: 100%;"></a>
-    <a href="{{ site.github_url }}/blob/master/manifest.json" rel="nofollow" target="_blank">
+    <a href="{{ site.extension_github }}/blob/master/manifest.json" rel="nofollow" target="_blank">
         <img src="https://img.shields.io/github/manifest-json/v/{{ site.github_name }}?filename=manifest.json&logo=json&label=manifest" alt="Manifest Version" style="max-width: 100%;"></a>
 </div>
+
+<p class="lead" data-nosnippet><a href="#configure">Configure</a> | <a href="#setup">Setup</a> | <a href="#usage">Usage</a></p>
 
 <p class="lead">
     Modern Chrome Web Extension and Firefox Browser Addon for Django Files to view recent uploads, shorten URLs, and upload Images, Video or Audio files with a right click.
@@ -85,7 +88,7 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
     <img src="/images/extension/pin-firefox.jpg" class="img-thumbnail" alt="Chrome Pin Extension" width="320">
 </div>
 
-<h2>Setup</h2>
+<h2 id="setup">Setup</h2>
 <p>
     To automatically configure the web extension to work with your Django Files instance do the following:
 </p>
@@ -123,13 +126,13 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 
 <p>
     Please submit an
-    <a href="{{ site.github_url }}/issues" target="_blank">Issue</a>
+    <a href="{{ site.extension_github }}/issues" target="_blank">Issue</a>
     if you find bugs and open a
-    <a href="{{ site.github_url }}/discussions/categories/feature-requests" target="_blank">Feature Request</a>
+    <a href="{{ site.extension_github }}/discussions/categories/feature-requests" target="_blank">Feature Request</a>
     if you have any ideas, suggestions, or requests.
 </p>
 
 <p>
-    More information can be found on GitHub,
-    <a href="https://github.com/django-files/web-extension" target="_blank" rel="noopener">django-files/web-extension</a>.
+    More information can be found on GitHub:
+    <a href="https://github.com/django-files/web-extension" target="_blank" rel="noopener">django-files/web-extension</a>
 </p>
