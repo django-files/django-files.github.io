@@ -1,5 +1,5 @@
 const repoDir = './src/screenshots'
-const relPath = '/screenshots/'
+const relPath = ''
 
 const fs = require('fs')
 const files = []
