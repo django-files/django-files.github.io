@@ -18,26 +18,27 @@
     <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
     <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.site_url }}">
-    <meta property="og:image" content="{{ site.site_url }}/media/logo.png">
+    <meta property="og:url" content="{{ "/" | absolute_url }}">
+    <meta property="og:image" content="{{ "/media/logo.png" | absolute_url }}">
 
     {% if page.dark != true %}
-        <script type="text/javascript" src="../js/theme.js"></script>
+        <script type="text/javascript" src="{{ "/js/theme.js" | relative_url }}"></script>
     {% endif %}
 
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" href="{{ "/favicon.ico" | relative_url }}" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 </head>
 <body class="d-flex flex-column h-100">
 
 <header>
     <nav class="navbar navbar-expand-sm">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="../images/logo.png" width="30" height="30" alt="logo"></a>
+            <a class="navbar-brand" href="{{ "/" | relative_url }}">
+                <img src="{{ "/images/logo.png" | relative_url }}" width="30" height="30" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -45,13 +46,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="/">
+                    <li class="nav-item"><a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="{{ "/" | relative_url }}">
                             Home</a></li>
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="/docs/">
+                    <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="{{ "/docs" | relative_url }}">
                             Docs</a></li>
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Web Extension' %}active{% endif %}" href="/extension/">
+                    <li class="nav-item"><a class="nav-link {% if page.title == 'Web Extension' %}active{% endif %}" href="{{ "/extension" | relative_url }}">
                             Web Extension</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/screenshots/" target="_blank">
+                    <li class="nav-item"><a class="nav-link" href="{{ "/screenshots" | relative_url }}" target="_blank">
                             Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ site.github_url }}" target="_blank" rel="noopener">
                             GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
@@ -75,13 +76,21 @@
             </div>
             <div class="col-12 col-md-8 text-md-end">
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="/">Home</a></li>
+                    <li class="list-inline-item">
+                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="{{ "/" | relative_url }}">
+                            Home</a></li>
                     <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="/docs/">Docs</a></li>
+                    <li class="list-inline-item">
+                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="{{ "/docs" | relative_url }}">
+                            Docs</a></li>
                     <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none {% if page.title == 'Web Extension' %}fw-bold{% endif %}" href="/docs/">Extension</a></li>
+                    <li class="list-inline-item">
+                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Web Extension' %}fw-bold{% endif %}" href="{{ "/extension" | relative_url }}">
+                            Extension</a></li>
                     <li class="list-inline-item">|</li>
-                    <li class="list-inline-item"><a class="link-body-emphasis text-decoration-none" href="/screenshots/" target="_blank">Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    <li class="list-inline-item">
+                        <a class="link-body-emphasis text-decoration-none" href="{{ "/screenshots" | relative_url }}" target="_blank">
+                            Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -104,7 +113,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js" integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script type="text/javascript" src="../js/main.js"></script>
+<script type="text/javascript" src="{{ "/js/main.js" | relative_url }}"></script>
 
 </body>
 </html>
