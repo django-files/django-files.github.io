@@ -1,5 +1,5 @@
 .idea/
 *.iml
 .vscode/
-.jekyll-cache/
-_site/
+**/.jekyll-cache/
+**/_site/
