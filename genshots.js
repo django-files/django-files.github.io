@@ -1,4 +1,4 @@
-const baseDir = './screenshots'
+const baseDir = './src/screenshots'
 
 const fs = require('fs')
 const files = []
@@ -7,7 +7,7 @@ fs.readdirSync(baseDir).forEach((file) => {
 })
 console.log(files)
 
-const file = fs.createWriteStream('./js/vars.js')
+const file = fs.createWriteStream('./src/js/vars.js')
 file.on('error', function (err) {
     console.error('err', err)
 })

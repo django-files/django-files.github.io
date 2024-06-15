@@ -1,5 +1,5 @@
 ---
-permalink: /screenshots/
+permalink: /screenshots
 title: Screen Shots
 description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/Docker File Manager for Sharing Files.
 ---
@@ -20,13 +20,14 @@ description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/D
     <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
     <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.site_url }}{{ page.dir }}">
-    <meta property="og:image" content="{{ site.site_url }}/media/logo.png">
+    <meta property="og:url" content="{{ "/" | absolute_url }}">
+    <meta property="og:image" content="{{ "/media/logo.png" | absolute_url }}">
 
-    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="{{ "/favicon.ico" | relative_url }}" sizes="any">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="/css/screenshots.css">
-
+    <link rel="stylesheet" href="{{ "/css/screenshots.css" | relative_url }}">
 </head>
 <body>
 
@@ -45,8 +46,8 @@ description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/D
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="/js/vars.js"></script>
-<script type="text/javascript" src="/js/screenshots.js"></script>
+<script type="text/javascript" src="{{ "/js/vars.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/js/screenshots.js" | relative_url }}"></script>
 
 </body>
 </html>

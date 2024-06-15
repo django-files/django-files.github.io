@@ -1,0 +1,58 @@
+name: 'Pages'
+
+on:
+  push:
+    branches: ['master']
+  repository_dispatch:
+    types:
+      - webhook
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 'Build'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+
+      - name: 'Configure Pages'
+        uses: actions/configure-pages@v5
+
+      - name: 'Jekyll Build Pages'
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: './src'
+
+      - name: 'Upload Pages Artifact'
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: _site/
+
+  deploy:
+    name: 'Deploy'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: build
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 'Deploy Pages'
+        id: deployment
+        uses: actions/deploy-pages@v2
+        with:
+          artifact_name: github-pages
