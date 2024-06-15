@@ -48,11 +48,11 @@
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                     <li class="nav-item"><a class="nav-link {% if page.title == 'Home' %}active{% endif %}" href="{{ "/" | relative_url }}">
                             Home</a></li>
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="{{ "/docs" | relative_url }}">
+                    <li class="nav-item"><a class="nav-link {% if page.title == 'Docs' %}active{% endif %}" href="{{ "/docs/" | relative_url }}">
                             Docs</a></li>
-                    <li class="nav-item"><a class="nav-link {% if page.title == 'Web Extension' %}active{% endif %}" href="{{ "/extension" | relative_url }}">
+                    <li class="nav-item"><a class="nav-link {% if page.title == 'Web Extension' %}active{% endif %}" href="{{ "/extension/" | relative_url }}">
                             Web Extension</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ "/screenshots" | relative_url }}" target="_blank">
+                    <li class="nav-item"><a class="nav-link" href="{{ "/screenshots/" | relative_url }}" target="_blank">
                             Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ site.github_url }}" target="_blank" rel="noopener">
                             GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
@@ -81,15 +81,15 @@
                             Home</a></li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="{{ "/docs" | relative_url }}">
+                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="{{ "/docs/" | relative_url }}">
                             Docs</a></li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Web Extension' %}fw-bold{% endif %}" href="{{ "/extension" | relative_url }}">
+                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Web Extension' %}fw-bold{% endif %}" href="{{ "/extension/" | relative_url }}">
                             Extension</a></li>
                     <li class="list-inline-item">|</li>
                     <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none" href="{{ "/screenshots" | relative_url }}" target="_blank">
+                        <a class="link-body-emphasis text-decoration-none" href="{{ "/screenshots/" | relative_url }}" target="_blank">
                             Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
                 </ul>
             </div>
