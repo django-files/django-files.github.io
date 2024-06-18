@@ -31,14 +31,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
+
 </head>
 <body class="d-flex flex-column h-100">
 
 <header>
-    <nav class="navbar navbar-expand-sm">
+    <nav class="navbar navbar-expand-sm" aria-label="Primary Navigation">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ "/" | relative_url }}">
-                <img src="{{ "/images/logo.png" | relative_url }}" width="30" height="30" alt="logo"></a>
+            <a class="mx-2" href="{{ "/" | relative_url }}">
+                <img src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" alt="logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +63,7 @@
     </nav>
 </header>
 
-<main class="flex-grow-1 p-3">
+<main class="flex-grow-1 px-3">
     {{ content }}
     <div class="clearfix"></div>
 </main>
@@ -70,28 +71,27 @@
 <footer class="footer mt-auto p-2 flex-shrink-0">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-4">
-                <p><a class="link-body-emphasis text-decoration-none" href="{{ site.github_url }}#readme" target="_blank" rel="noopener">
-                        <i class="fab fa-github"></i> {{ site.site_name }}</a></p>
+            <div class="col-12 col-sm-4">
+                <a class="link-body-emphasis text-decoration-none" href="{{ site.github_url }}" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i> {{ site.site_name }}</a>
             </div>
-            <div class="col-12 col-md-8 text-md-end">
-                <ul class="list-inline">
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="{{ "/" | relative_url }}">
-                            Home</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="{{ "/docs/" | relative_url }}">
-                            Docs</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none {% if page.title == 'Web Extension' %}fw-bold{% endif %}" href="{{ "/extension/" | relative_url }}">
-                            Extension</a></li>
-                    <li class="list-inline-item">|</li>
-                    <li class="list-inline-item">
-                        <a class="link-body-emphasis text-decoration-none" href="{{ "/screenshots/" | relative_url }}" target="_blank">
-                            Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
-                </ul>
+            <div class="col-12 col-sm-8 text-sm-end">
+                <nav aria-label="Secondary Navigation">
+                    <ol class="list-inline mb-1">
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none {% if page.title == 'Home' %}fw-bold{% endif %}" href="{{ "/" | relative_url }}">
+                                Home</a></li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none {% if page.title == 'Docs' %}fw-bold{% endif %}" href="{{ "/docs/" | relative_url }}">
+                                Docs</a></li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none {% if page.title == 'Extension' %}fw-bold{% endif %}" href="{{ "/extension/" | relative_url }}">
+                                Extension</a></li>
+                        <li class="list-inline-item">
+                            <a class="link-body-emphasis text-decoration-none" href="{{ "/screenshots/" | relative_url }}" target="_blank">
+                                Screen Shots <i class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+                    </ol>
+                </nav>
             </div>
         </div>
     </div>

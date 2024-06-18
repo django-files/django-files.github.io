@@ -9,10 +9,10 @@ site_name: Django Files
 github_url: https://github.com/django-files/django-files
 github_name: django-files/web-extension
 
-extension_github: https://github.com/django-files/web-extension
-
-chrome_url: https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej
 chrome_id: abpbiefojfkekhkjnpakpekkpeibnjej
+chrome_url: https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej
 
-firefox_url: https://addons.mozilla.org/en-US/firefox/addon/django-files/
 firefox_id: django-files
+firefox_url: https://addons.mozilla.org/en-US/firefox/addon/django-files/
+
+extension_github: https://github.com/django-files/web-extension
