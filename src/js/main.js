@@ -1,6 +1,11 @@
 // JS Main
 
+document
+    .querySelectorAll('[data-clipboard-text], [data-clipboard-target]')
+    .forEach((el) => el.addEventListener('click', (e) => e.preventDefault()))
+
 const backToTop = document.getElementById('back-to-top')
+
 if (backToTop) {
     window.addEventListener('scroll', debounce(onScroll))
     backToTop.addEventListener('click', () => {
@@ -9,12 +14,10 @@ if (backToTop) {
     })
 }
 
-document
-    .querySelectorAll('.clip')
-    .forEach((el) => el.addEventListener('click', (e) => e.preventDefault()))
-
 if (typeof ClipboardJS !== 'undefined') {
-    const clipboard = new ClipboardJS('.clip')
+    const clipboard = new ClipboardJS(
+        '[data-clipboard-text], [data-clipboard-target]'
+    )
     clipboard.on('success', function (event) {
         // console.debug('clipboard.success:', event)
         // const text = event.text

@@ -12,3 +12,8 @@
     max-width: 260px;
     width: 100%;
 }
+
+footer li + li::before {
+    content: '| ';
+    margin-right: 8px;
+}

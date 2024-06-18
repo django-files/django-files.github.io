@@ -8,7 +8,6 @@ for (const shot of screenShots) {
     const div = document.createElement('div')
     div.classList.add('swiper-slide')
     const img = document.createElement('img')
-    // img.src = `${baseDir}${shot}`
     img.src = shot
     img.alt = shot
     div.appendChild(img)
