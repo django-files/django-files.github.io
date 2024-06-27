@@ -8,16 +8,16 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 <h1>{{ site.site_name }} - {{ page.title }}</h1>
 
 <div class="mb-2" style="min-height: 20px;">
-    <a href="{{ site.chrome_url }}" rel="nofollow" target="_blank">
-        <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users" style="max-width: 100%;"></a>
-    <a href="{{ site.firefox_url }}" rel="nofollow" target="_blank">
-        <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users" style="max-width: 100%;"></a>
-    <a href="{{ site.chrome_url }}" rel="nofollow" target="_blank">
-        <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version" style="max-width: 100%;"></a>
-    <a href="{{ site.firefox_url }}" rel="nofollow" target="_blank">
-        <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version" style="max-width: 100%;"></a>
-    <a href="{{ site.extension_github }}/releases/latest" rel="nofollow" target="_blank">
-        <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version" style="max-width: 100%;"></a>
+    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users" class="mw-100"></a>
+    <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users" class="mw-100"></a>
+    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version" class="mw-100"></a>
+    <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version" class="mw-100"></a>
+    <a href="{{ site.extension_github }}/releases/latest" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version" class="mw-100"></a>
 </div>
 
 <p class="lead" data-nosnippet><a href="#configure">Configure</a> | <a href="#setup">Setup</a> | <a href="#usage">Usage</a></p>
@@ -27,20 +27,20 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 </p>
 
 <div class="ms-1 mb-3">
-    <a href="{{ site.chrome_url }}" target="_blank">
-        <img alt="Chrome" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chrome/chrome_48x48.png" width="42" height="42" /></a>
-    <a href="{{ site.firefox_url }}" target="_blank">
-        <img alt="Firefox" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/firefox/firefox_48x48.png" width="42" height="42" /></a>
-    <a href="{{ site.chrome_url }}" target="_blank">
-        <img alt="Edge" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/edge/edge_48x48.png" width="42" height="42" /></a>
-    <a href="{{ site.chrome_url }}" target="_blank">
-        <img alt="Chromium" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/chromium/chromium_48x48.png" width="42" height="42" /></a>
-    <a href="{{ site.chrome_url }}" target="_blank">
-        <img alt="Opera" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/opera/opera_48x48.png" width="42" height="42" /></a>
-    <a href="{{ site.chrome_url }}" target="_blank">
-        <img alt="Brave" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/brave/brave_48x48.png" width="42" height="42" /></a>
-    <a href="{{ site.chrome_url }}" target="_blank">
-        <img alt="Vivaldi" src="https://raw.githubusercontent.com/alrra/browser-logos/main/src/vivaldi/vivaldi_48x48.png" width="42" height="42" /></a>
+    <a href="{{ site.chrome_url }}" title="Chrome" target="_blank" rel="noopener">
+        <img alt="Chrome" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/chrome_48.png" width="48" height="48" /></a>
+    <a href="{{ site.firefox_url }}" title="Firefox" target="_blank" rel="noopener">
+        <img alt="Firefox" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/firefox_48.png" width="48" height="48" /></a>
+    <a href="{{ site.chrome_url }}" title="Edge" target="_blank" rel="noopener">
+        <img alt="Edge" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/edge_48.png" width="48" height="48" /></a>
+    <a href="{{ site.chrome_url }}" title="Opera" target="_blank" rel="noopener">
+        <img alt="Opera" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/opera_48.png" width="48" height="48" /></a>
+    <a href="{{ site.chrome_url }}" title="Brave" target="_blank" rel="noopener">
+        <img alt="Brave" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/brave_48.png" width="48" height="48" /></a>
+    <a href="{{ site.chrome_url }}" title="Chromium" target="_blank" rel="noopener">
+        <img alt="Chromium" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/chromium_48.png" width="48" height="48" /></a>
+    <a href="{{ site.chrome_url }}" title="Kiwi" target="_blank" rel="noopener">
+        <img alt="Kiwi" src="https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/kiwi_48.png" width="48" height="48" /></a>
 </div>
 
 <ul>
@@ -69,6 +69,12 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 <p>
     All <strong>Chromium</strong> Based Browsers can install the extension from the
     <a href="{{ site.chrome_url }}" target="_blank">Chrome Web Store</a>.
+</p>
+
+<p>
+    Mobile browser support available for
+    <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">Firefox</a> and
+    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">Kiwi</a>.
 </p>
 
 <h2 id="configure">Configure</h2>
@@ -102,12 +108,11 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
     The addon should now be configured to work with your Django Files instance.
 </p>
 <p>
+    Alternatively, you can open the Options page and add your URL and Token.
+</p>
+<p>
     You can now click the Django Files icon to view your recent uploads or open Options.
     Right-click on any Image, Video, Audio, or URL upload to Django Files or Shorten URL.
-</p>
-
-<p>
-    Alternatively, you can open the Options page and add your URL and Token.
 </p>
 
 <h2 id="usage">Usage</h2>
