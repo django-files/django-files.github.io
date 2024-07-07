@@ -13,7 +13,9 @@
     width: 100%;
 }
 
-footer li + li::before {
-    content: '| ';
-    margin-right: 8px;
+@media (min-width: 576px) {
+    footer li + li::before {
+        content: '•';
+        margin-right: 0.3rem;
+    }
 }

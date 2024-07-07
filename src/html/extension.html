@@ -9,18 +9,35 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 
 <div class="mb-2" style="min-height: 20px;">
     <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-        <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users" class="mw-100"></a>
+        <img src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?logo=google&logoColor=white&label=google%20users" alt="Chrome Web Store Users"></a>
     <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
-        <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users" class="mw-100"></a>
+        <img src="https://img.shields.io/amo/users/{{ site.firefox_id }}?logo=mozilla&label=mozilla%20users" alt="Mozilla Add-on Users"></a>
     <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-        <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version" class="mw-100"></a>
+        <img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version"></a>
     <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">
-        <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version" class="mw-100"></a>
+        <img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version"></a>
     <a href="{{ site.extension_github }}/releases/latest" target="_blank" rel="noopener">
-        <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version" class="mw-100"></a>
+        <img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version"></a>
+    <a href="{{ site.discord_invite }}" title="GitHub" target="_blank" rel="noopener">
+        <img src="https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da" alt="Join Discord"></a>
 </div>
 
-<p class="lead" data-nosnippet><a href="#configure">Configure</a> | <a href="#setup">Setup</a> | <a href="#usage">Usage</a></p>
+<p class="lead">
+    <a href="#configure" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover">Configure</a> &bull;
+    <a href="#setup" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover">Setup</a> &bull;
+    <a href="#usage" class="link-body-emphasis link-offset-1 link-underline-opacity-50 link-underline-opacity-75-hover">Usage</a>
+</p>
+
+<div id="feedback" class="alert alert-success d-none" role="alert">
+    <p>Thank you for providing feedback. If you provided details we will look into them.</p>
+    <p>
+        If you would like feedback from the developer you can open an
+        <a href="{{ site.extension_github }}/issues" class="alert-link" target="_blank" rel="noopener">Issue</a> on GitHub.
+    </p>
+    <p class="mb-0">
+        You may also request support and get help on the <a href="{{ site.discord_invite }}" class="alert-link" target="_blank" rel="noopener">Discord Server</a>.
+    </p>
+</div>
 
 <p class="lead">
     Modern Chrome Web Extension and Firefox Browser Addon for Django Files to view recent uploads, shorten URLs, and upload Images, Video or Audio files with a right click.
@@ -45,11 +62,12 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 
 <ul>
     <li>View Recent Uploads on Popup</li>
-    <li>Preview Popup Images on Hover.</li>
-    <li>Right Click any Image, Video, or Audio to Upload.</li>
-    <li>Right Click any URL to Shorten.</li>
-    <li>Automatically Auth with Django Files.</li>
-    <li>Automatic Dark/Light Mode based on Browser Settings.</li>
+    <li>Preview Popup Images on Hover</li>
+    <li>Right Click any Image, Video, or Audio to Upload</li>
+    <li>Right Click any URL to Shorten</li>
+    <li>Drag and Drop files to the Popup or Sidepanel</li>
+    <li>Automatically Auth with Django Files</li>
+    <li>Automatic Dark/Light Mode based on Browser Settings</li>
 </ul>
 
 <div class="mb-2">
@@ -59,11 +77,11 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 <h2>Install</h2>
 
 <p class="ms-3">
-    <i class="fa-brands fa-chrome me-1"></i>
-    <a href="{{ site.chrome_url }}" target="_blank">Google Chrome Web Store</a>
+    <i class="fa-brands fa-chrome fa-lg me-1"></i>
+    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">Google Chrome Web Store</a>
     <br>
-    <i class="fa-brands fa-firefox-browser me-1"></i>
-    <a href="{{ site.firefox_url }}" target="_blank">Mozilla Firefox Add-ons</a>
+    <i class="fa-brands fa-firefox-browser fa-lg me-1"></i>
+    <a href="{{ site.firefox_url }}" target="_blank" rel="noopener">Mozilla Firefox Add-ons</a>
 </p>
 
 <p>
@@ -80,12 +98,15 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 <h2 id="configure">Configure</h2>
 <hr class="mt-0">
 
-<p>You can access Django Files through the Icon on the Extension Toolbar or Right Click Context Menu.</p>
-<p>You can pin the Addon by locating the Django Files icon on the Extension Toolbar, then;</p>
-<ul>
-    <li><strong>Firefox</strong>, click the Settings Wheel and Pin to Toolbar.<br></li>
-    <li><strong>Chrome</strong>, click the Pin icon.<br></li>
-</ul>
+<p>You can access {{ site.site_name }} through the Icon on the Extension Toolbar or Right Click Context Menu.</p>
+<p>You can pin the Addon by locating the {{ site.site_name }} icon on the Extension Toolbar, then;</p>
+<p class="ms-3">
+    <i class="fa-brands fa-firefox-browser me-1"></i>
+    <strong>Firefox</strong>, click the Settings Wheel and Pin to Toolbar.
+    <br>
+    <i class="fa-brands fa-chrome me-1"></i>
+    <strong>Chrome</strong>, click the Pin icon.
+</p>
 
 <div class="mb-2">
     <img src="{{ "/media/extension/pin-chrome.jpg" | relative_url }}" class="img-thumbnail" alt="Chrome Pin Extension" width="350">
@@ -146,9 +167,13 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
     if you find bugs and open a
     <a href="{{ site.extension_github }}/discussions/categories/feature-requests" target="_blank">Feature Request</a>
     if you have any ideas, suggestions, or requests.
+    You may also get support on the
+    <a href="{{ site.discord_invite }}" target="_blank" rel="noopener">Discord Server</a>.
 </p>
 
 <p>
     More information can be found on GitHub:
     <a href="{{ site.extension_github }}?tab=readme-ov-file#readme" target="_blank" rel="noopener">django-files/web-extension</a>
 </p>
+
+<script type="text/javascript" src="{{ "/js/extension.js" | relative_url }}"></script>
