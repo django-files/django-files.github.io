@@ -6,6 +6,18 @@ url: https://django-files.github.io
 author: Shane/Ralph
 site_name: Django Files
 
+menu:
+    - name: Home
+      link: /
+    - name: Docs
+      link: /docs/
+    - name: Web Extension
+      link: /extension/
+    - name: Screen Shots
+      link: /screenshots/
+      external: true
+
+github_owner_repo: django-files/django-files
 github_url: https://github.com/django-files/django-files
 github_name: django-files/web-extension
 
@@ -16,3 +28,6 @@ firefox_id: django-files
 firefox_url: https://addons.mozilla.org/en-US/firefox/addon/django-files/
 
 extension_github: https://github.com/django-files/web-extension
+
+discord_invite: https://discord.gg/wXy6m2X8wY
+discord_webhook: https://discord.com/api/webhooks/242137648028712961/4xM7SXClH_i8we_epG6AXMaqhueg5L5oAVf1dnLw1_el05OxZ-JVfph-QrcQwPkOMJem
