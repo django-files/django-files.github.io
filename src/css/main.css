@@ -13,7 +13,17 @@
     width: 100%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 575px) {
+    .right-icons {
+        display: flex;
+        flex-direction: row;
+    }
+    .right-icons .nav-item {
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 575px) {
     footer li + li::before {
         content: '•';
         margin-right: 0.3rem;
