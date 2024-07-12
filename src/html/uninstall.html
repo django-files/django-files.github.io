@@ -8,53 +8,52 @@ description: Uninstall Feedback.
 ---
 
 <div class="d-flex align-items-center h-100">
-    <div class="col-sm-12 col-md-10 col-lg-8 col-xxl-6 m-auto">
-        <div id="login-outer" class="py-3 px-1 px-sm-3 mb-3 me-1 rounded rounded-4">
-            <div class="justify-content-center align-items-center d-flex">
-                <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-2" alt="{{ site.site_name }}" height="42" width="42">
-                <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
-            </div>
-            <p class="text-center mb-2">
-                Please let us know why you uninstalled {{ site.site_name }}.
-                <br>
-                <span class="fs-4">
-                    All <a href="{{ site.github_url }}/issues" target="_blank" rel="noopener">bugs that get reported</a> <span class="d-inline-block fw-bold">will be fixed!</span>
-                </span>
-                <br>
+    <div id="content-wrapper" class="p-3 mb-3 mx-auto w-100 rounded rounded-3 ">
+        <div class="justify-content-center align-items-center d-flex">
+            <img src="{{ "/media/logo.png" | relative_url }}" class="img-fluid float-start me-2" alt="{{ site.site_name }}" height="42" width="42">
+            <h1 class="align-middle mb-0">{{ site.site_name }}</h1>
+        </div>
+        <div class="text-center">
+            <p class="mb-0">Please let us know why you uninstalled {{ site.site_name }}.</p>
+            <p id="bug-report" class="mb-1 fs-3 animate__animated animate__delay-1s">
+                All <a href="{{ site.github_url }}/issues" target="_blank" rel="noopener">bugs that get reported</a> <span class="d-inline-block fw-bold">will be fixed!</span>
+            </p>
+            <p class="mb-2">
                 Any <a href="{{ site.github_url }}/discussions/categories/feature-requests" target="_blank" rel="noopener">Feature Requests</a> are appreciated.
                 Support is also available on <a href="{{ site.discord_invite }}" target="_blank" rel="noopener">Discord</a>.
             </p>
-            {% include alerts.html %}
-            <form id="uninstall-form">
-                <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
-                <div class="form-check form-switch fs-5">
-                    <input class="form-check-input" type="checkbox" role="switch" id="not-used">
-                    <label class="form-check-label text-success-emphasis" for="not-used">Do Not Need or Not Used</label>
-                </div>
-                <div class="form-check form-switch fs-5">
-                    <input class="form-check-input" type="checkbox" role="switch" id="not-expected">
-                    <label class="form-check-label text-warning-emphasis" for="not-expected">Does Not Work as Expected</label>
-                </div>
-                <div class="form-check form-switch fs-5">
-                    <input class="form-check-input" type="checkbox" role="switch" id="not-working">
-                    <label class="form-check-label text-danger-emphasis" for="not-working">Not Working or Broken</label>
-                </div>
-                <div id="not-working-extra" class="alert alert-warning text-center p-2 mt-2 mb-0 d-none">
-                    Please let us know which <strong>feature</strong> is not functioning.
-                </div>
-                <div class="my-2">
-                    <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
-                    <textarea class="form-control" id="uninstall-response" rows="4" maxlength="1000"
-                              placeholder="Optional Feedback. Bugs, Missing Features, etc..." autofocus></textarea>
-                    <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
-                </div>
-                <button id="submit-btn" class="btn btn-success w-100" type="submit">
-                    Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
-            </form>
-            <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
-        </div> <!-- login-outer -->
-    </div> <!-- col -->
+        </div>
+        {% include alerts.html %}
+        <form id="uninstall-form">
+            <input type="hidden" value="{{ site.discord_webhook }}" id="discord-webhook" hidden="hidden">
+            <div class="form-check form-switch fs-5">
+                <input class="form-check-input" type="checkbox" role="switch" id="not-used">
+                <label class="form-check-label text-success-emphasis" for="not-used">Do Not Need or Not Used</label>
+            </div>
+            <div class="form-check form-switch fs-5">
+                <input class="form-check-input" type="checkbox" role="switch" id="not-expected">
+                <label class="form-check-label text-warning-emphasis" for="not-expected">Does Not Work as Expected</label>
+            </div>
+            <div class="form-check form-switch fs-5">
+                <input class="form-check-input" type="checkbox" role="switch" id="not-working">
+                <label class="form-check-label text-danger-emphasis" for="not-working">Not Working or Broken</label>
+            </div>
+            <div id="not-working-alert" class="alert alert-warning text-center p-2 mt-2 mb-0 d-none animate__animated animate__pulse">
+                Please let us know which <strong>feature</strong> is not functioning.
+            </div>
+            <div class="my-2">
+                <label for="uninstall-response" class="form-label visually-hidden">Uninstall Feedback</label>
+                <textarea class="form-control" id="uninstall-response" rows="4" maxlength="1000"
+                          placeholder="Optional Feedback. Bugs, Missing Features, etc..." autofocus></textarea>
+                <span id="inputCounter" class="float-end label label-default"><span id="input-count">0</span> / 1000</span>
+            </div>
+            <button id="submit-btn" class="btn btn-success w-100" type="submit">
+                Submit Feedback <i class="fa-regular fa-comment-dots ms-2"></i></button>
+        </form>
+        <div id="error-alert" class="alert alert-danger alert-dismissible fade show text-center mt-3" role="alert" style="display: none;"></div>
+    </div> <!-- content-wrapper -->
 </div> <!-- d-flex -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/1.0.37/ua-parser.min.js" integrity="sha512-LAchvH0Y4sxYM1ouOaqHQ6WbSXvOgkioPaiyW0oPOFNNMNfpsBEpvzYmsxgDf8pQM/fMaMdxYP/nFenquTAkdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/3.0.2/tsparticles.bundle.min.js" integrity="sha512-MM4W2ywPFL6GyTpBoj7PU6nyv2jJg47rLI8kEAL8vk20RHtAqIe9KdweahKUk+OivrdpZoMYfMi271ZdS6tRnQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="{{ "/js/uninstall.js" | relative_url }}"></script>

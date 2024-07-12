@@ -5,76 +5,80 @@ title: Home
 description: A Feature Packed Self-Hosted Django/Docker File Manager for Sharing Files with ShareX, Flameshot and Much more...
 ---
 
-<h1>{{ site.site_name }}</h1>
+<div class="container-fluid">
 
-<div class="mb-2" style="min-height: 20px;">
-    <a href="{{ site.extension_github }}/releases/latest" target="_blank" rel="noopener">
-        <img alt="GitHub Release Version" src="https://img.shields.io/github/v/release/{{ site.github_owner_repo }}?logo=github"></a>
-    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/django-files/django-files?logo=github&logoColor=white&label=updated"></a>
-    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-        <img alt="GitHub Actions Build" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/build.yaml?logo=github&logoColor=white&label=build"></a>
-    <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-        <img alt="GitHub Actions Test" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/test.yaml?logo=github&logoColor=white&label=test"></a>
-    <a href="{{ site.discord_invite }}" title="GitHub" target="_blank" rel="noopener">
-        <img  alt="Join Discord" src="https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da"></a>
-</div>
+    <h1>{{ site.site_name }}</h1>
 
-<p class="lead">
-    A Self-Hosted Django File Manager for Uploading and Sharing;
-    designed to work with client apps such as <a href="https://github.com/ShareX/ShareX" target="_blank" rel="noopener">ShareX</a> and
-    <a href="https://github.com/flameshot-org/flameshot" target="_blank" rel="noopener">Flameshot</a>. Django Files is currently
-    functional but <strong>Under Active Development</strong>. Expect breaking changes until an official
-    <a href="{{ site.github_url }}/releases" target="_blank" rel="noopener">release</a> is made.
-</p>
+    <div class="mb-2" style="min-height: 20px;">
+        <a href="{{ site.extension_github }}/releases/latest" target="_blank" rel="noopener">
+            <img alt="GitHub Release Version" src="https://img.shields.io/github/v/release/{{ site.github_owner_repo }}?logo=github"></a>
+        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
+            <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/django-files/django-files?logo=github&logoColor=white&label=updated"></a>
+        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
+            <img alt="GitHub Actions Build" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/build.yaml?logo=github&logoColor=white&label=build"></a>
+        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
+            <img alt="GitHub Actions Test" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/test.yaml?logo=github&logoColor=white&label=test"></a>
+        <a href="{{ site.discord_invite }}" title="GitHub" target="_blank" rel="noopener">
+            <img  alt="Join Discord" src="https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da"></a>
+    </div>
 
-<p>
-    If you find any bugs please
-    <a href="{{ site.github_url }}/issues" target="_blank" rel="noopener">Open an Issue</a>.
-    If you have any ideas, suggestions, or requests; submit a
-    <a href="{{ site.github_url }}/discussions/categories/feature-requests" target="_blank" rel="noopener">Feature Request</a>.
-    You may also get support on the
-    <a href="{{ site.discord_invite }}" target="_blank" rel="noopener">Discord Server</a>.
-</p>
+    <p class="lead">
+        A Self-Hosted Django File Manager for Uploading and Sharing;
+        designed to work with client apps such as <a href="https://github.com/ShareX/ShareX" target="_blank" rel="noopener">ShareX</a> and
+        <a href="https://github.com/flameshot-org/flameshot" target="_blank" rel="noopener">Flameshot</a>. Django Files is currently
+        functional but <strong>Under Active Development</strong>. Expect breaking changes until an official
+        <a href="{{ site.github_url }}/releases" target="_blank" rel="noopener">release</a> is made.
+    </p>
 
-<h2>Running</h2>
+    <p>
+        If you find any bugs please
+        <a href="{{ site.github_url }}/issues" target="_blank" rel="noopener">Open an Issue</a>.
+        If you have any ideas, suggestions, or requests; submit a
+        <a href="{{ site.github_url }}/discussions/categories/feature-requests" target="_blank" rel="noopener">Feature Request</a>.
+        You may also get support on the
+        <a href="{{ site.discord_invite }}" target="_blank" rel="noopener">Discord Server</a>.
+    </p>
 
-<p>Django Files is designed to run with Docker.</p>
+    <h2>Running</h2>
 
-<h3>
-    Docker Run
-    <a href="#" class="small clip" data-clipboard-target="#docker-run-inline">
-        <i class="fa-solid fa-copy"></i></a>
-</h3>
-<pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-run-inline">
-docker run --name "django-files" -d --restart unless-stopped  \
-  -p 80:80  -v /data/django-files:/data/media  \
-  -e SECRET=07Y5uGMWF8icYIJXsKPpbdMm  \
-  -e USERNAME=testuser  \
-  -e PASSWORD=testpass  \
-    ghcr.io/django-files/django-files:latest
-</code></pre>
+    <p>Django Files is designed to run with Docker.</p>
 
-<h3>
-    Docker Compose
-    <a href="#" class="small clip" data-clipboard-target="#docker-compose-inline">
-        <i class="fa-solid fa-copy"></i></a>
-</h3>
-<pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-compose-inline">
-version: '3'
+    <h3>
+        Docker Run
+        <a href="#" class="small clip" data-clipboard-target="#docker-run-inline">
+            <i class="fa-solid fa-copy"></i></a>
+    </h3>
+    <pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-run-inline">
+    docker run --name "django-files" -d --restart unless-stopped  \
+      -p 80:80  -v /data/django-files:/data/media  \
+      -e SECRET=07Y5uGMWF8icYIJXsKPpbdMm  \
+      -e USERNAME=testuser  \
+      -e PASSWORD=testpass  \
+        ghcr.io/django-files/django-files:latest
+    </code></pre>
 
-services:
-  django-files:
-    image: ghcr.io/django-files/django-files:latest
-    environment:
-      SECRET: "07Y5uGMWF8icYIJXsKPpbdMm"
-      USERNAME: "testuser"
-      PASSWORD: "testpass"
+    <h3>
+        Docker Compose
+        <a href="#" class="small clip" data-clipboard-target="#docker-compose-inline">
+            <i class="fa-solid fa-copy"></i></a>
+    </h3>
+    <pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-compose-inline">
+    version: '3'
+
+    services:
+      django-files:
+        image: ghcr.io/django-files/django-files:latest
+        environment:
+          SECRET: "07Y5uGMWF8icYIJXsKPpbdMm"
+          USERNAME: "testuser"
+          PASSWORD: "testpass"
+        volumes:
+          - media_dir:/data/media
+        ports:
+          - "80:80"
+
     volumes:
-      - media_dir:/data/media
-    ports:
-      - "80:80"
+      media_dir:
+    </code></pre>
 
-volumes:
-  media_dir:
-</code></pre>
+</div>
