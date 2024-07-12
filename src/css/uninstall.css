@@ -1,8 +1,5 @@
 body {
     background: url('https://picsum.photos/1920/1080') no-repeat center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -11,10 +8,11 @@ body {
     margin-right: 15px;
 }
 
-#login-outer {
-    background: rgba(0 0 0 / 50%);
+#content-wrapper {
+    background: rgba(0 0 0 / 70%);
     filter: drop-shadow(15px 15px 12px #000000);
     backdrop-filter: blur(6px);
+    max-width: 800px;
 }
 
 .form-control {

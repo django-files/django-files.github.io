@@ -1,5 +1,18 @@
 /* CSS for global */
 
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-underline-offset: 0.125em;
+}
+
+.toast-container {
+    max-width: 260px;
+    width: 100%;
+}
+
 #back-to-top {
     position: fixed;
     bottom: 64px;
@@ -8,24 +21,37 @@
     z-index: 3;
 }
 
-.toast-container {
-    max-width: 260px;
-    width: 100%;
-}
-
 @media (max-width: 575px) {
-    .right-icons {
-        display: flex;
-        flex-direction: row;
+    .nav-icons .nav-link {
+        padding-right: 7px;
     }
-    .right-icons .nav-item {
-        margin-right: 15px;
+    .nav-icons .nav-item + .nav-item .nav-link {
+        padding-left: 7px;
     }
 }
 
 @media (min-width: 576px) {
     footer li + li::before {
         content: '•';
-        margin-right: 0.3rem;
+        margin-right: 0.3em;
     }
+}
+
+/* Grow */
+.hvr-grow-lg,
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+.hvr-grow:hover {
+    transform: scale(1.1);
+}
+.hvr-grow-lg:hover {
+    transform: scale(1.2);
 }
