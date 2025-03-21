@@ -6,6 +6,7 @@ on:
       - "master"
     paths:
       - "src/**"
+      - ".github/workflows/build.yaml"
   workflow_dispatch:
 
 permissions:
