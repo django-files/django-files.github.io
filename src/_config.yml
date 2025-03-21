@@ -7,19 +7,19 @@ author: Shane/Ralph
 site_name: Django Files
 
 menu:
-    - name: Home
-      link: /
-    - name: Docs
-      link: /docs/
-    - name: iOS App
-      link: /ios/
-    - name: Web Extension
-      link: /extension/
-    - name: Screen Shots
-      link: /screenshots/
+  - name: Home
+    link: /
+  - name: Docs
+    link: /docs/
+  - name: iOS App
+    link: /ios/
+  - name: Web Extension
+    link: /extension/
+  - name: Screen Shots
+    link: /screenshots/
 
 github_name: django-files/web-extension
-github_url: https://github.com/django-files/django-files
+extension_github: https://github.com/django-files/web-extension
 
 chrome_id: abpbiefojfkekhkjnpakpekkpeibnjej
 chrome_url: https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej
@@ -30,6 +30,7 @@ firefox_url: https://addons.mozilla.org/en-US/firefox/addon/django-files/
 discord_invite: https://discord.gg/wXy6m2X8wY
 discord_server: 899171661457293343
 
-extension_github: https://github.com/django-files/web-extension
 github_owner_repo: django-files/django-files
+github_url: https://github.com/django-files/django-files
+github_org: https://github.com/django-files
 relay_url: https://relay.cssnr.com/discord/1258944618389569566
