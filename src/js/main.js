@@ -3,6 +3,9 @@
 document
     .querySelectorAll('[data-clipboard-text], [data-clipboard-target]')
     .forEach((el) => el.addEventListener('click', (e) => e.preventDefault()))
+// document
+//     .querySelectorAll('[data-bs-toggle="tooltip"]')
+//     .forEach((el) => new bootstrap.Tooltip(el))
 
 const backToTop = document.getElementById('back-to-top')
 
@@ -29,10 +32,41 @@ if (typeof ClipboardJS !== 'undefined') {
         }
     })
     clipboard.on('error', function (event) {
-        // console.debug('clipboard.error:', event)
+        console.log('clipboard.error:', event)
         showToast('Clipboard Copy Failed', 'warning')
     })
 }
+
+// document.addEventListener('DOMContentLoaded', domContentLoaded)
+//
+// async function domContentLoaded() {
+//     // console.debug('DOMContentLoaded')
+//
+//     // Register Service Worker
+//     if ('serviceWorker' in navigator) {
+//         await registerServiceWorker()
+//     }
+// }
+//
+// async function registerServiceWorker() {
+//     try {
+//         const registration = await navigator.serviceWorker.register('/sw.js', {
+//             scope: '/',
+//         })
+//         // console.debug('registerServiceWorker:', registration)
+//         if (registration.installing) {
+//             console.debug('Service worker: installing')
+//         } else if (registration.waiting) {
+//             console.debug('Service worker: waiting')
+//         } else if (registration.active) {
+//             console.debug('Service worker: active')
+//         } else {
+//             console.warn('Service worker unknown:', registration)
+//         }
+//     } catch (error) {
+//         console.error('Service Worker Registration Error:', error)
+//     }
+// }
 
 /**
  * On Scroll Callback
@@ -53,7 +87,7 @@ function onScroll() {
  * Show Bootstrap Toast
  * @function showToast
  * @param {String} message
- * @param {String} type
+ * @param {String} [type]
  */
 function showToast(message, type = 'success') {
     console.debug(`showToast: ${type}: ${message}`)
@@ -83,4 +117,17 @@ function debounce(fn, timeout = 250) {
         clearTimeout(timeoutID)
         timeoutID = setTimeout(() => fn(...args), timeout)
     }
+}
+
+const animateCSS = (selector, animation, prefix = 'animate__') => {
+    const name = `${prefix}${animation}`
+    const node = document.querySelector(selector)
+    node.classList.add(`${prefix}animated`, name)
+    function handleAnimationEnd(event) {
+        event.stopPropagation()
+        node.classList.remove(`${prefix}animated`, name)
+    }
+    node.addEventListener('animationend', handleAnimationEnd, {
+        once: true,
+    })
 }

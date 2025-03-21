@@ -1,7 +1,7 @@
 // JS for screenshots.html
 
-const shotsEl = document.getElementById('swiper-shots')
-const thumbsEl = document.getElementById('swiper-thumbs')
+const swiperImages = document.getElementById('swiper-images')
+const swiperThumbs = document.getElementById('swiper-thumbs')
 
 for (const shot of screenShots) {
     // console.debug('shot', shot)
@@ -11,21 +11,21 @@ for (const shot of screenShots) {
     img.src = shot
     img.alt = shot
     div.appendChild(img)
-    shotsEl.appendChild(div)
-    thumbsEl.appendChild(div.cloneNode(true))
+    swiperImages.appendChild(div)
+    swiperThumbs.appendChild(div.cloneNode(true))
 }
 
-const swiper = new Swiper('.mySwiper', {
+const thumbs = new Swiper('.thumbs', {
     freeMode: true,
     grabCursor: true,
     loop: true,
     mousewheel: true,
-    slidesPerView: 5,
+    slidesPerView: 4,
     spaceBetween: 10,
     watchSlidesProgress: true,
 })
 
-new Swiper('.mySwiper2', {
+const swiper = new Swiper('.images', {
     grabCursor: true,
     effect: 'fade',
     loop: true,
@@ -44,6 +44,6 @@ new Swiper('.mySwiper2', {
         type: 'fraction',
     },
     thumbs: {
-        swiper: swiper,
+        swiper: thumbs,
     },
 })

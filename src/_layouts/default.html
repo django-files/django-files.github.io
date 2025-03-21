@@ -7,7 +7,7 @@
     <title>{{ site.site_name }} - {{ page.title }}</title>
 
     {% if page.noindex %}
-        <meta name="robots" content="noindex, nofollow">
+        <meta name="robots" content="noindex">
     {% endif %}
 
     <meta name="author" content="{{ site.author }}"/>
@@ -21,6 +21,8 @@
     <meta property="og:url" content="{{ "/" | absolute_url }}">
     <meta property="og:image" content="{{ "/media/logo.png" | absolute_url }}">
 
+    <meta name="darkreader-lock">
+
     {% if page.dark != true %}
         <script type="text/javascript" src="{{ "/js/theme.js" | relative_url }}"></script>
     {% endif %}
@@ -33,6 +35,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{ "/css/main.css" | relative_url }}">
 
+    {% if page.title == 'Screen Shots' %}
+        <link rel="stylesheet" href="{{ "/dist/swiper/swiper-bundle.min.css" | relative_url }}">
+        <link rel="stylesheet" href="{{ "/css/screenshots.css" | relative_url }}">
+    {% endif %}
     {% if page.title == 'Uninstall' %}
         <link rel="stylesheet" href="{{ "/css/uninstall.css" | relative_url }}">
     {% endif %}
@@ -43,71 +49,90 @@
 <div id="tsparticles"></div>
 
 <header>
-    <nav class="navbar navbar-expand-sm bg-body-tertiary mb-2" aria-label="Primary Navigation">
+    <nav aria-label="Primary Navigation" class="navbar navbar-expand-md bg-body-tertiary mb-2">
         <div class="container-fluid">
-            <a class="mx-2" href="{{ "/" | relative_url }}">
-                <img src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" alt="logo" class="my-auto"></a>
+            <a class="px-2" href="{{ "/" | relative_url }}">
+                <img alt="logo" src="{{ "/media/logo.png" | relative_url }}" width="30" height="30" class="my-auto"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse me-auto " id="navbarSupportedContent">
+            <div class="collapse navbar-collapse me-auto" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     {% for item in site.menu %}
                         <li class="nav-item">
-                            <a class="nav-link {% if page.title == item.name %}active{% endif %}"
+                            <a class="nav-link {% if page.permalink == item.link %}active{% endif %}"
                                href="{{ item.link | relative_url }}" {% if item.external %}target="_blank"{% endif %}>
                                 {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
                         </li>
                     {% endfor %}
-                </ul>
+                </ul> <!-- main navigation -->
                 <ul class="navbar-nav nav-icons d-flex flex-row">
+
                     <li class="nav-item">
                         <a class="nav-link hvr-grow-lg" href="{{ site.discord_invite }}" target="_blank" rel="noopener">
                             <i class="fa-brands fa-discord fa-xl"></i></a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link hvr-grow-lg" href="{{ site.github_url }}" target="_blank" rel="noopener">
+                        <a class="nav-link hvr-grow-lg" href="{{ site.github_url }}?tab=readme-ov-file#readme" target="_blank" rel="noopener">
                             <i class="fa-brands fa-github fa-xl"></i></a>
                     </li>
-                </ul>
-            </div>
-        </div>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link hvr-grow ms-1" id="bd-theme-disabled" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="min-width: 56px;">
+                            <i id="theme-icon" class="fa-solid fa-circle-half-stroke fa-lg" style="min-width: 20px;"></i> <i class="fa-solid fa-caret-down fa-xs mx-1"></i></a>
+                        <ul class="dropdown-menu auto dropdown-menu-end" aria-labelledby="bd-theme-disabled">
+                            <li><button class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-regular fa-moon" style="min-width: 16px;"></i> <span class="ms-3">Dark</span></button></li>
+                            <li><button class="dropdown-item" data-bs-theme-value="light" aria-pressed="false">
+                                    <i class="fa-solid fa-sun" style="min-width: 16px;"></i> <span class="ms-3">Light</span></button></li>
+                            <li><button class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke" style="min-width: 16px;"></i> <span class="ms-3">Auto</span></button></li>
+                        </ul>
+                    </li>
+                </ul> <!-- icons -->
+            </div> <!-- navbar -->
+        </div> <!-- container -->
     </nav>
 </header>
+
 
 <main class="flex-grow-1 px-0 px-sm-3">
     {{ content }}
 </main>
 
-<footer class="footer mt-auto px-1 flex-shrink-0 bg-body-tertiary">
-    <div class="container-fluid py-2">
-        <div class="d-flex flex-column flex-md-row">
-            <div class="me-md-auto">
-                <a class="text-decoration-none link-body-emphasis" href="{{ site.github_url }}" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i> {{ site.site_name }}</a>
-            </div>
-            <div class="ms-md-auto">
-                <nav aria-label="Secondary Navigation">
-                    <ol class="list-inline mb-1 d-flex flex-column flex-sm-row">
-                        {% for item in site.menu %}
+
+{% if page.nofooter != true %}
+    <footer class="footer mt-auto px-1 flex-shrink-0 bg-body-tertiary">
+        <div class="container-fluid py-2">
+            <div class="d-flex flex-column flex-md-row">
+                <div class="me-md-auto mb-2 mb-md-0">
+                    <a class="link-body-emphasis text-decoration-none" href="{{ site.github_url }}?tab=readme-ov-file#readme" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i> {{ site.site_name }}</a>
+                </div>
+                <div class="ms-md-auto">
+                    <nav aria-label="Secondary Navigation">
+                        <ol class="list-inline mb-1 d-flex flex-column flex-sm-row">
+                            {% for item in site.menu %}
+                                <li class="list-inline-item mb-2 mb-sm-0">
+                                    <a class="link-body-emphasis text-decoration-none {% if page.permalink == item.link %}fw-bold{% endif %}"
+                                       href="{{ item.link | relative_url }}" {% if item.external %}target="_blank"{% endif %}>
+                                        {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
+                                </li>
+                            {% endfor %}
                             <li class="list-inline-item">
-                                <a class="text-decoration-none link-body-emphasis {% if page.title == item.name %}fw-bold{% endif %}"
-                                   href="{{ item.link | relative_url }}" {% if item.external %}target="_blank"{% endif %}>
-                                    {{ item.name }}{% if item.external %} <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>{% endif %}</a>
+                                <a class="link-body-emphasis text-decoration-none" href="{{ site.discord_invite }}" target="_blank">
+                                    Discord <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></a>
                             </li>
-                        {% endfor %}
-                        <li class="list-inline-item">
-                            <a class="text-decoration-none link-body-emphasis" href="{{ site.discord_invite }}" target="_blank">
-                                Discord <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
-                        </li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
-    </div>
-</footer>
+                        </ol>
+                    </nav>
+                </div> <!-- bottom navigation -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </footer>
+{% endif %}
 
 <button type="button" class="btn btn-outline-secondary" id="back-to-top">
     <i class="fa-regular fa-square-caret-up"></i>

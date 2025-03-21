@@ -9,17 +9,21 @@ description: A Feature Packed Self-Hosted Django/Docker File Manager for Sharing
 
     <h1 class="animate__animated animate__zoomIn"><i class="fa-solid fa-house-laptop me-2"></i> {{ site.site_name }}</h1>
 
-    <div class="mb-2" style="min-height: 20px;">
-        <a href="{{ site.extension_github }}/releases/latest" target="_blank" rel="noopener">
-            <img alt="GitHub Release Version" src="https://img.shields.io/github/v/release/{{ site.github_owner_repo }}?logo=github"></a>
-        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-            <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/django-files/django-files?logo=github&logoColor=white&label=updated"></a>
-        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-            <img alt="GitHub Actions Build" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/build.yaml?logo=github&logoColor=white&label=build"></a>
-        <a href="{{ site.chrome_url }}" target="_blank" rel="noopener">
-            <img alt="GitHub Actions Test" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/test.yaml?logo=github&logoColor=white&label=test"></a>
-        <a href="{{ site.discord_invite }}" title="GitHub" target="_blank" rel="noopener">
-            <img  alt="Join Discord" src="https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da"></a>
+    <div class="mb-2 badges" style="min-height: 28px;">
+        <a href="{{ site.github_url }}/releases/latest" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Release Version" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/v/release/{{ site.github_owner_repo }}?style=for-the-badge&logo=github"></a>
+        <a href="{{ site.github_url }}?tab=readme-ov-file#readme" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Language" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/languages/top/{{ site.github_owner_repo }}?style=for-the-badge&logo=htmx&logoColor=white"></a>
+        <a href="{{ site.github_url }}" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Last Commit" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/last-commit/{{ site.github_owner_repo }}?style=for-the-badge&logo=github"></a>
+        <a href="{{ site.github_url }}/stargazers" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Stars" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/stars/{{ site.github_owner_repo }}?style=for-the-badge&logo=github&logoColor=white"></a>
+        <a href="{{ site.github_url }}" title="Mozilla" target="_blank" rel="noopener">
+            <img alt="GitHub Workflow Build" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/build.yaml?style=for-the-badge&logo=github&logoColor=white&label=build"></a>
+        <a href="{{ site.github_url }}" title="Google" target="_blank" rel="noopener">
+            <img alt="GitHub Workflow Build" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/actions/workflow/status/{{ site.github_owner_repo }}/test.yaml?style=for-the-badge&logo=github&logoColor=white&label=test"></a>
+        <a href="{{ site.discord_invite }}" title="Discord" target="_blank" rel="noopener">
+            <img alt="Join Discord" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/discord/{{ site.discord_server }}?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=7289da"></a>
     </div>
 
     <p class="lead">
@@ -48,37 +52,37 @@ description: A Feature Packed Self-Hosted Django/Docker File Manager for Sharing
         <a href="#" class="small clip" data-clipboard-target="#docker-run-inline">
             <i class="fa-solid fa-copy"></i></a>
     </h3>
-    <pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-run-inline">
-    docker run --name "django-files" -d --restart unless-stopped  \
-      -p 80:80  -v /data/django-files:/data/media  \
-      -e SECRET=07Y5uGMWF8icYIJXsKPpbdMm  \
-      -e USERNAME=testuser  \
-      -e PASSWORD=testpass  \
-        ghcr.io/django-files/django-files:latest
-    </code></pre>
+<pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-run-inline">
+docker run --name "django-files" -d --restart unless-stopped  \
+  -p 80:80  -v /data/django-files:/data/media  \
+  -e SECRET=07Y5uGMWF8icYIJXsKPpbdMm  \
+  -e USERNAME=testuser  \
+  -e PASSWORD=testpass  \
+    ghcr.io/django-files/django-files:latest
+</code></pre>
 
     <h3>
         Docker Compose
         <a href="#" class="small clip" data-clipboard-target="#docker-compose-inline">
             <i class="fa-solid fa-copy"></i></a>
     </h3>
-    <pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-compose-inline">
-    version: '3'
+<pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-compose-inline">
+version: '3'
 
-    services:
-      django-files:
-        image: ghcr.io/django-files/django-files:latest
-        environment:
-          SECRET: "07Y5uGMWF8icYIJXsKPpbdMm"
-          USERNAME: "testuser"
-          PASSWORD: "testpass"
-        volumes:
-          - media_dir:/data/media
-        ports:
-          - "80:80"
-
+services:
+  django-files:
+    image: ghcr.io/django-files/django-files:latest
+    environment:
+      SECRET: "07Y5uGMWF8icYIJXsKPpbdMm"
+      USERNAME: "testuser"
+      PASSWORD: "testpass"
     volumes:
-      media_dir:
-    </code></pre>
+      - media_dir:/data/media
+    ports:
+      - "80:80"
+
+volumes:
+  media_dir:
+</code></pre>
 
 </div>

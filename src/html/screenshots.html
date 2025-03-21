@@ -1,54 +1,28 @@
 ---
+layout: default
 permalink: /screenshots/
 title: Screen Shots
-description: Screen Shots of Django Files, a feature Packed Self-Hosted Django/Docker File Manager for Sharing Files.
+description: Screen Shots of the Web Extension, extracted links and other features.
+noindex: true
+nofooter: true
 ---
 
-<!doctype html>
-<html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.site_name }} - {{ page.title }}</title>
-
-    <meta name="author" content="{{ site.author }}"/>
-    <meta name="title" content="{{ site.site_name }} - {{ page.title }}"/>
-    <meta name="description" content="{{ site.site_name }} - {{ page.description }}"/>
-
-    <meta property="og:author" content="{{ site.author }}">
-    <meta property="og:title" content="{{ site.site_name }} - {{ page.title }}">
-    <meta property="og:description" content="{{ site.site_name }} - {{ page.description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ "/" | absolute_url }}">
-    <meta property="og:image" content="{{ "/media/logo.png" | absolute_url }}">
-
-    <link rel="icon" href="{{ "/favicon.ico" | relative_url }}" sizes="any">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relative_url }}">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.css" integrity="sha512-8L/PDtOcxXEvVD1mWAzCBco7FQ/AHyG/bhg7yQpekicDmRwZA/iNDKpn+MJkYNEVg+qSLkxWLjsHtK781oAaWw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ "/css/screenshots.css" | relative_url }}">
-
-</head>
-<body>
-
-<div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
-    <div class="swiper-wrapper" id="swiper-shots">
-        {% comment %}<div class="swiper-slide"><img src="01_Login.png" alt="01_Login.png"></div>{% endcomment %}
+<div class="swiper-container images">
+    <div class="swiper-wrapper" id="swiper-images">
+        <!-- Swiper slides -->
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
 </div>
-<div thumbsSlider="" class="swiper mySwiper">
+<div thumbsSlider="" class="swiper-container thumbs">
     <div class="swiper-wrapper" id="swiper-thumbs">
-        {% comment %}<div class="swiper-slide"><img src="01_Login.png" alt="01_Login.png"></div>{% endcomment %}
+        <!-- Swiper slides -->
     </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js" integrity="sha512-ILrDRgEiIojcsKyBy12ZU7MtOf78F2fj3vve/AN5i94iXLQ8PZN7IJYPphmAGdwZmTv4N+OzY3trvqGIEY87VA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+{% comment %}<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>{% endcomment %}
+<script type="text/javascript" src="{{ "/dist/swiper/swiper-bundle.min.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/vars.js" | relative_url }}"></script>
 <script type="text/javascript" src="{{ "/js/screenshots.js" | relative_url }}"></script>
-
-</body>
-</html>

@@ -12,8 +12,9 @@ const discordUsername = 'Django Files'
 const uninstallMessage = `${discordUsername} Uninstall, Version: **${version}**`
 const discordAvatar = 'https://django-files.github.io/media/logo.png'
 
+const contentWrapper = document.getElementById('content-wrapper')
 const uninstallForm = document.getElementById('uninstall-form')
-const uninstallResponse = document.getElementById('uninstall-response')
+const userResponse = document.getElementById('user-response')
 const inputCount = document.getElementById('input-count')
 const submitBtn = document.getElementById('submit-btn')
 const errorAlert = document.getElementById('error-alert')
@@ -23,15 +24,27 @@ const bugReport = document.getElementById('bug-report')
 uninstallForm.addEventListener('change', formChange)
 uninstallForm.addEventListener('submit', formSubmit)
 
-uninstallResponse.addEventListener('input', function () {
+userResponse.addEventListener('input', function () {
     inputCount.textContent = this.value.length
 })
 
-window.addEventListener('focus', function () {
-    if (!bugReport.classList.contains('animate__shakeX')) {
-        bugReport.classList.add('animate__shakeX')
-    }
-})
+contentWrapper.addEventListener(
+    'animationend',
+    () => {
+        // console.debug('contentWrapper: animationend')
+        contentWrapper.classList.remove(
+            'animate__animated',
+            'animate__backInDown'
+        )
+    },
+    { once: true }
+)
+
+window.addEventListener(
+    'focus',
+    () => bugReport.classList.add('animate__shakeX'),
+    { once: true }
+)
 
 document.addEventListener('DOMContentLoaded', async function () {
     if (version) {
@@ -73,23 +86,25 @@ async function formSubmit(event) {
     console.debug('formSubmit:', event)
     event.preventDefault()
     errorAlert.style.display = 'none'
-    const url = event.target.elements['discord-webhook'].value
+    const url = event.target.elements['relay-url'].value
     const notUsed = event.target.elements['not-used'].checked
     const notExpected = event.target.elements['not-expected'].checked
     const notWorking = event.target.elements['not-working'].checked
-    const feedbackText = event.target.elements['uninstall-response'].value
+    const feedbackText = event.target.elements['user-response'].value.trim()
     if (!(notUsed || notExpected || notWorking || feedbackText)) {
-        uninstallResponse.focus()
+        userResponse.focus()
+        animateCSS('textarea', 'shakeX')
         return console.warn('No Data to Send.')
     }
     submitBtn.classList.add('disabled')
 
     const parser = new UAParser()
-    const res = parser.getResult()
+    const r = parser.getResult()
+    const type = r.browser.type ? ` - ${r.browser.type}` : ''
     const lines = [
         uninstallMessage,
-        `**Browser**: ${res.browser.name} ${res.browser.version} (${res.engine.name})`,
-        `**System**: ${res.os.name} ${res.os.version} (${res.cpu.architecture})`,
+        `**Browser**: ${r.browser.name} ${r.browser.major} (${r.engine.name} - ${r.browser.version})`,
+        `**System**: ${r.os.name} ${r.os.version} (${r.cpu.architecture}${type})`,
         `${getBoolIcon(notUsed)} Not Used`,
         `${getBoolIcon(notExpected)} Not as Expected`,
         `${getBoolIcon(notWorking)} Not Working`,
@@ -102,9 +117,10 @@ async function formSubmit(event) {
         const response = await sendDiscord(url, lines.join('\n'))
         // console.debug('response:', response)
         if (response.status >= 200 && response.status <= 299) {
-            document
-                .querySelector('#content-wrapper')
-                .classList.add('animate__animated', 'animate__backOutUp')
+            contentWrapper.classList.add(
+                'animate__animated',
+                'animate__backOutUp'
+            )
             window.location = redirect
         } else {
             console.warn(`Error ${response.status}`, response)
@@ -119,6 +135,14 @@ async function formSubmit(event) {
     submitBtn.classList.remove('disabled')
 }
 
+/**
+ * @function sendDiscord
+ * @global discordUsername
+ * @global discordAvatar
+ * @param {String} url Discord Webhook URL
+ * @param {String} content Message Contents
+ * @return {Promise<Response>}
+ */
 async function sendDiscord(url, content) {
     // console.debug('sendDiscord', url, content)
     // console.debug('content.length', content.length)
@@ -137,6 +161,11 @@ async function sendDiscord(url, content) {
     return await fetch(url, opts)
 }
 
+/**
+ * @function getBoolIcon
+ * @param {Boolean} value
+ * @return {String}
+ */
 function getBoolIcon(value) {
     if (value) {
         return '✅'
