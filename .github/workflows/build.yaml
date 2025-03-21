@@ -2,7 +2,10 @@ name: "Pages"
 
 on:
   push:
-    branches: ["master"]
+    branches:
+      - "master"
+    paths:
+      - "src/**"
   workflow_dispatch:
 
 permissions:
@@ -33,7 +36,7 @@ jobs:
           source: "./src"
 
       - name: "Upload Pages Artifact"
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
 
@@ -50,6 +53,6 @@ jobs:
     steps:
       - name: "Deploy Pages"
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
         with:
           artifact_name: github-pages
