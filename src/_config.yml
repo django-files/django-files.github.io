@@ -20,7 +20,7 @@ menu:
   - name: Browser
     link: /extension/
 
-github_name: django-files/web-extension
+ext_repo: web-extension
 extension_github: https://github.com/django-files/web-extension
 
 chrome_id: abpbiefojfkekhkjnpakpekkpeibnjej

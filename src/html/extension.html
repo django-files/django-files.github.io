@@ -10,6 +10,10 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
     <h1 class="animate__animated animate__zoomIn"><i class="fa-solid fa-globe me-2"></i> {{ page.title }}</h1>
 
     <div class="mb-2 badges" style="min-height: 28px;">
+        <a href="{{ site.github_url }}/releases/latest" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Release Version" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/v/release/{{ site.github_org }}/{{ site.ext_repo }}?style=for-the-badge&logo=github"></a>
+        <a href="{{ site.github_full_url }}?tab=readme-ov-file#readme" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Language" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/languages/top/{{ site.github_org }}/{{ site.ext_repo }}?style=for-the-badge&logo=htmx&logoColor=white"></a>
         <a href="{{ site.chrome_url }}" title="Google" target="_blank" rel="noopener">
             <img alt="Chrome Web Store Users" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/chrome-web-store/users/{{ site.chrome_id }}?style=for-the-badge&logo=google&logoColor=white&label=google%20users"></a>
         <a href="{{ site.firefox_url }}" title="Mozilla" target="_blank" rel="noopener">
@@ -18,14 +22,12 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
             <img alt="Chrome Web Store Rating" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/chrome-web-store/rating/{{ site.chrome_id }}?style=for-the-badge&logo=google&logoColor=white"></a>
         <a href="{{ site.firefox_url }}" title="Mozilla" target="_blank" rel="noopener">
             <img alt="Mozilla Add-on Rating" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/amo/rating/{{ site.firefox_id }}?style=for-the-badge&logo=mozilla&logoColor=white"></a>
-        <a href="{{ site.extension_github }}" title="GitHub" target="_blank" rel="noopener">
-            <img alt="GitHub Stars" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/stars/{{ site.github_name }}?style=for-the-badge&logo=github&logoColor=white"></a>
+        <a href="{{ site.github_org_url }}/{{ site.ext_repo }}" title="GitHub" target="_blank" rel="noopener">
+            <img alt="GitHub Stars" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/stars/{{ site.github_org }}/{{ site.ext_repo }}?style=for-the-badge&logo=github&logoColor=white"></a>
         <a href="{{ site.chrome_url }}" title="Google" target="_blank" rel="noopener">
             <img alt="Chrome Web Store Version" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?style=for-the-badge&label=chrome&logo=googlechrome"></a>
         <a href="{{ site.firefox_url }}" title="Mozilla" target="_blank" rel="noopener">
             <img alt="Mozilla Add-on Version" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/amo/v/{{ site.firefox_id }}?style=for-the-badge&label=firefox&logo=firefox"></a>
-        <a href="{{ site.github_url }}/releases/latest" title="GitHub" target="_blank" rel="noopener">
-            <img alt="GitHub Release Version" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/v/release/{{ site.github_name }}?style=for-the-badge&logo=github"></a>
         <a href="{{ site.discord_invite }}" title="Discord" target="_blank" rel="noopener">
             <img alt="Join Discord" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/discord/{{ site.discord_server }}?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=7289da"></a>
     </div>
@@ -39,8 +41,8 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
             {% comment %}<img src="https://img.shields.io/chrome-web-store/v/{{ site.chrome_id }}?label=chrome&logo=googlechrome" alt="Chrome Web Store Version"></a>{% endcomment %}
         {% comment %}<a href="{{ site.firefox_url }}" target="_blank" rel="noopener">{% endcomment %}
             {% comment %}<img src="https://img.shields.io/amo/v/{{ site.firefox_id }}?label=firefox&logo=firefox" alt="Mozilla Add-on Version"></a>{% endcomment %}
-        {% comment %}<a href="{{ site.extension_github }}/releases/latest" target="_blank" rel="noopener">{% endcomment %}
-            {% comment %}<img src="https://img.shields.io/github/v/release/{{ site.github_name }}?logo=github" alt="GitHub Release Version"></a>{% endcomment %}
+        {% comment %}<a href="{{ site.github_org_url }}/{{ site.ext_repo }}/releases/latest" target="_blank" rel="noopener">{% endcomment %}
+            {% comment %}<img src="https://img.shields.io/github/v/release/{{ site.github_org }}/{{ site.ext_repo }}?logo=github" alt="GitHub Release Version"></a>{% endcomment %}
         {% comment %}<a href="{{ site.discord_invite }}" title="Discord" target="_blank" rel="noopener">{% endcomment %}
             {% comment %}<img src="https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da" alt="Join Discord"></a>{% endcomment %}
     {% comment %}</div>{% endcomment %}
@@ -196,9 +198,9 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 
     <p>
         Please submit an
-        <a href="{{ site.extension_github }}/issues" target="_blank">Issue</a>
+        <a href="{{ site.github_org_url }}/{{ site.ext_repo }}/issues" target="_blank">Issue</a>
         if you find bugs and open a
-        <a href="{{ site.extension_github }}/discussions/categories/feature-requests" target="_blank">Feature Request</a>
+        <a href="{{ site.github_org_url }}/{{ site.ext_repo }}/discussions/categories/feature-requests" target="_blank">Feature Request</a>
         if you have any ideas, suggestions, or requests.
         You may also get support on the
         <a href="{{ site.discord_invite }}" target="_blank" rel="noopener">Discord Server</a>.
@@ -206,7 +208,7 @@ description: Django Files Chrome Web Extension and Firefox Browser Addon.
 
     <p>
         More information can be found on GitHub:
-        <a href="{{ site.extension_github }}?tab=readme-ov-file#readme" target="_blank" rel="noopener">{{ site.github_name }}</a>
+        <a href="{{ site.github_org_url }}/{{ site.ext_repo }}?tab=readme-ov-file#readme" target="_blank" rel="noopener">{{ site.github_org }}/{{ site.ext_repo }}</a>
     </p>
 
     <script type="text/javascript" src="{{ "/js/extension.js" | relative_url }}"></script>
