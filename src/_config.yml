@@ -11,12 +11,14 @@ menu:
     link: /
   - name: Docs
     link: /docs/
-  - name: iOS App
-    link: /ios/
-  - name: Web Extension
-    link: /extension/
   - name: Screen Shots
     link: /screenshots/
+  - name: iOS
+    link: /ios/
+  - name: Android
+    link: /android/
+  - name: Browser
+    link: /extension/
 
 github_name: django-files/web-extension
 extension_github: https://github.com/django-files/web-extension
@@ -30,7 +32,12 @@ firefox_url: https://addons.mozilla.org/en-US/firefox/addon/django-files/
 discord_invite: https://discord.gg/wXy6m2X8wY
 discord_server: 899171661457293343
 
-github_owner_repo: django-files/django-files
-github_url: https://github.com/django-files/django-files
-github_org: https://github.com/django-files
 relay_url: https://relay.cssnr.com/discord/1258944618389569566
+
+github_org: django-files
+github_repo: django-files
+github_org_url: https://github.com/django-files
+github_full_url: https://github.com/django-files/django-files
+
+ios_repo: ios-client
+android_repo: android-client
