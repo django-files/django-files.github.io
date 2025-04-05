@@ -68,9 +68,8 @@ description: A Feature Packed Self-Hosted Django/Docker File Manager for Sharing
 <pre class="border border-success rounded-3 px-3 pb-3"><code id="docker-run-inline">
 docker run --name "django-files" -d --restart unless-stopped  \
   -p 80:80  -v /data/django-files:/data/media  \
-  -e SECRET=07Y5uGMWF8icYIJXsKPpbdMm  \
-  -e USERNAME=testuser  \
-  -e PASSWORD=testpass  \
+  -e USERNAME=myadminuser  \
+  -e PASSWORD=pleasechangeme  \
     ghcr.io/django-files/django-files:latest
 </code></pre>
 
@@ -86,9 +85,8 @@ services:
   django-files:
     image: ghcr.io/django-files/django-files:latest
     environment:
-      SECRET: "07Y5uGMWF8icYIJXsKPpbdMm"
-      USERNAME: "testuser"
-      PASSWORD: "testpass"
+      USERNAME: "myadminuser"
+      PASSWORD: "pleasechangeme"
     volumes:
       - media_dir:/data/media
     ports:
