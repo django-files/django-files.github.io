@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 const repoDir = './src/screenshots'
-const varsFile = './src/js/vars.js'
+const varsFile = './src/js/shots-server.js'
 const varName = 'screenShots'
 const relPath = ''
 

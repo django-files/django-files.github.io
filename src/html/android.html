@@ -30,25 +30,46 @@ description: Native Android Application for Django Files...
             <img alt="Discord" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/discord/{{ site.discord_server }}?style=for-the-badge&logo=discord&logoColor=white&label=discord&color=7289da"></a>
     </div>
 
-    <a class="btn btn-lg btn-success mt-3" href="{{ site.github_org_url }}/{{ site.android_repo }}/releases/latest/download/django-files.apk" role="button">
-        <i class="fa-brands fa-android me-2"></i> Download for Android</a>
-
-    <h2 class="mt-3">Setup</h2>
-    <ul class="ms-2">
-        <li>Install and open the app.</li>
-        <li>Enter the URL to your Django Files server.</li>
-        <li>Log in as you normally would on the website.</li>
-        <li>Done! You can now share any file to your Django Files server...</li>
-    </ul>
+    <div class="d-flex flex-column flex-lg-row">
+        <div>
+            <a class="btn btn-lg btn-success mt-3" href="{{ site.github_org_url }}/{{ site.android_repo }}/releases/latest/download/django-files.apk" role="button">
+                <i class="fa-brands fa-android me-2"></i> Download for Android</a>
+            <h2 class="mt-3">Setup</h2>
+            <ul class="ms-2">
+                <li>Install and open the app.</li>
+                <li>Enter the URL to your Django Files server.</li>
+                <li>Log in as you normally would on the website.</li>
+                <li>Done! You can now share any file to your Django Files server...</li>
+            </ul>
+            <div thumbsSlider="" class="swiper-container thumbs">
+                <div class="swiper-wrapper" id="swiper-thumbs">
+                    <!-- Swiper slides -->
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="swiper-container images">
+                <div class="swiper-wrapper" id="swiper-images">
+                    <!-- Swiper slides -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
 
     <div class="alert alert-info mt-3" role="alert">
         Please see the
         <a href="{{ site.github_org_url }}/{{ site.android_repo }}?tab=readme-ov-file#readme" class="alert-link" target="_blank" rel="noopener">
-            README.md on GitHub</a> for more information.
+            README.md on GitHub</a>
+        for more information.
     </div>
 
-    <p>
-
-    </p>
-
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="{{ "/js/shots-android.js" | relative_url }}"></script>
+<script type="text/javascript" src="{{ "/js/screenshots.js" | relative_url }}"></script>
+
