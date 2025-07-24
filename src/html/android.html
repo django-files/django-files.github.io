@@ -14,7 +14,7 @@ description: Native Android Application for Django Files...
             <img alt="GitHub Release Version" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/v/release/{{ site.github_org }}/{{ site.android_repo }}?style=for-the-badge&logo=github"></a>
         <a href="{{ site.github_org_url }}/{{ site.android_repo }}" title="GitHub Top Language" target="_blank" rel="noopener">
             <img alt="GitHub Top Language" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/languages/top/{{ site.github_org }}/{{ site.android_repo }}?style=for-the-badge&logo=htmx"></a>
-        <a href="{{ site.github_org_url }}/{{ site.android_repo }}/releases/latest/download/django-files.apk" title="GitHub Downloads" target="_blank" rel="noopener">
+        <a href="{{ site.android_latest_apk }}" title="GitHub Downloads" target="_blank" rel="noopener">
             <img alt="GitHub Downloads" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/downloads/{{ site.github_org }}/{{ site.android_repo }}/total?style=for-the-badge&logo=github"></a>
         <a href="{{ site.github_org_url }}/{{ site.android_repo }}/graphs/commit-activity" title="GitHub Last Commit" target="_blank" rel="noopener">
             <img alt="GitHub Last Commit" class="mb-1 animate__animated animate__zoomIn" src="https://img.shields.io/github/last-commit/{{ site.github_org }}/{{ site.android_repo }}?style=for-the-badge&logo=github&label=updated"></a>
@@ -32,14 +32,16 @@ description: Native Android Application for Django Files...
 
     <div class="d-flex flex-column flex-lg-row">
         <div>
-            <a class="btn btn-lg btn-success mt-3" href="{{ site.github_org_url }}/{{ site.android_repo }}/releases/latest/download/django-files.apk" role="button">
-                <i class="fa-brands fa-android me-2"></i> Download for Android</a>
+            <a title="Get it on GitHub" href="{{ site.android_latest_apk }}" target="_blank">
+                <img alt="Get it on GitHub" src="{{ "/media/badges/github.png" | relative_url }}" width="245" height="80"></a>
+            <a title="Get it on Obtainium" href="{{ site.android_obtainium_link }}" target="_blank">
+                <img alt="Get it on Obtainium" src="{{ "/media/badges/obtainium.png" | relative_url }}" width="245" height="80"></a>
             <h2 class="mt-3">Setup</h2>
             <ul class="ms-2">
                 <li>Install and open the app.</li>
-                <li>Enter the URL to your Django Files server.</li>
-                <li>Log in as you normally would on the website.</li>
-                <li>Done! You can now share any file to your Django Files server...</li>
+                <li>From your phone, scan the QR Code on the site.</li>
+                <li>Or, Log in as you normally would on the website.</li>
+                <li>Done! You can now share files to your Django Files server.</li>
             </ul>
             <div thumbsSlider="" class="swiper-container thumbs">
                 <div class="swiper-wrapper" id="swiper-thumbs">

@@ -41,3 +41,6 @@ github_full_url: https://github.com/django-files/django-files
 
 ios_repo: ios-client
 android_repo: android-client
+
+android_latest_apk: https://github.com/django-files/android-client/releases/latest/download/app-release.apk
+android_obtainium_link: https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/django-files/android-client
