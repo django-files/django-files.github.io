@@ -4,9 +4,8 @@
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/django-files/docs?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/django-files/docs)
 [![GitHub Discussions](https://img.shields.io/github/discussions/django-files/django-files?logo=github)](https://github.com/django-files/django-files/discussions)
 [![GitHub Repo Stars](https://img.shields.io/github/stars/django-files/django-files?style=flat&logo=github)](https://github.com/django-files/django-files/stargazers)
-[![GitHub Org Stars](https://img.shields.io/github/stars/cssnr?style=flat&logo=github&label=org%20stars)](https://cssnr.github.io/)
+[![GitHub Org Stars](https://img.shields.io/github/stars/django-files?style=flat&logo=github&label=org%20stars)](https://github.com/django-files)
 [![Discord](https://img.shields.io/discord/899171661457293343?logo=discord&logoColor=white&label=discord&color=7289da)](https://discord.gg/wXy6m2X8wY)
-[![Ko-fi](https://img.shields.io/badge/Ko--fi-72a5f2?logo=kofi&label=Support)](https://ko-fi.com/cssnr)
 
 # Django Files Documentation
 
@@ -16,12 +15,14 @@ Website and Documentation for the [Django Files](https://github.com/django-files
 
 These [docs](docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
 
-| Location                                       | Description                          |
-| ---------------------------------------------- | ------------------------------------ |
-| [docs](docs)                                   | Documentation Root (Markdown files). |
-| [docs/public](docs/public)                     | Static Root (copied to docs root).   |
-| [.vitepress](.vitepress)                       | VitePress Configuration Root.        |
-| [.vitepress/config.mts](.vitepress/config.mts) | VitePress Configuration File.        |
+| Location                                       | Description                                                                             |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [docs](docs)                                   | Documentation Root (Markdown files).                                                    |
+| [docs/index.md](docs/index.md)                 | Special [VitePress Home Page](https://vitepress.dev/reference/default-theme-home-page). |
+| [docs/team.md](docs/team.md)                   | Special [VitePress Team Page](https://vitepress.dev/reference/default-theme-team-page). |
+| [docs/public](docs/public)                     | Static Root (copied to docs root).                                                      |
+| [.vitepress](.vitepress)                       | VitePress Configuration Root.                                                           |
+| [.vitepress/config.mts](.vitepress/config.mts) | VitePress Configuration File.                                                           |
 
 ## Development
 

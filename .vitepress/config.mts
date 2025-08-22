@@ -57,8 +57,10 @@ export default defineConfig({
       {
         text: 'Links',
         items: [
-          { text: 'Our Team', link: '/team' },
           { text: 'GitHub Organization', link: 'https://github.com/django-files' },
+          { text: 'Server Source Code', link: 'https://github.com/django-files/django-files' },
+          { text: 'Docs Source Code', link: 'https://github.com/django-files/docs' },
+          { text: 'Our Team', link: '/team' },
         ],
       },
     ],
@@ -102,7 +104,7 @@ export default defineConfig({
             items: [
               { text: 'iOS', link: '/clients/ios' },
               { text: 'Android', link: '/clients/android' },
-              { text: 'Web Browser', link: '/clients/browser' },
+              { text: 'Browser Addon', link: '/clients/browser' },
               { text: 'Command Line', link: '/clients/cli' },
             ],
           },

@@ -30,4 +30,13 @@ features:
   - title: Documentation
     details: Review Features and Options
     link: /docs/home
+  - title: Open Source
+    details: View Source Code on GitHub
+    link: https://github.com/django-files/django-files
+  - title: GitHub Organization
+    details: View the GitHub Organization
+    link: https://github.com/django-files
+  - title: Our Team
+    details: Meet our Team of Bots
+    link: /team
 ---

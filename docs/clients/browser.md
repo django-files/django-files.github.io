@@ -1,6 +1,6 @@
-# Web Browser
+# Browser Addon
 
-A Web Extension is available for all major browsers including Firefox Android.
+A Web Extension (Addon) is available for all major browsers including Firefox Android.
 
 - [Google](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej) _Chrome, Edge, Brave, etc._
 - [Mozilla](https://addons.mozilla.org/addon/django-files) _Firefox and Firefox Android_
