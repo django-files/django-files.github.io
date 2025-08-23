@@ -46,11 +46,8 @@ View in Full Screen
     :lazyPreloadPrevNext="1"
     :effect="'coverflow'"
     class="swiper">
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/1.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/2.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/3.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/4.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/5.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/6.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
+<SwiperSlide v-for="i in 6" :key="i">
+    <img :src="`https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/${i}.jpg`" alt="Loading..." loading="lazy" />
+</SwiperSlide>
 </Swiper>
 </ClientOnly>

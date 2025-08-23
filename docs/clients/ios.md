@@ -49,12 +49,8 @@ View in Full Screen
     :lazyPreloadPrevNext="2"
     :effect="'coverflow'"
     class="swiper">
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/1.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/2.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/3.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/4.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/5.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/6.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/7.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
+<SwiperSlide v-for="i in 7" :key="i">
+    <img :src="`https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs/${i}.jpg`" alt="Loading..." loading="lazy" />
+</SwiperSlide>
 </Swiper>
 </ClientOnly>

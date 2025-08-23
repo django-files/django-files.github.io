@@ -68,23 +68,8 @@ View in Full Screen
     :lazyPreloadPrevNext="1"
     :effect="'coverflow'"
     class="swiper" style="height: 396px;">
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/01.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/02.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/03.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/04.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/05.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/06.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/07.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/08.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/09.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/10.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/11.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/12.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/13.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/14.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/15.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/16.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/17.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
-<SwiperSlide><img src="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/18.jpg" alt="Screenshot" loading="lazy" /></SwiperSlide>
+<SwiperSlide v-for="i in 18" :key="i">
+  <img :src="`https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/${String(i).padStart(2, '0')}.jpg`" alt="Loading..." loading="lazy" />
+</SwiperSlide>
 </Swiper>
 </ClientOnly>
