@@ -17,8 +17,8 @@
 
 .swiper {
     height: 512px;
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
+    /*padding-top: 4px !important;*/
+    /*padding-bottom: 4px !important;*/
     background-color: var(--vp-code-block-bg);
     border-radius: 8px;
 }

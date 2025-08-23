@@ -13,6 +13,9 @@ hero:
     - text: Get Started
       link: /guides/get-started
       theme: brand
+    - text: Features
+      link: /guides/features
+      theme: brand
     - text: Clients
       link: /clients/home
       theme: alt
@@ -24,6 +27,9 @@ features:
   - title: Guides
     details: View Setup and Uploading Guides
     link: /guides/get-started
+  - title: Features
+    details: View Screenshots and Features
+    link: /guides/features
   - title: Clients
     details: Get Upload Clients for All Platforms
     link: /clients/home
@@ -33,9 +39,6 @@ features:
   - title: Open Source
     details: View Source Code on GitHub
     link: https://github.com/django-files/django-files
-  - title: GitHub Organization
-    details: View the GitHub Organization
-    link: https://github.com/django-files
   - title: Our Team
     details: Meet our Team of Bots
     link: /team

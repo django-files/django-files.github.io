@@ -79,6 +79,10 @@ export default defineConfig({
               { text: 'Uploading', link: '/guides/upload' },
             ],
           },
+          {
+            text: 'Features',
+            link: '/guides/features',
+          },
         ],
       },
       {
@@ -99,7 +103,7 @@ export default defineConfig({
             ],
           },
           {
-            text: 'In House',
+            text: 'Native',
             collapsed: false,
             items: [
               { text: 'iOS', link: '/clients/ios' },
