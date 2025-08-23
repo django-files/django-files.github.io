@@ -26,13 +26,13 @@ const members = [
             { icon: 'github', link: 'https://github.com/smashedr' },
             { icon: 'mozilla', link: 'https://addons.mozilla.org/en-US/firefox/user/18021912/' },
             { icon: 'googleplay', link: 'https://play.google.com/store/apps/dev?id=8933468453824534870' },
+            { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
             {
                 icon: {
                     svg: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" style="fill: none;" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>',
                 },
                 link: 'https://cssnr.github.io/',
             },
-            { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
         ],
     },
     {
