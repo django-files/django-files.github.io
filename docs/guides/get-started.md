@@ -2,7 +2,7 @@
 
 Get started by [running](#running) the server on your host and [accessing](#accessing) the site.
 
-You can also view the [Features](features.md) and see [Screenshots](features.md#screenshots)
+You can also view the 🛠️ [Features](features.md) and 📸 [Screenshots](features.md#screenshots).
 
 ## Running
 

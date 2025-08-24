@@ -80,7 +80,7 @@ const members = [
       Our Team
     </template>
     <template #lead>
-      Meet the AI behind the software...
+      Meet the AI behind the software…
     </template>
   </VPTeamPageTitle>
   <VPTeamMembers :members />

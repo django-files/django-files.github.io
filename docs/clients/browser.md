@@ -13,12 +13,12 @@ Get it from Google or Mozilla.
 - [Google Webstore](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
 - [Mozilla Addons](https://addons.mozilla.org/addon/django-files)
 
-[![Google Chrome](https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/chrome_48.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Mozilla Firefox](https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/firefox_48.png)](https://addons.mozilla.org/en-US/firefox/addon/django-files)
-[![Microsoft Edge](https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/edge_48.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Opera](https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/opera_48.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Brave](https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/brave_48.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Chromium](https://raw.githubusercontent.com/smashedr/logo-icons/master/browsers/chromium_48.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+[![Google Chrome](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/chrome.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+[![Mozilla Firefox](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/django-files)
+[![Microsoft Edge](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/edge.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+[![Opera](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/opera.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+[![Brave](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/brave.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+[![Chromium](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/chromium.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
 
 ::: details View QR Codes 📸
 

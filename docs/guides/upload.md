@@ -1,6 +1,8 @@
 # Uploading
 
-There are more ways to upload than we can keep up with...
+There are more ways to upload than we can keep up with…
+
+[[toc]]
 
 ## Website
 
@@ -13,6 +15,8 @@ If you navigate to an album, any files you drop will upload to that album.
 To upload files from elsewhere you will need your Auth Token and Site URL.
 
 From the user menu you can Copy Token or URL.
+
+This is needed to use an upload [Client](#clients).
 
 ## Clients
 
