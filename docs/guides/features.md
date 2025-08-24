@@ -43,24 +43,8 @@ Missing a feature? Submit a [Feature Request](https://github.com/django-files/dj
 
 ## Screenshots
 
-<!--suppress CheckEmptyScriptTag, HtmlUnknownTag -->
-<FullscreenButton />
-<ClientOnly>
-<Swiper
-    :modules="[Keyboard, Mousewheel, Navigation, Pagination, EffectCoverflow]"
-    :slides-per-view="1"
-    :pagination="{ clickable: true, type: 'fraction' }"
-    :coverflowEffect="{ slideShadows: false }"
-    :keyboard="true"
-    :mousewheel="true"
-    :navigation="true"
-    :grabCursor="true"
-    :loop="true"
-    :lazyPreloadPrevNext="1"
-    :effect="'coverflow'"
-    class="swiper" style="height: 396px;">
-<SwiperSlide v-for="i in 18" :key="i">
-    <img :src="`https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs/${String(i).padStart(2, '0')}.jpg`" alt="Loading..." loading="lazy" />
-</SwiperSlide>
-</Swiper>
-</ClientOnly>
+<VpSwiper
+base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs"
+:number-of-slides="18"
+height="396px"
+/>

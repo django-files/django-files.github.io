@@ -41,24 +41,7 @@ Alternatively you can copy and paste your URL and Token into the Settings.
 
 ## Screenshots
 
-<!--suppress CheckEmptyScriptTag, HtmlUnknownTag -->
-<FullscreenButton />
-<ClientOnly>
-<Swiper
-    :modules="[Keyboard, Mousewheel, Navigation, Pagination, EffectCoverflow]"
-    :slides-per-view="1"
-    :pagination="{ clickable: true, type: 'fraction' }"
-    :coverflowEffect="{ slideShadows: false }"
-    :keyboard="true"
-    :mousewheel="true"
-    :navigation="true"
-    :grabCursor="true"
-    :loop="true"
-    :lazyPreloadPrevNext="1"
-    :effect="'coverflow'"
-    class="swiper">
-<SwiperSlide v-for="i in 6" :key="i">
-    <img :src="`https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs/${i}.jpg`" alt="Loading..." loading="lazy" />
-</SwiperSlide>
-</Swiper>
-</ClientOnly>
+<VpSwiper
+base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs"
+:number-of-slides="6"
+/>
