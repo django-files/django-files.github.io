@@ -8,9 +8,18 @@ More details available on GitHub: https://github.com/django-files/android-client
 
 ## Install
 
-- [GitHub](https://github.com/django-files/android-client/releases/latest/download/app-release.apk)
-- [Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/django-files/android-client)
-- Google Play _(Closed Testing)_
+Get it from GitHub or Obtainium.
+
+[![GitHub](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/badges/get/github.png)](https://github.com/django-files/android-client/releases/latest/download/app-release.apk)
+[![Obtainium](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/badges/get/obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/django-files/android-client)
+
+::: details View QR Codes 📸
+[![Firefox Android](https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/qr-code-github.png)](https://github.com/django-files/android-client/releases/latest/download/app-release.apk)
+
+[![Firefox Android](https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/qr-code-obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/django-files/android-client)
+:::
+
+_Note: Google Play is currently in closed testing._
 
 ## Setup
 

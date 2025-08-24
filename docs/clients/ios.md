@@ -8,7 +8,13 @@ More details available on GitHub: https://github.com/django-files/ios-client
 
 ## Install
 
-- [Apple App Store](https://apps.apple.com/us/app/django-files/id6742523003)
+Get it from the Apple App Store.
+
+[![Apple App Store](https://df.cssnr.com/raw/apple.png)](https://apps.apple.com/us/app/django-files/id6742523003)
+
+::: details View QR Code 📸
+[![Apple App Store](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/qr/apple.png)](https://apps.apple.com/us/app/django-files/id6742523003)
+:::
 
 ## Setup
 

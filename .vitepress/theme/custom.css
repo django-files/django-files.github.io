@@ -15,6 +15,11 @@
     margin-top: 0 !important;
 }
 
+/*NOTE: Override block on images */
+img {
+    display: inline-block;
+}
+
 .swiper {
     height: 512px;
     /*padding-top: 4px !important;*/
