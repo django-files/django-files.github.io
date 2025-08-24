@@ -4,7 +4,7 @@ A Native iOS Application is Available.
 
 [[toc]]
 
-More details available on GitHub: https://github.com/django-files/ios-client
+More details on GitHub: https://github.com/django-files/ios-client
 
 ## Install
 

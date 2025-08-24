@@ -4,7 +4,7 @@ A Native Android Application is Available.
 
 [[toc]]
 
-More details available on GitHub: https://github.com/django-files/android-client
+More details on GitHub: https://github.com/django-files/android-client
 
 ## Install
 

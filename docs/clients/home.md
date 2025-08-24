@@ -1,6 +1,8 @@
 # Clients
 
-## Supported
+Many [Popular](#popular) clients are supported, including [Native](#native) clients for Mobile and others.
+
+## Popular
 
 Popular upload clients with one-click configuration:
 

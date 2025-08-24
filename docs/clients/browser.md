@@ -1,10 +1,10 @@
 # Browser Addon
 
-A Web Extension (Addon) is available for all major browsers including Firefox Android.
+A Web Extension is available for all major browsers including Firefox Android.
 
 [[toc]]
 
-More details available on GitHub: https://github.com/django-files/web-extension
+More details on GitHub: https://github.com/django-files/web-extension
 
 ## Install
 

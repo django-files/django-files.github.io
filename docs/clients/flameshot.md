@@ -2,6 +2,8 @@
 
 For Linux, you should use the [Flameshot](https://flameshot.org/) client.
 
+[[toc]]
+
 ## Setup
 
 Navigate to: `User Settings` > `Clients`

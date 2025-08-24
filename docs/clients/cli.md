@@ -1,12 +1,25 @@
 # Command Line Interface
 
-A CLI is available in Python 3 and can be installed with `pip`.
+A CLI is available for Python 3 from [PyPi](https://pypi.org/project/zipline-cli).
+
+[[toc]]
+
+More details on GitHub: https://github.com/cssnr/zipline-cli
+
+## Install
+
+The easiest way to install is with `pip`.
 
 ```shell
 python -m pip install zipline-cli
 ```
 
-More details available on GitHub: https://github.com/cssnr/zipline-cli
+Alternatively, you can install from source.
+
+```shell
+git clone https://github.com/cssnr/zipline-cli.git
+python3 -m pip install -e zipline-cli
+```
 
 ## Setup
 

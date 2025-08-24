@@ -2,6 +2,8 @@
 
 For Windows, you should use the [ShareX](https://getsharex.com/) client.
 
+[[toc]]
+
 ## Setup
 
 Navigate to: `User Settings` > `Clients`
