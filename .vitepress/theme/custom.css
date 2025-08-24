@@ -10,14 +10,21 @@
     --swiper-navigation-sides-offset: 4px;
 }
 
-/*NOTE: Override Team Page Top Margin */
+/*NOTE: Override block on images */
+img {
+    display: inline-block;
+}
+
+/*NOTE: Override Team Page top margin */
 .VPTeamPage {
     margin-top: 0 !important;
 }
 
-/*NOTE: Override block on images */
-img {
-    display: inline-block;
+/*NOTE: inline-button style for FullscreenButton.vue */
+.inline-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .swiper {

@@ -1,6 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 
+import FullscreenButton from './components/FullscreenButton.vue'
+
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 
@@ -18,11 +20,17 @@ export default {
     enhanceApp({ app }) {
         app.component('Swiper', Swiper)
         app.component('SwiperSlide', SwiperSlide)
-
         app.config.globalProperties.Keyboard = Keyboard
         app.config.globalProperties.Mousewheel = Mousewheel
         app.config.globalProperties.Navigation = Navigation
         app.config.globalProperties.Pagination = Pagination
         app.config.globalProperties.EffectCoverflow = EffectCoverflow
+
+        app.component('FullscreenButton', FullscreenButton)
+        app.config.globalProperties.$requestFullscreen = () => {
+            console.debug('requestFullscreen')
+            // noinspection JSIgnoredPromiseFromCall
+            document.querySelector('.swiper')?.requestFullscreen()
+        }
     },
 }
