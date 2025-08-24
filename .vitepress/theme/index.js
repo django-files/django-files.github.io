@@ -18,6 +18,8 @@ export default {
     ...DefaultTheme,
 
     enhanceApp({ app }) {
+        app.component('FullscreenButton', FullscreenButton)
+
         app.component('Swiper', Swiper)
         app.component('SwiperSlide', SwiperSlide)
         app.config.globalProperties.Keyboard = Keyboard
@@ -25,12 +27,5 @@ export default {
         app.config.globalProperties.Navigation = Navigation
         app.config.globalProperties.Pagination = Pagination
         app.config.globalProperties.EffectCoverflow = EffectCoverflow
-
-        app.component('FullscreenButton', FullscreenButton)
-        app.config.globalProperties.$requestFullscreen = () => {
-            console.debug('requestFullscreen')
-            // noinspection JSIgnoredPromiseFromCall
-            document.querySelector('.swiper')?.requestFullscreen()
-        }
     },
 }

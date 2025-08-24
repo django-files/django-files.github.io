@@ -1,5 +1,22 @@
+<script setup>
+const requestFullscreen = () => document.querySelector('.swiper')?.requestFullscreen()
+</script>
+
+<style>
+:root {
+  --swiper-pagination-fraction-color: var(--vp-c-purple-1);
+  --swiper-navigation-color: var(--vp-c-purple-1);
+  --swiper-navigation-sides-offset: 4px;
+}
+.inline-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+</style>
+
 <template>
-  <button @click="$requestFullscreen()" class="inline-button">
+  <button @click="requestFullscreen" class="inline-button">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"

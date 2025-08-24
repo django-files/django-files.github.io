@@ -4,10 +4,6 @@
 
     --vp-home-hero-image-filter: blur(44px);
     --vp-home-hero-image-background-image: linear-gradient(0deg, rgba(86, 90, 169, 0.6), rgba(86, 90, 169, 0.6));
-
-    --swiper-pagination-fraction-color: var(--vp-c-purple-1);
-    --swiper-navigation-color: var(--vp-c-purple-1);
-    --swiper-navigation-sides-offset: 4px;
 }
 
 /*NOTE: Override block on images */
@@ -20,13 +16,7 @@ img {
     margin-top: 0 !important;
 }
 
-/*NOTE: inline-button style for FullscreenButton.vue */
-.inline-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
+/*NOTE: Swiper styles, move this out of global css */
 .swiper {
     height: 512px;
     /*padding-top: 4px !important;*/
