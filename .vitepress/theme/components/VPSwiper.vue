@@ -13,22 +13,12 @@ const props = defineProps({
   numberOfSlides: { type: Number, required: true },
   altTextPrefix: { type: String, default: 'Loading' },
   fileExt: { type: String, default: 'jpg' },
+  padStart: { type: Number, default: 1 },
   height: { type: String, default: '496px' },
 
-  padStart: { type: Number, default: 1 },
   slidesPerView: { type: Number, default: 1 },
-  breakpoints: {
-    type: Object,
-    default() {
-      return {}
-    },
-  },
-  pagination: {
-    type: Object,
-    default() {
-      return {}
-    },
-  },
+  breakpoints: { type: Object, default: () => ({}) },
+  pagination: { type: Object, default: () => ({}) },
   lazyPreloadPrevNext: { type: Number, default: 2 },
   buttonText: { type: String, default: 'View in Fullscreen' },
   keyboard: { type: Boolean, default: true },
@@ -37,13 +27,14 @@ const props = defineProps({
   grabCursor: { type: Boolean, default: true },
   loop: { type: Boolean, default: true },
   effect: { type: String, default: '' },
-  coverflowEffect: {
-    type: Object,
-    default() {
-      return { slideShadows: false }
-    },
-  },
+  coverflowEffect: { type: Object, default: () => ({ slideShadows: false }) },
 })
+
+const baseUrl = props.baseUrl.replace(/\/$/, '')
+const getImageSource = (index) => {
+  const fileName = String(index).padStart(props.padStart, '0')
+  return `${baseUrl}/${fileName}.${props.fileExt}`
+}
 
 const swiperEl = ref(null)
 const requestFullscreen = () => {
@@ -120,11 +111,7 @@ const requestFullscreen = () => {
       :coverflow-effect="props.coverflowEffect"
     >
       <SwiperSlide v-for="i in props.numberOfSlides" :key="i">
-        <img
-          :src="`${props.baseUrl}/${String(i).padStart(props.padStart, '0')}.${props.fileExt}`"
-          :alt="`${props.altTextPrefix} ${i}`"
-          loading="lazy"
-        />
+        <img :src="getImageSource(i)" :alt="`${props.altTextPrefix} ${i}`" loading="lazy" />
       </SwiperSlide>
     </Swiper>
   </ClientOnly>
