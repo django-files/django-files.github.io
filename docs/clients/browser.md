@@ -41,7 +41,9 @@ Alternatively you can copy and paste your URL and Token into the Settings.
 
 ## Screenshots
 
-<VpSwiper
+<VPSwiper
 base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/docs"
 :number-of-slides="6"
+:pagination="{ clickable: true, type: 'fraction' }"
+effect="coverflow"
 />

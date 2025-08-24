@@ -29,8 +29,10 @@ Click `Add Server` and you are done!
 
 ## Screenshots
 
-<VpSwiper
+<VPSwiper
 base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs"
 :number-of-slides="7"
 :breakpoints="{ 1096: { slidesPerView: 3 } }"
+:pagination="{ clickable: true, type: 'fraction' }"
+effect="coverflow"
 />

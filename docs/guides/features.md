@@ -43,8 +43,10 @@ Missing a feature? Submit a [Feature Request](https://github.com/django-files/dj
 
 ## Screenshots
 
-<VpSwiper
+<VPSwiper
 base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs"
 :number-of-slides="18"
 height="396px"
+:pagination="{ clickable: true, type: 'fraction' }"
+effect="coverflow"
 />

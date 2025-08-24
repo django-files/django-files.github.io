@@ -34,8 +34,10 @@ Click `Add Server` and you are done!
 
 ## Screenshots
 
-<VpSwiper
+<VPSwiper
 base-url="https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/screenshots"
 :number-of-slides="18"
 :breakpoints="{ 1096: { slidesPerView: 3 } }"
+:pagination="{ clickable: true, type: 'fraction' }"
+effect="coverflow"
 />

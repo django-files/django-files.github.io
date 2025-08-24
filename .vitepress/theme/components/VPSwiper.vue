@@ -11,16 +11,38 @@ import 'swiper/css/effect-coverflow'
 const props = defineProps({
   baseUrl: { type: String, required: true },
   numberOfSlides: { type: Number, required: true },
-  slidesPerView: { type: Number, default: 1 },
-  breakpoints: { type: Object, default: () => ({}) },
-  lazyPreloadPrevNext: { type: Number, default: 2 },
+  altTextPrefix: { type: String, default: 'Loading' },
+  fileExt: { type: String, default: 'jpg' },
   height: { type: String, default: '496px' },
+
+  padStart: { type: Number, default: 1 },
+  slidesPerView: { type: Number, default: 1 },
+  breakpoints: {
+    type: Object,
+    default() {
+      return {}
+    },
+  },
+  pagination: {
+    type: Object,
+    default() {
+      return {}
+    },
+  },
+  lazyPreloadPrevNext: { type: Number, default: 2 },
   buttonText: { type: String, default: 'View in Fullscreen' },
   keyboard: { type: Boolean, default: true },
   mousewheel: { type: Boolean, default: true },
   navigation: { type: Boolean, default: true },
   grabCursor: { type: Boolean, default: true },
   loop: { type: Boolean, default: true },
+  effect: { type: String, default: '' },
+  coverflowEffect: {
+    type: Object,
+    default() {
+      return { slideShadows: false }
+    },
+  },
 })
 
 const swiperEl = ref(null)
@@ -82,23 +104,27 @@ const requestFullscreen = () => {
   <ClientOnly>
     <Swiper
       ref="swiperEl"
+      class="swiper"
+      :style="{ height: props.height }"
       :modules="[Keyboard, Mousewheel, Navigation, Pagination, EffectCoverflow]"
       :slides-per-view="props.slidesPerView"
       :breakpoints="props.breakpoints"
-      :pagination="{ clickable: true, type: 'fraction' }"
-      :coverflow-effect="{ slideShadows: false }"
+      :pagination="props.pagination"
       :keyboard="props.keyboard"
       :mousewheel="props.mousewheel"
       :navigation="props.navigation"
       :grab-cursor="props.grabCursor"
       :loop="props.loop"
       :lazy-preload-prev-next="props.lazyPreloadPrevNext"
-      effect="coverflow"
-      class="swiper"
-      :style="{ height: props.height }"
+      :effect="props.effect"
+      :coverflow-effect="props.coverflowEffect"
     >
       <SwiperSlide v-for="i in props.numberOfSlides" :key="i">
-        <img :src="`${props.baseUrl}/${i}.jpg`" :alt="`Loading ${i}`" loading="lazy" />
+        <img
+          :src="`${props.baseUrl}/${String(i).padStart(props.padStart, '0')}.${props.fileExt}`"
+          :alt="`${props.altTextPrefix} ${i}`"
+          loading="lazy"
+        />
       </SwiperSlide>
     </Swiper>
   </ClientOnly>
