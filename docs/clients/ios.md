@@ -33,6 +33,7 @@ Click `Add Server` and you are done!
 base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/ios-client/docs"
 :number-of-slides="7"
 :breakpoints="{ 1096: { slidesPerView: 3 } }"
-:pagination="{ clickable: true, type: 'fraction' }"
+:pagination="{ type: 'fraction' }"
 effect="coverflow"
+:coverflow-effect="{ slideShadows: false }"
 />
