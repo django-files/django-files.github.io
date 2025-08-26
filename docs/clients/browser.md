@@ -4,7 +4,11 @@ A Web Extension is available for all major browsers including Firefox Android.
 
 [[toc]]
 
-More details on GitHub: https://github.com/django-files/web-extension
+<VPCardLink
+title="Visit GitHub for More Info"
+href="https://github.com/django-files/web-extension"
+src="/images/logos/github.png"
+/>
 
 ## Install
 

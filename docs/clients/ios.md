@@ -4,7 +4,11 @@ A Native iOS Application is Available.
 
 [[toc]]
 
-More details on GitHub: https://github.com/django-files/ios-client
+<VPCardLink
+title="Visit GitHub for More Info"
+href="https://github.com/django-files/ios-client"
+src="/images/logos/github.png"
+/>
 
 ## Install
 

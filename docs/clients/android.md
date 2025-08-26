@@ -4,7 +4,11 @@ A Native Android Application is Available.
 
 [[toc]]
 
-More details on GitHub: https://github.com/django-files/android-client
+<VPCardLink
+title="Visit GitHub for More Info"
+href="https://github.com/django-files/android-client"
+src="/images/logos/github.png"
+/>
 
 ## Install
 

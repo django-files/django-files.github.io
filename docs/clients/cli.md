@@ -4,7 +4,11 @@ A CLI is available for Python 3 from [PyPi](https://pypi.org/project/zipline-cli
 
 [[toc]]
 
-More details on GitHub: https://github.com/cssnr/zipline-cli
+<VPCardLink
+title="Visit GitHub for More Info"
+href="https://github.com/django-files/cssnr/zipline-cli"
+src="/images/logos/github.png"
+/>
 
 ## Install
 
