@@ -32,6 +32,19 @@ Click on the `View QR Authentication Code` button.
 
 Click `Add Server` and you are done!
 
+## Features
+
+- Share or Open any file(s) and automatically copy the URL to the clipboard.
+- Upload Previews for single media and scrolling selection for multiple files.
+- Native File List with Options, Infinite Scroll, and Multi-Select Options.
+- Supports Native Local Login, GitHub OAuth, Google OAuth, and Discord OAuth.
+- Ability to add multiple servers and switch on the fly from the Server List menu.
+- Widget with Stats, Upload Shortcut, Custom Background Update Interval, and More.
+- Automatic Authentication from Authenticated Sessions with QR Code or Deep Link.
+
+> [!INFO]  
+> Missing a feature? Submit a [Feature Request](https://github.com/django-files/android-client/discussions/categories/feature-requests)!
+
 ## Screenshots
 
 <VPSwiper

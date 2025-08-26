@@ -27,6 +27,14 @@ Click on the `View QR Authentication Code` button.
 
 Click `Add Server` and you are done!
 
+## Features
+
+- Share any file (or multiple) and automatically copy the URL to the clipboard.
+- Ability to add multiple servers and switch between them in the server list.
+
+> [!INFO]  
+> Missing a feature? Submit a [Feature Request](https://github.com/django-files/ios-client/discussions/categories/feature-requests)!
+
 ## Screenshots
 
 <VPSwiper

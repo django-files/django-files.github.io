@@ -5,9 +5,8 @@ More features are in progress!
 
 [[toc]]
 
-::: info
-Missing a feature? Submit a [Feature Request](https://github.com/django-files/django-files/discussions/categories/feature-requests) and we will get it added!
-:::
+> [!INFO]  
+> Missing a feature? Submit a [Feature Request](https://github.com/django-files/django-files/discussions/categories/feature-requests)!
 
 ## Core Features
 

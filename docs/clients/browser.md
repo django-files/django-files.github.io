@@ -39,6 +39,18 @@ Click `Authorize Server` and you are done!
 
 Alternatively you can copy and paste your URL and Token into the Settings.
 
+## Features
+
+- View Recent Uploads on Popup
+- Preview Popup Images on Hover
+- Drag and Drop files to the Popup or Sidepanel
+- Right Click any Image, Video, or Audio to Upload
+- Right Click any URL to Shorten
+- Automatically Auth with Django Files
+
+> [!INFO]  
+> Missing a feature? Submit a [Feature Request](https://github.com/django-files/web-extension/discussions/categories/feature-requests)!
+
 ## Screenshots
 
 <VPSwiper
