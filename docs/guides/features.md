@@ -8,6 +8,14 @@ More features are in progress!
 > [!INFO]  
 > Missing a feature? Submit a [Feature Request](https://github.com/django-files/django-files/discussions/categories/feature-requests)!
 
+## Screenshots
+
+<VPSwiper
+base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs"
+:number-of-slides="18"
+:pagination="{ type: 'fraction' }"
+/>
+
 ## Core Features
 
 - Local or S3 storage support
@@ -39,12 +47,3 @@ More features are in progress!
 - Dashboard with user-friendly overview & stats
 - Graph-based analytics (work in progress)
 - File expiration & view counting
-
-## Screenshots
-
-<VPSwiper
-base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/django-files/docs"
-:number-of-slides="18"
-height="396px"
-:pagination="{ type: 'fraction' }"
-/>
