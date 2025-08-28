@@ -59,8 +59,7 @@ export default defineConfig({
         items: [
           { text: 'GitHub Organization', link: 'https://github.com/django-files' },
           { text: 'Server Source Code', link: 'https://github.com/django-files/django-files' },
-          { text: 'Docs Source Code', link: 'https://github.com/django-files/docs' },
-          { text: 'Our Team', link: '/team' },
+          { text: 'Docs Source Code', link: 'https://github.com/django-files/django-files.github.io' },
         ],
       },
     ],
@@ -130,7 +129,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/django-files/docs/blob/master/docs/:path',
+      pattern: 'https://github.com/django-files/django-files.github.io/blob/master/docs/:path',
       text: 'View on GitHub',
     },
 
