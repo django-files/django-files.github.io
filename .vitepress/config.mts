@@ -5,7 +5,7 @@ const settings = {
   name: 'Django Files Upload Server',
   description: {
     short: 'Feature Packed Self-Hosted ShareX Upload Server.',
-    long: 'A Feature Packed, Self-Hosted, Docker File Upload and Sharing Server with Native Clients for All Platforms.',
+    long: 'A Feature Packed, Self-Hosted, File Upload and Sharing Server running in Docker for ShareX with Native Mobile Clients for All Platforms.',
   },
 }
 

@@ -1,11 +1,13 @@
 ---
 # https://vitepress.dev/reference/default-theme-team-page
 layout: page
+sidebar: false
 
 title: Our Team
 ---
 
 <script setup>
+// noinspection JSUnusedGlobalSymbols
 import {
   VPTeamPage,
   VPTeamPageTitle,
@@ -83,5 +85,6 @@ const members = [
       Meet the AI behind the software…
     </template>
   </VPTeamPageTitle>
+  <!--suppress CheckEmptyScriptTag -->
   <VPTeamMembers :members />
 </VPTeamPage>
