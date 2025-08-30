@@ -101,7 +101,7 @@ export default defineConfig({
           },
           {
             text: 'Native',
-            collapsed: true,
+            collapsed: false,
             items: [
               { text: 'iOS', link: '/clients/ios' },
               { text: 'Android', link: '/clients/android' },
