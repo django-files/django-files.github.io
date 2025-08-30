@@ -1,3 +1,9 @@
+---
+next:
+  text: 'Get Started'
+  link: '/guides/get-started'
+---
+
 # Documentation
 
 > [!WARNING]

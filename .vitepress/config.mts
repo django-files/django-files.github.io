@@ -33,14 +33,14 @@ export default defineConfig({
     ['meta', { property: 'og:site_name', content: settings.name }],
     ['meta', { property: 'og:title', content: settings.title }],
     ['meta', { property: 'og:description', content: settings.description.short }],
-    ['meta', { property: 'og:image', content: '/images/logo-lg.png' }],
+    ['meta', { property: 'og:image', content: '/images/logo.png' }],
     ['meta', { property: 'og:image:alt', content: settings.title }],
 
     ['meta', { property: 'twitter:card', content: 'summary' }],
     ['meta', { property: 'twitter:site', content: settings.name }],
     ['meta', { property: 'twitter:title', content: settings.title }],
     ['meta', { property: 'twitter:description', content: settings.description.short }],
-    ['meta', { property: 'twitter:image', content: '/images/logo-lg.png' }],
+    ['meta', { property: 'twitter:image', content: '/images/logo.png' }],
     ['meta', { property: 'twitter:image:alt', content: settings.title }],
   ],
 
@@ -52,7 +52,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guides', link: '/guides/get-started', activeMatch: '/guides/' },
-      { text: 'Clients', link: '/clients/home', activeMatch: '/clients/' },
+      { text: 'Clients', link: '/clients', activeMatch: '/clients/' },
       { text: 'Docs', link: '/docs/home', activeMatch: '/docs/' },
       {
         text: 'Links',
@@ -67,7 +67,6 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guides',
-        collapsed: false,
         items: [
           {
             text: 'Get Started',
@@ -86,12 +85,9 @@ export default defineConfig({
       },
       {
         text: 'Clients',
+        link: '/clients',
         collapsed: false,
         items: [
-          {
-            text: 'Uploaders',
-            link: '/clients/home',
-          },
           {
             text: 'Popular',
             collapsed: false,
@@ -115,7 +111,7 @@ export default defineConfig({
       },
       {
         text: 'Documentation',
-        collapsed: false,
+        collapsed: true,
         items: [{ text: 'Home', link: '/docs/home' }],
       },
     ],

@@ -10,7 +10,7 @@ The directory mounted to `/data/media` has the following structure.
 
 | Directory | Description                                       |
 | --------- | ------------------------------------------------- |
-| `db`      | If using SQLite the databse file is stored here.  |
+| `db`      | If using SQLite the database file is stored here. |
 | `files`   | If using file storage, the files are stored here. |
 | `redis`   | Redis snapshots are stored here.                  |
 

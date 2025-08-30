@@ -1,3 +1,12 @@
+---
+prev:
+  text: 'Features'
+  link: '/guides/features'
+next:
+  text: 'ShareX (Windows)'
+  link: '/clients/sharex'
+---
+
 # Clients
 
 Many [Popular](#popular) clients are supported, including [Native](#native) clients for Mobile and others.

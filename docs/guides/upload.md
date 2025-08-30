@@ -24,4 +24,4 @@ You can download one-click configurations for many clients on the User page.
 
 Navigate to: `User Settings` > `Clients`
 
-There is also a list of [supported clients](../clients/home.md).
+There is also a list of [supported clients](../clients/index.md).

@@ -7,7 +7,7 @@ hero:
   text: Upload Server
   tagline: Feature Packed Self-Hosted ShareX Upload Server
   image:
-    src: /images/logo-lg.png
+    src: /images/logo.png
     alt: Django Files
   actions:
     - text: Get Started
@@ -17,7 +17,7 @@ hero:
       link: /guides/features
       theme: brand
     - text: Clients
-      link: /clients/home
+      link: /clients
       theme: alt
     - text: Documentation
       link: /docs/home
@@ -32,7 +32,7 @@ features:
     link: /guides/features
   - title: Clients
     details: Get Upload Clients for All Platforms
-    link: /clients/home
+    link: /clients
   - title: Documentation
     details: Review Features and Options
     link: /docs/home
