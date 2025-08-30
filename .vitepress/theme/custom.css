@@ -7,8 +7,9 @@
 }
 
 /*NOTE: Override block on images */
-img {
+.vp-doc img {
     display: inline-block;
+    margin-right: 8px;
 }
 
 /*NOTE: Override Team Page top margin */

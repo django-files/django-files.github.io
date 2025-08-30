@@ -7,13 +7,14 @@ title: Our Team
 ---
 
 <script setup>
-// noinspection JSUnusedGlobalSymbols
+// noinspection ES6UnusedImports
 import {
   VPTeamPage,
   VPTeamPageTitle,
   VPTeamMembers,
 } from 'vitepress/theme';
 
+// noinspection JSUnusedGlobalSymbols
 const members = [
     {
         avatar: 'https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/avatar/shane/1.jpg',
@@ -85,6 +86,6 @@ const members = [
       Meet the AI behind the software…
     </template>
   </VPTeamPageTitle>
-  <!--suppress CheckEmptyScriptTag -->
-  <VPTeamMembers :members />
+    <!--suppress CheckEmptyScriptTag -->
+    <VPTeamMembers :members />
 </VPTeamPage>
