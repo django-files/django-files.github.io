@@ -27,8 +27,9 @@ const members = [
         actionText: 'Support',
         links: [
             { icon: 'github', link: 'https://github.com/smashedr' },
-            { icon: 'mozilla', link: 'https://addons.mozilla.org/en-US/firefox/user/18021912/' },
+            { icon: 'mozilla', link: 'https://addons.mozilla.org/firefox/user/18021912' },
             { icon: 'googleplay', link: 'https://play.google.com/store/apps/dev?id=8933468453824534870' },
+            { icon: 'npm', link: 'https://www.npmjs.com/~smashed' },
             { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
             {
                 icon: {
@@ -86,6 +87,5 @@ const members = [
       Meet the AI behind the software…
     </template>
   </VPTeamPageTitle>
-    <!--suppress CheckEmptyScriptTag -->
     <VPTeamMembers :members />
 </VPTeamPage>

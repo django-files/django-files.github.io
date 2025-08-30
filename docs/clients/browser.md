@@ -14,25 +14,20 @@ src="/images/logos/github.png"
 
 Get it from Google or Mozilla.
 
-- [Google Webstore](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+- [Chrome Web Store](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
 - [Mozilla Addons](https://addons.mozilla.org/addon/django-files)
 
-[![Google Chrome](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/chrome.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Mozilla Firefox](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/django-files)
-[![Microsoft Edge](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/edge.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Opera](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/opera.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Brave](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/brave.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
-[![Chromium](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/browsers/56/chromium.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+<BrowserIcons />
 
 ::: details View QR Codes 📸
 
 <h3>Mozilla Firefox Android</h3>
 
-[![Firefox Android](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/qr/mozilla.png)](https://addons.mozilla.org/en-US/firefox/addon/django-files)
+[![Firefox Android](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/qr/mozilla.png)](https://addons.mozilla.org/firefox/addon/django-files)
 
-<h3>Google Chromium</h3>
+<h3>Chrome Web Store</h3>
 
-[![Firefox Android](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/qr/google.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
+[![Chrome Web Store](https://raw.githubusercontent.com/django-files/repo-images/refs/heads/master/web-extension/qr/google.png)](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
 :::
 
 ## Setup

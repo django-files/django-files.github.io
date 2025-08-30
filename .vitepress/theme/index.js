@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 
+import BrowserIcons from './components/BrowserIcons.vue'
 import VPCardLink from './components/VPCardLink.vue'
 
 import VPSwiper from '@cssnr/vitepress-swiper'
@@ -11,6 +12,7 @@ export default {
     ...DefaultTheme,
 
     enhanceApp({ app }) {
+        app.component('BrowserIcons', BrowserIcons)
         app.component('VPCardLink', VPCardLink)
         app.component('VPSwiper', VPSwiper)
     },
