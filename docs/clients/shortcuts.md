@@ -11,5 +11,5 @@ Get started by getting the [shortcut](https://www.icloud.com/shortcuts/9fde67b3a
 
 [![Get Shortcut](https://img.shields.io/badge/get_shortcut-blue?style=for-the-badge&logo=apple)](https://www.icloud.com/shortcuts/9fde67b3aa9c401b86987061e5c359a8)
 
-> [!WARNING]  
-> Setup Documentation for Shortcuts is a Work in Progress.
+> [!TIP]  
+> Shortcuts will eventually be replaced by the [iOS Client](ios.md).

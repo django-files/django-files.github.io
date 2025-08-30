@@ -23,7 +23,9 @@ export default defineConfig({
   title: settings.title,
   description: settings.description.short,
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/logo.png' }],
+
     ['meta', { name: 'darkreader-lock' }],
 
     ['meta', { name: 'theme-color', content: '#565aa9' }],
@@ -60,6 +62,7 @@ export default defineConfig({
           { text: 'GitHub Organization', link: 'https://github.com/django-files' },
           { text: 'Server Source Code', link: 'https://github.com/django-files/django-files' },
           { text: 'Docs Source Code', link: 'https://github.com/django-files/django-files.github.io' },
+          { text: 'Meet Our Team', link: '/team' },
         ],
       },
     ],
@@ -86,7 +89,6 @@ export default defineConfig({
       {
         text: 'Clients',
         link: '/clients',
-        collapsed: false,
         items: [
           {
             text: 'Popular',
@@ -99,7 +101,7 @@ export default defineConfig({
           },
           {
             text: 'Native',
-            collapsed: false,
+            collapsed: true,
             items: [
               { text: 'iOS', link: '/clients/ios' },
               { text: 'Android', link: '/clients/android' },
