@@ -12,21 +12,11 @@ You can also view the 🛠️ [Features](features.md) and 📸 [Screenshots](fea
 
 ## Running
 
-You can use either [Docker Run](#docker-run) or [Docker Compose](#docker-compose).
+The fastest way to get up and running is with [Docker](https://www.docker.com/).
 
-### Docker Run
+::: code-group
 
-```shell
-docker run --name "django-files" -d --restart unless-stopped  \
-  -p 80:80  -v /data/django-files:/data/media  \
-  -e USERNAME=myadminuser  \
-  -e PASSWORD=pleasechangeme  \
-    ghcr.io/django-files/django-files:latest
-```
-
-### Docker Compose
-
-```shell
+```shell [Docker Compose]
 version: '3'
 
 services:
@@ -44,6 +34,18 @@ volumes:
   media_dir:
 ```
 
+```shell [Docker CLI]
+docker run --name "django-files" -d --restart unless-stopped  \
+  -p 80:80  -v /data/django-files:/data/media  \
+  -e USERNAME=myadminuser  \
+  -e PASSWORD=pleasechangeme  \
+    ghcr.io/django-files/django-files:latest
+```
+
+:::
+
+_Note: you can run from source; however, this is currently not documented or supported._
+
 ## Accessing
 
 Once the server is up and running you can access the site from a web browser.
@@ -51,8 +53,6 @@ Once the server is up and running you can access the site from a web browser.
 If running on your localhost with default port mapping, you can access it here:
 
 - http://localhost/
-
-### Credentials
 
 If you set a `USERNAME` or `PASSWORD` environment variable, use those values.
 
@@ -62,3 +62,5 @@ Otherwise, the default credentials are.
 | ------------ | ------- |
 | **username** | `admin` |
 | **password** | `12345` |
+
+Next you can review the [server setup](setup.md) and start [uploading](upload.md) or check out the [features](features.md).

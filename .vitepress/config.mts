@@ -70,20 +70,12 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guides',
+        collapsed: false,
         items: [
-          {
-            text: 'Get Started',
-            collapsed: false,
-            link: '/guides/get-started',
-            items: [
-              { text: 'Server Setup', link: '/guides/setup' },
-              { text: 'Uploading', link: '/guides/upload' },
-            ],
-          },
-          {
-            text: 'Features',
-            link: '/guides/features',
-          },
+          { text: 'Get Started', link: '/guides/get-started' },
+          { text: 'Server Setup', link: '/guides/setup' },
+          { text: 'Uploading', link: '/guides/upload' },
+          { text: 'Features', link: '/guides/features' },
         ],
       },
       {
