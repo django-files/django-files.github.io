@@ -1,4 +1,6 @@
 <script setup>
+import 'animate.css'
+
 // Variables
 const chrome_url = 'https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej'
 const firefox_url = 'https://addons.mozilla.org/addon/django-files'
@@ -11,14 +13,18 @@ const browsers = [
   { name: 'Edge', url: chrome_url, img: 'edge/edge_48x48.png' },
   { name: 'Opera', url: chrome_url, img: 'opera/opera_48x48.png' },
   { name: 'Brave', url: chrome_url, img: 'brave/brave_48x48.png' },
-  { name: 'Chromium', url: chrome_url, img: 'chromium/chromium_48x48.png' },
+  // { name: 'Chromium', url: chrome_url, img: 'chromium/chromium_48x48.png' },
 ]
 
 // Style from Props
 const props = defineProps({
+  animation: { type: String, default: null },
   centered: { type: Boolean, default: false },
   margin: { type: String, default: null },
 })
+
+const imageClass = props.animation ? `animate__animated ${props.animation}` : null
+
 const iconStyle = {}
 if (props.centered) iconStyle.textAlign = 'center'
 if (props.margin) iconStyle.margin = props.margin
@@ -28,7 +34,7 @@ if (props.margin) iconStyle.margin = props.margin
 .browser-icons {
   min-height: 48px;
 }
-.browser-icons img {
+.browser-icons a {
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
@@ -38,7 +44,7 @@ if (props.margin) iconStyle.margin = props.margin
   transition-duration: 0.3s;
   transition-property: transform;
 }
-.browser-icons img:hover {
+.browser-icons a:hover {
   transform: scale(1.2);
 }
 </style>
@@ -54,7 +60,7 @@ if (props.margin) iconStyle.margin = props.margin
       target="_blank"
       rel="noopener"
     >
-      <img :alt="browser.name" :src="`${baseUrl}/${browser.img}`" width="48" height="auto" />
+      <img :alt="browser.name" :src="`${baseUrl}/${browser.img}`" :class="imageClass" width="48" height="48" />
     </a>
   </div>
 </template>

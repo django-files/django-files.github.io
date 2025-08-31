@@ -7,6 +7,10 @@ const settings = {
     short: 'Feature Packed Self-Hosted ShareX Upload Server.',
     long: 'A Feature Packed, Self-Hosted, File Upload and Sharing Server running in Docker for ShareX with Native Mobile Clients for All Platforms.',
   },
+  image: '/images/logo.png',
+  color: '#565aa9',
+  docs_repo: 'https://github.com/django-files/django-files.github.io',
+  source_repo: 'https://github.com/django-files/django-files',
 }
 
 // https://vitepress.dev/reference/site-config
@@ -24,25 +28,25 @@ export default defineConfig({
   description: settings.description.short,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
-    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/images/logo.png' }],
+    ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: settings.image }],
 
     ['meta', { name: 'darkreader-lock' }],
 
-    ['meta', { name: 'theme-color', content: '#565aa9' }],
+    ['meta', { name: 'theme-color', content: settings.color }],
     ['meta', { name: 'description', content: settings.description.long }],
 
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: settings.name }],
     ['meta', { property: 'og:title', content: settings.title }],
     ['meta', { property: 'og:description', content: settings.description.short }],
-    ['meta', { property: 'og:image', content: '/images/logo.png' }],
+    ['meta', { property: 'og:image', content: settings.image }],
     ['meta', { property: 'og:image:alt', content: settings.title }],
 
     ['meta', { property: 'twitter:card', content: 'summary' }],
     ['meta', { property: 'twitter:site', content: settings.name }],
     ['meta', { property: 'twitter:title', content: settings.title }],
     ['meta', { property: 'twitter:description', content: settings.description.short }],
-    ['meta', { property: 'twitter:image', content: '/images/logo.png' }],
+    ['meta', { property: 'twitter:image', content: settings.image }],
     ['meta', { property: 'twitter:image:alt', content: settings.title }],
   ],
 
@@ -60,8 +64,8 @@ export default defineConfig({
         text: 'Links',
         items: [
           { text: 'GitHub Organization', link: 'https://github.com/django-files' },
-          { text: 'Server Source Code', link: 'https://github.com/django-files/django-files' },
-          { text: 'Docs Source Code', link: 'https://github.com/django-files/django-files.github.io' },
+          { text: 'Server Source Code', link: settings.source_repo },
+          { text: 'Docs Source Code', link: settings.docs_repo },
           { text: 'Meet Our Team', link: '/team' },
         ],
       },
@@ -119,7 +123,7 @@ export default defineConfig({
     ],
 
     editLink: {
-      pattern: 'https://github.com/django-files/django-files.github.io/blob/master/docs/:path',
+      pattern: `${settings.docs_repo}/blob/master/docs/:path`,
       text: 'View on GitHub',
     },
 

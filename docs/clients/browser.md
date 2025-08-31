@@ -17,7 +17,7 @@ Get it from Google or Mozilla.
 - [Chrome Web Store](https://chromewebstore.google.com/detail/django-files/abpbiefojfkekhkjnpakpekkpeibnjej)
 - [Mozilla Addons](https://addons.mozilla.org/addon/django-files)
 
-<BrowserIcons />
+<BrowserIcons animation="animate__rotateIn" />
 
 ::: details View QR Codes 📸
 
