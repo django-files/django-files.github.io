@@ -30,6 +30,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' }],
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: settings.image }],
 
+    ['meta', { name: 'algolia-site-verification', content: 'A026D8A8A0FFD15B' }],
     ['meta', { name: 'darkreader-lock' }],
 
     ['meta', { name: 'theme-color', content: settings.color }],
@@ -136,13 +137,13 @@ export default defineConfig({
     },
 
     search: {
-      provider: 'local',
-      // provider: 'algolia',
-      // options: {
-      //   appId: 'XXXXXXXXXX',
-      //   apiKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-      //   indexName: 'django-files-docs',
-      // },
+      // provider: 'local',
+      provider: 'algolia',
+      options: {
+        appId: '5I6N4X5AVX',
+        apiKey: '58ebf7571036ea603a099eeb44a0d687',
+        indexName: 'django-files-docs',
+      },
     },
 
     // footer: {
