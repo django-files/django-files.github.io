@@ -58,9 +58,9 @@ export default defineConfig({
     logo: '/images/logo-sm.png',
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Guides', link: '/guides/get-started', activeMatch: '/guides/' },
-      { text: 'Clients', link: '/clients', activeMatch: '/clients/' },
-      { text: 'Docs', link: '/docs/home', activeMatch: '/docs/' },
+      { text: 'Guides', link: '/guides/get-started', activeMatch: '^/guides/' },
+      { text: 'Clients', link: '/clients', activeMatch: '^/clients/' },
+      { text: 'Docs', link: '/docs', activeMatch: '^/docs/' },
       {
         text: 'Links',
         items: [
@@ -75,43 +75,46 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Guides',
+        base: '/guides',
         collapsed: false,
         items: [
-          { text: 'Get Started', link: '/guides/get-started' },
-          { text: 'Server Setup', link: '/guides/setup' },
-          { text: 'Uploading', link: '/guides/upload' },
-          { text: 'Features', link: '/guides/features' },
+          { text: 'Get Started', link: '/get-started' },
+          { text: 'Server Setup', link: '/setup' },
+          { text: 'Uploading', link: '/upload' },
+          { text: 'Features', link: '/features' },
         ],
       },
       {
         text: 'Clients',
-        link: '/clients',
+        base: '/clients',
+        link: '/',
         items: [
           {
             text: 'Popular',
             collapsed: false,
             items: [
-              { text: 'ShareX (Windows)', link: '/clients/sharex' },
-              { text: 'Flameshot (Linux)', link: '/clients/flameshot' },
-              { text: 'Shortcuts (macOS)', link: '/clients/shortcuts' },
+              { text: 'ShareX (Windows)', link: '/sharex' },
+              { text: 'Flameshot (Linux)', link: '/flameshot' },
+              { text: 'Shortcuts (macOS)', link: '/shortcuts' },
             ],
           },
           {
             text: 'Native',
             collapsed: false,
             items: [
-              { text: 'iOS', link: '/clients/ios' },
-              { text: 'Android', link: '/clients/android' },
-              { text: 'Browser Addon', link: '/clients/browser' },
-              { text: 'Command Line', link: '/clients/cli' },
+              { text: 'iOS', link: '/ios' },
+              { text: 'Android', link: '/android' },
+              { text: 'Browser Addon', link: '/browser' },
+              { text: 'Command Line', link: '/cli' },
             ],
           },
         ],
       },
       {
         text: 'Documentation',
+        base: '/docs',
         collapsed: true,
-        items: [{ text: 'Home', link: '/docs/home' }],
+        items: [{ text: 'Home', link: '/' }],
       },
     ],
 

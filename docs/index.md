@@ -20,7 +20,7 @@ hero:
       link: /clients
       theme: alt
     - text: Documentation
-      link: /docs/home
+      link: /docs
       theme: alt
 
 features:
@@ -35,7 +35,7 @@ features:
     link: /clients
   - title: Documentation
     details: Review Features and Options
-    link: /docs/home
+    link: /docs
   - title: Open Source
     details: View Source Code on GitHub
     link: https://github.com/django-files/django-files

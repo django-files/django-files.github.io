@@ -1,3 +1,9 @@
+---
+next:
+  text: 'Documentation'
+  link: '/docs/'
+---
+
 # Command Line Interface
 
 A CLI is available for Python 3 from [PyPi](https://pypi.org/project/zipline-cli).
