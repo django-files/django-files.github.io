@@ -59,8 +59,8 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Guides', link: '/guides/get-started', activeMatch: '^/guides/' },
-      { text: 'Clients', link: '/clients', activeMatch: '^/clients/' },
-      { text: 'Docs', link: '/docs', activeMatch: '^/docs/' },
+      { text: 'Clients', link: '/clients/', activeMatch: '^/clients/' },
+      { text: 'Docs', link: '/docs/', activeMatch: '^/docs/' },
       {
         text: 'Links',
         items: [
@@ -70,6 +70,14 @@ export default defineConfig({
           { text: 'Meet Our Team', link: '/team' },
         ],
       },
+    ],
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/django-files/django-files?tab=readme-ov-file#readme' },
+      { icon: 'apple', link: 'https://github.com/django-files/ios-client?tab=readme-ov-file#readme' },
+      { icon: 'googleplay', link: 'https://github.com/django-files/android-client?tab=readme-ov-file#readme' },
+      { icon: 'googlechrome', link: 'https://github.com/django-files/web-extension?tab=readme-ov-file#readme' },
+      { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
     ],
 
     sidebar: [
@@ -116,14 +124,6 @@ export default defineConfig({
         collapsed: true,
         items: [{ text: 'Home', link: '/' }],
       },
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/django-files/django-files?tab=readme-ov-file#readme' },
-      { icon: 'apple', link: 'https://github.com/django-files/ios-client?tab=readme-ov-file#readme' },
-      { icon: 'googleplay', link: 'https://github.com/django-files/android-client?tab=readme-ov-file#readme' },
-      { icon: 'googlechrome', link: 'https://github.com/django-files/web-extension?tab=readme-ov-file#readme' },
-      { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
     ],
 
     editLink: {

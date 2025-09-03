@@ -2,17 +2,19 @@
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: linear-gradient(120deg, #aeb2ff, #565aa9);
 
-    --vp-home-hero-image-filter: blur(44px);
     --vp-home-hero-image-background-image: linear-gradient(0deg, rgba(86, 90, 169, 0.6), rgba(86, 90, 169, 0.6));
+    --vp-home-hero-image-filter: blur(56px);
 }
 
-/*NOTE: Override block on images */
+body {
+    overflow-y: scroll;
+}
+
+summary {
+    cursor: pointer;
+}
+
 .vp-doc img {
     display: inline-block;
     margin-right: 8px;
-}
-
-/*NOTE: Override Team Page top margin */
-.VPTeamPage {
-    margin-top: 0 !important;
 }

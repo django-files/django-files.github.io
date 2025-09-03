@@ -73,6 +73,13 @@ const members = [
 ]
 </script>
 
+<!--suppress CssUnusedSymbol -->
+<style>
+    .VPTeamPage {
+        margin-top: 0 !important;
+    }
+</style>
+
 <VPTeamPage>
   <VPTeamPageTitle>
     <template #title>
