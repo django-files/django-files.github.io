@@ -17,10 +17,10 @@ hero:
       link: /guides/features
       theme: brand
     - text: Clients
-      link: /clients
+      link: /clients/
       theme: alt
     - text: Documentation
-      link: /docs
+      link: /docs/
       theme: alt
 
 features:
@@ -32,10 +32,10 @@ features:
     link: /guides/features
   - title: Clients
     details: Get Upload Clients for All Platforms
-    link: /clients
+    link: /clients/
   - title: Documentation
     details: Review Features and Options
-    link: /docs
+    link: /docs/
   - title: Open Source
     details: View Source Code on GitHub
     link: https://github.com/django-files/django-files

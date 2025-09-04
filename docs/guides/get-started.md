@@ -1,7 +1,7 @@
 ---
 prev:
   text: 'Clients'
-  link: '/clients'
+  link: '/clients/'
 ---
 
 # Getting Started
