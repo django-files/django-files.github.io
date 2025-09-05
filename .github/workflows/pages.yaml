@@ -13,6 +13,8 @@ on:
 
 env:
   CRAWLER_ID: 740ca24d-65fd-4f25-b397-16ebcec2f7fd
+  CRAWLER_USER_ID: ${{ secrets.CRAWLER_USER_ID }}
+  CRAWLER_API_KEY: ${{ secrets.CRAWLER_API_KEY }}
 
 permissions:
   contents: read
@@ -89,12 +91,12 @@ jobs:
 
     steps:
       - name: "Algolia Start Crawl"
-        continue-on-error: true
+        if: ${{ !cancelled() }}
         uses: cssnr/web-request-action@v1
         with:
           url: https://crawler.algolia.com/api/1/crawlers/${{ env.CRAWLER_ID }}/reindex
-          username: ${{ secrets.CRAWLER_USER_ID }}
-          password: ${{ secrets.CRAWLER_API_KEY }}
+          username: ${{ env.CRAWLER_USER_ID }}
+          password: ${{ env.CRAWLER_API_KEY }}
 
       - name: "Send Post-Deploy Notification"
         if: ${{ failure() }}
