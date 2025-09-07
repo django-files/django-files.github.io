@@ -44,18 +44,22 @@ features:
     link: /team
 ---
 
+<div class="footer">
+
 ---
 
 Contributors
 
 <Contributors />
 
+</div>
+
 <style>
-.vp-doc.container {
+div.footer {
   margin-top: 96px;
   text-align: center;
 }
-.vp-doc p:first-of-type {
+.footer p:first-of-type {
   text-align: center;
   font-size: 1.5em;
 }
