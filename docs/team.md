@@ -76,7 +76,7 @@ const members = [
 <!--suppress CssUnusedSymbol -->
 <style>
     .VPTeamPage {
-        margin-top: 0 !important;
+        margin: 0 0 96px !important;
     }
 </style>
 
@@ -91,3 +91,5 @@ const members = [
   </VPTeamPageTitle>
     <VPTeamMembers :members />
 </VPTeamPage>
+
+<Contributors heading="Our Contributors" margin="0 0 96px" />

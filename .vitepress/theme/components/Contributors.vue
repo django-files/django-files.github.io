@@ -1,33 +1,52 @@
 <script setup>
 import contributors from '../../contributors.json'
 // console.debug('%c Contributors', 'color: Cyan', 'contributors:', contributors)
-const imageStyle = {}
+
 const props = defineProps({
-  size: { type: String, default: null },
+  size: { type: String, default: '64' },
+  margin: { type: String, default: null },
+  heading: { type: String, default: null },
 })
-if (props.size) {
-  imageStyle.height = props.size
-  imageStyle.width = props.size
-}
+
+const outerStyle = { margin: props.margin }
+console.log('outerStyle:', outerStyle)
+const imageStyle = { width: `${props.size}px`, height: `${props.size}px` }
+console.log('imageStyle:', imageStyle)
 </script>
 
 <template>
-  <div class="contributors">
-    <a
-      v-for="{ login, avatar_url } of contributors"
-      :key="login"
-      :aria-label="`${login} on GitHub`"
-      :href="`https://github.com/${login}`"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img :alt="login" :src="avatar_url" :style="imageStyle" loading="lazy" />
-    </a>
+  <div class="vp-contributors" :style="outerStyle">
+    <div class="vp-contributors-heading" v-if="props.heading">{{ props.heading }}</div>
+    <div class="vp-contributors-images">
+      <a
+        v-for="{ login, avatar_url } of contributors"
+        :key="login"
+        :aria-label="`${login} on GitHub`"
+        :href="`https://github.com/${login}`"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          :alt="login"
+          :src="avatar_url"
+          :width="props.size"
+          :height="props.size"
+          :style="imageStyle"
+          loading="lazy"
+        />
+      </a>
+    </div>
   </div>
 </template>
 
 <style scoped>
-div.contributors {
+div.vp-contributors-heading {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+div.vp-contributors-images {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -35,11 +54,9 @@ div.contributors {
   align-items: center;
 }
 
-.contributors img {
+.vp-contributors img {
   margin: 0;
   border-radius: 50%;
-  width: 4rem;
-  height: 4rem;
   /* styles for img:hover transform */
   display: inline-block;
   vertical-align: middle;
@@ -51,7 +68,7 @@ div.contributors {
   transition-property: transform;
 }
 
-.contributors img:hover {
+.vp-contributors img:hover {
   transform: scale(1.08);
 }
 </style>

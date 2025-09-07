@@ -44,23 +44,4 @@ features:
     link: /team
 ---
 
-<div class="footer">
-
----
-
-Contributors
-
-<Contributors />
-
-</div>
-
-<style>
-div.footer {
-  margin-top: 96px;
-  text-align: center;
-}
-.footer p:first-of-type {
-  text-align: center;
-  font-size: 1.5em;
-}
-</style>
+<Contributors heading="Contributors" margin="96px 0" />
