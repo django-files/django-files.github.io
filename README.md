@@ -1,6 +1,6 @@
 [![GitHub Deployments](https://img.shields.io/github/deployments/django-files/django-files.github.io/github-pages?logo=github&label=deploy)](https://github.com/django-files/django-files.github.io/deployments)
-[![Pages](https://img.shields.io/github/actions/workflow/status/django-files/django-files.github.io/pages.yaml?logo=cachet&label=pages)](https://github.com/django-files/django-files.github.io/actions/workflows/pages.yaml)
-[![Lint](https://img.shields.io/github/actions/workflow/status/django-files/django-files.github.io/lint.yaml?logo=cachet&label=lint)](https://github.com/django-files/django-files.github.io/actions/workflows/lint.yaml)
+[![GitHub Pages](https://img.shields.io/github/actions/workflow/status/django-files/django-files.github.io/pages.yaml?logo=cachet&label=pages)](https://github.com/django-files/django-files.github.io/actions/workflows/pages.yaml)
+[![GitHub Lint](https://img.shields.io/github/actions/workflow/status/django-files/django-files.github.io/lint.yaml?logo=cachet&label=lint)](https://github.com/django-files/django-files.github.io/actions/workflows/lint.yaml)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/django-files/django-files.github.io?logo=vitepress&logoColor=white&label=updated)](https://github.com/django-files/django-files.github.io/pulse)
 [![GitHub Contributors](https://img.shields.io/github/contributors/django-files/django-files.github.io?logo=github)](https://github.com/django-files/django-files.github.io/graphs/contributors)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/django-files/django-files.github.io?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/django-files/django-files.github.io)

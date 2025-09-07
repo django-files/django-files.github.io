@@ -43,3 +43,20 @@ features:
     details: Meet our Team of Bots
     link: /team
 ---
+
+---
+
+Contributors
+
+<Contributors />
+
+<style>
+.vp-doc.container {
+  margin-top: 96px;
+  text-align: center;
+}
+.vp-doc p:first-of-type {
+  text-align: center;
+  font-size: 1.5em;
+}
+</style>

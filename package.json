@@ -3,7 +3,9 @@
     "dev": "vitepress dev .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
-    "prettier": "npx prettier --check ."
+    "prettier": "npx prettier --check .",
+    "postinstall": "npm run get-contributors",
+    "get-contributors": "node .vitepress/scripts/get-contributors.js django-files/django-files"
   },
   "dependencies": {
     "@cssnr/vitepress-swiper": "^0.0.7",

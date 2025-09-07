@@ -30,6 +30,22 @@ if (props.centered) iconStyle.textAlign = 'center'
 if (props.margin) iconStyle.margin = props.margin
 </script>
 
+<template>
+  <div class="browser-icons" :style="iconStyle">
+    <a
+      v-for="browser in browsers"
+      :key="browser.name"
+      :href="browser.url"
+      :title="browser.name"
+      class="px-1 hvr-grow-lg"
+      target="_blank"
+      rel="noopener"
+    >
+      <img :alt="browser.name" :src="`${baseUrl}/${browser.img}`" :class="imageClass" width="48" height="48" />
+    </a>
+  </div>
+</template>
+
 <style scoped>
 .browser-icons {
   min-height: 48px;
@@ -48,19 +64,3 @@ if (props.margin) iconStyle.margin = props.margin
   transform: scale(1.2);
 }
 </style>
-
-<template>
-  <div class="browser-icons" :style="iconStyle">
-    <a
-      v-for="browser in browsers"
-      :key="browser.name"
-      :href="browser.url"
-      :title="browser.name"
-      class="px-1 hvr-grow-lg"
-      target="_blank"
-      rel="noopener"
-    >
-      <img :alt="browser.name" :src="`${baseUrl}/${browser.img}`" :class="imageClass" width="48" height="48" />
-    </a>
-  </div>
-</template>
