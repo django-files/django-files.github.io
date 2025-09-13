@@ -2,11 +2,14 @@ import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 
 import BrowserIcons from './components/BrowserIcons.vue'
-import Contributors from './components/Contributors.vue'
 import VPCardLink from './components/VPCardLink.vue'
 
 import VPSwiper from '@cssnr/vitepress-swiper'
 import '@cssnr/vitepress-swiper/style.css'
+
+import Contributors from '@cssnr/vitepress-plugin-contributors'
+import '@cssnr/vitepress-plugin-contributors/style.css'
+import contributors from '../contributors.json'
 
 // noinspection JSUnusedGlobalSymbols
 export default {
@@ -14,8 +17,9 @@ export default {
 
     enhanceApp({ app }) {
         app.component('BrowserIcons', BrowserIcons)
-        app.component('Contributors', Contributors)
         app.component('VPCardLink', VPCardLink)
         app.component('VPSwiper', VPSwiper)
+        app.component('Contributors', Contributors)
+        app.config.globalProperties.$contributors = contributors
     },
 }
