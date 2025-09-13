@@ -44,4 +44,4 @@ features:
     link: /team
 ---
 
-<Contributors heading="Contributors" margin="96px 0" />
+<Contributors :contributors="$contributors" heading="Contributors" margin="96px 0" />

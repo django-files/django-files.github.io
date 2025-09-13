@@ -92,4 +92,4 @@ const members = [
     <VPTeamMembers :members />
 </VPTeamPage>
 
-<Contributors heading="Our Contributors" margin="0 0 96px" />
+<Contributors :contributors="$contributors" heading="Our Contributors" margin="0 0 96px" />
