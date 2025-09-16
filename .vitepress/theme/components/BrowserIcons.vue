@@ -50,6 +50,9 @@ if (props.margin) iconStyle.margin = props.margin
 .browser-icons {
   min-height: 48px;
 }
+.browser-icons img {
+  margin-right: 6px;
+}
 .browser-icons a {
   display: inline-block;
   vertical-align: middle;
