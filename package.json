@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@cssnr/vitepress-plugin-contributors": "^0.0.3",
-    "@cssnr/vitepress-swiper": "^0.1.1",
+    "@cssnr/vitepress-swiper": "^0.2.0",
     "animate.css": "^4.1.1",
     "vitepress": "^1.6.4"
   },
