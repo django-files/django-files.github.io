@@ -58,9 +58,9 @@ If you set a `USERNAME` or `PASSWORD` environment variable, use those values.
 
 Otherwise, the default credentials are.
 
-| Default      | Value   |
-| ------------ | ------- |
-| **username** | `admin` |
-| **password** | `12345` |
+| Default      | Value          |
+| ------------ | -------------- |
+| **username** | `admin` <CB /> |
+| **password** | `12345` <CB /> |
 
 Next you can review the [server setup](setup.md) and start [uploading](upload.md) or check out the [features](features.md).
