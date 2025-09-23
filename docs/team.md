@@ -5,6 +5,7 @@ sidebar: false
 title: Our Team
 ---
 
+<!--suppress ES6UnusedImports -->
 <script setup>
 import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from 'vitepress/theme';
 import { members } from '../.vitepress/team.js';
