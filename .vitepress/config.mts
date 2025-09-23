@@ -129,7 +129,7 @@ export default defineConfig({
 
     editLink: {
       pattern: `${settings.docs_repo}/blob/master/docs/:path`,
-      text: 'View on GitHub',
+      text: 'View or Edit on GitHub',
     },
 
     lastUpdated: {

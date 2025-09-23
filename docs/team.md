@@ -2,15 +2,12 @@
 # https://vitepress.dev/reference/default-theme-team-page
 layout: page
 sidebar: false
-
 title: Our Team
 ---
 
 <script setup>
-// noinspection ES6UnusedImports
-import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from 'vitepress/theme'
-// noinspection ES6UnusedImports
-import { members } from '../.vitepress/team.js'
+import { VPTeamPage, VPTeamPageTitle, VPTeamMembers } from 'vitepress/theme';
+import { members } from '../.vitepress/team.js';
 </script>
 
 <!--suppress CssUnusedSymbol -->

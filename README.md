@@ -17,14 +17,21 @@ Website and Documentation for the [Django Files](https://github.com/django-files
 
 These [docs](docs) are **written in plain text** using Markdown and built with [VitePress](https://vitepress.dev/).
 
-| Location                                       | Description                                                                             |
-| ---------------------------------------------- | --------------------------------------------------------------------------------------- |
-| [docs](docs)                                   | Documentation Root (Markdown files).                                                    |
-| [docs/index.md](docs/index.md)                 | Special [VitePress Home Page](https://vitepress.dev/reference/default-theme-home-page). |
-| [docs/team.md](docs/team.md)                   | Special [VitePress Team Page](https://vitepress.dev/reference/default-theme-team-page). |
-| [docs/public](docs/public)                     | Static Root (copied to docs root).                                                      |
-| [.vitepress](.vitepress)                       | VitePress Configuration Root.                                                           |
-| [.vitepress/config.mts](.vitepress/config.mts) | VitePress Configuration File.                                                           |
+| Location                                                                     | Description                                                                            |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| [docs](docs)                                                                 | Documentation Root (Markdown files)                                                    |
+| [docs/public](docs/public)                                                   | Static Root (copied to docs root)                                                      |
+| [docs/index.md](docs/index.md)                                               | Special [VitePress Home Page](https://vitepress.dev/reference/default-theme-home-page) |
+| [docs/team.md](docs/team.md)                                                 | Special [VitePress Team Page](https://vitepress.dev/reference/default-theme-team-page) |
+| [.vitepress](.vitepress)                                                     | VitePress Configuration Root                                                           |
+| [.vitepress/config.mts](.vitepress/config.mts)                               | VitePress Configuration File                                                           |
+| [.vitepress/theme](.vitepress/theme)                                         | VitePress Custom Theme Root                                                            |
+| [.vitepress/theme/index.js](.vitepress/theme/index.js)                       | VitePress Custom Theme File                                                            |
+| [.vitepress/team.js](.vitepress/team.js)                                     | Team `members` array                                                                   |
+| [.vitepress/theme/custom.css](.vitepress/theme/custom.css)                   | VitePress Global CSS File                                                              |
+| [.vitepress/theme/components](.vitepress/theme/components)                   | VitePress Components Root                                                              |
+| [@components/BrowserIcons.vue](.vitepress/theme/components/BrowserIcons.vue) | BrowserIcons Component                                                                 |
+| [@components/VPCardLink.vue](.vitepress/theme/components/VPCardLink.vue)     | VPCardLink Component                                                                   |
 
 ## Development
 

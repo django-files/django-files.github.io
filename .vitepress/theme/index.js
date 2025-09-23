@@ -14,7 +14,9 @@ import contributors from '../contributors.json'
 import VPSwiper from '@cssnr/vitepress-swiper'
 import '@cssnr/vitepress-swiper/style.css'
 
+// https://vitepress.dev/guide/extending-default-theme
 // noinspection JSUnusedGlobalSymbols
+/** @type {import('vitepress').Theme} */
 export default {
     ...DefaultTheme,
 
