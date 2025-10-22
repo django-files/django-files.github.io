@@ -1,6 +1,7 @@
 name: "Pages"
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - "master"
@@ -9,7 +10,6 @@ on:
       - ".vitepress/**"
       - "package.json"
       - ".github/workflows/pages.yaml"
-  workflow_dispatch:
 
 env:
   CRAWLER_ID: "740ca24d-65fd-4f25-b397-16ebcec2f7fd"

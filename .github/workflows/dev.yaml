@@ -1,6 +1,7 @@
 name: "Dev"
 
 on:
+  workflow_dispatch:
   push:
     branches-ignore: [master]
     paths:
@@ -8,7 +9,6 @@ on:
       - ".vitepress/**"
       - "docs/**"
       - "package*.json"
-  workflow_dispatch:
 
 env:
   SSH_HOST: ${{ secrets.DEV_DEPLOY_HOST }}
