@@ -69,6 +69,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: "Deploy Pages"
         id: deployment
@@ -101,3 +104,4 @@ jobs:
         uses: sarisia/actions-status-discord@v1
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          description: ${{ needs.deploy.outputs.page_url }}
