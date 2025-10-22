@@ -1,6 +1,8 @@
 import DefaultTheme, { VPBadge } from 'vitepress/theme'
 import './custom.css'
 
+// import Layout from './Layout.vue'
+
 import BrowserIcons from './components/BrowserIcons.vue'
 import VPCardLink from './components/VPCardLink.vue'
 
@@ -19,6 +21,8 @@ import '@cssnr/vitepress-swiper/style.css'
 /** @type {import('vitepress').Theme} */
 export default {
     ...DefaultTheme,
+
+    // Layout: Layout,
 
     enhanceApp({ app }) {
         app.component('Badge', VPBadge)
