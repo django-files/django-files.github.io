@@ -11,7 +11,8 @@ on:
       - "package*.json"
 
 env:
-  CRAWLER_ID: "740ca24d-65fd-4f25-b397-16ebcec2f7fd"
+  crawler-id: "740ca24d-65fd-4f25-b397-16ebcec2f7fd"
+  purge-domain: ""
 
 concurrency:
   group: pages
@@ -22,6 +23,8 @@ jobs:
     name: "Build"
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
+    if: ${{ !contains(github.event.head_commit.message, '#nodeploy') }}
 
     steps:
       - name: "Checkout"
@@ -55,6 +58,12 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           path: .vitepress/dist
+
+      - name: "Send Failure Notification"
+        if: ${{ failure() }}
+        uses: sarisia/actions-status-discord@v1
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
 
   deploy:
     name: "Deploy"
@@ -90,11 +99,18 @@ jobs:
     needs: deploy
 
     steps:
+      - name: "Purge Cache"
+        if: ${{ env.purge-domain != '' }}
+        uses: cssnr/cloudflare-purge-cache-action@v2
+        with:
+          zones: ${{ env.purge-domain }}
+          token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
       - name: "Algolia Crawler"
-        if: ${{ env.CRAWLER_ID != '' }}
+        if: ${{ env.crawler-id != '' }}
         uses: cssnr/algolia-crawler-action@v1
         with:
-          crawler_id: ${{ env.CRAWLER_ID }}
+          crawler_id: ${{ env.crawler-id }}
           crawler_user_id: ${{ secrets.CRAWLER_USER_ID }}
           crawler_api_key: ${{ secrets.CRAWLER_API_KEY }}
 
