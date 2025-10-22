@@ -2,6 +2,7 @@ name: "Dev"
 
 on:
   push:
+    branches-ignore: [master]
     paths:
       - ".github/workflows/dev.yaml"
       - ".vitepress/**"
