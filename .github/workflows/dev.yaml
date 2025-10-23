@@ -24,6 +24,8 @@ jobs:
     with:
       build: "npm run build"
       path: ".vitepress/dist"
+    secrets:
+      webhook: ${{ secrets.DISCORD_WEBHOOK }}
 
   deploy:
     name: "Deploy"
