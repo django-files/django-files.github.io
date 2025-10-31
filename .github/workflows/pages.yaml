@@ -3,7 +3,7 @@ name: "Pages"
 on:
   workflow_dispatch:
   push:
-    branches: ["master"]
+    branches: [master]
     paths:
       - ".github/workflows/pages.yaml"
       - ".vitepress/**"
@@ -15,13 +15,14 @@ env:
   purge-domain: ""
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     name: "Build"
-    if: ${{ !contains(github.event.head_commit.message, '#nodeploy') }}
+    if: ${{ !contains(github.event.head_commit.message, '#nodeploy') || github.actor != 'dependabot[bot]' }}
+
     uses: cssnr/workflows/.github/workflows/npm-build.yaml@master
     permissions:
       contents: read
@@ -79,7 +80,7 @@ jobs:
           crawler_user_id: ${{ secrets.CRAWLER_USER_ID }}
           crawler_api_key: ${{ secrets.CRAWLER_API_KEY }}
 
-      - name: "Send Post-Deploy Notification"
+      - name: "Send Discord Notification"
         if: ${{ failure() }}
         uses: sarisia/actions-status-discord@v1
         with:
