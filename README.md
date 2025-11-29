@@ -2,7 +2,7 @@
 [![GitHub Pages](https://img.shields.io/github/actions/workflow/status/django-files/django-files.github.io/pages.yaml?logo=cachet&label=pages)](https://github.com/django-files/django-files.github.io/actions/workflows/pages.yaml)
 [![GitHub Lint](https://img.shields.io/github/actions/workflow/status/django-files/django-files.github.io/lint.yaml?logo=cachet&label=lint)](https://github.com/django-files/django-files.github.io/actions/workflows/lint.yaml)
 [![GitHub Last Commit](https://img.shields.io/github/last-commit/django-files/django-files.github.io?logo=vitepress&logoColor=white&label=updated)](https://github.com/django-files/django-files.github.io/pulse)
-[![GitHub Contributors](https://img.shields.io/github/contributors/django-files/django-files.github.io?logo=github)](https://github.com/django-files/django-files.github.io/graphs/contributors)
+[![GitHub Contributors](https://img.shields.io/github/contributors-anon/django-files/django-files.github.io?logo=github)](https://github.com/django-files/django-files.github.io/graphs/contributors)
 [![GitHub Repo Size](https://img.shields.io/github/repo-size/django-files/django-files.github.io?logo=bookstack&logoColor=white&label=repo%20size)](https://github.com/django-files/django-files.github.io)
 [![GitHub Discussions](https://img.shields.io/github/discussions/django-files/django-files?logo=github)](https://github.com/django-files/django-files/discussions)
 [![GitHub Repo Stars](https://img.shields.io/github/stars/django-files/django-files?style=flat&logo=github)](https://github.com/django-files/django-files/stargazers)
