@@ -57,3 +57,14 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 :number-of-slides="6"
 :pagination="{ clickable: true }"
 />
+
+&nbsp;
+
+::: tip Upload w/ Native ShareX Client
+
+If you are only uploading images and want to use your locally installed ShareX for processing, ShareX now supports native messaging.
+
+Download [ShareX](https://getsharex.com/) for [Chrome](https://chromewebstore.google.com/detail/sharex/nlkoigbdolhchiicbonbihbphgamnaoc)
+or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/sharex/).
+
+:::
