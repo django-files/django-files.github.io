@@ -10,6 +10,12 @@ href="https://github.com/django-files/android-client"
 src="/images/logos/github.png"
 />
 
+::: danger :rotating_light: **Free and Open-Source Android is under threat!**
+
+Google will turn Android into a locked-down platform, restricting your essential freedom to install apps of your choice. Make your voice heard – [Keep Android Open](https://keepandroidopen.org/).
+
+:::
+
 ## Install
 
 Get it from GitHub or Obtainium.

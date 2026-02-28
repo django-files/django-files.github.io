@@ -16,6 +16,14 @@ href="https://github.com/django-files/cssnr/zipline-cli"
 src="/images/logos/github.png"
 />
 
+::: warning :warning: New CLI Available
+
+A new CLI is available and supports any ShareX server.  
+For more details visit: <https://cssnr.github.io/sharex-cli/>  
+Additionally, this is being re-written in GoLang to remove the Python dependency.
+
+:::
+
 ## Install
 
 The easiest way to install is with `pip`.
