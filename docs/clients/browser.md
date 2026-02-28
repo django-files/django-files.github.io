@@ -60,9 +60,9 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 
 ::: tip
 
-If you are only uploading images and want to use your locally installed [ShareX](https://getsharex.com/) for processing, it now supports native messaging.
+If you are only uploading images and want to use your locally installed ShareX for processing, it now supports native messaging.
 
-Download for [Chrome](https://chromewebstore.google.com/detail/sharex/nlkoigbdolhchiicbonbihbphgamnaoc)
+Download [ShareX](https://getsharex.com/) for [Chrome](https://chromewebstore.google.com/detail/sharex/nlkoigbdolhchiicbonbihbphgamnaoc)
 or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/sharex/).
 
 :::
