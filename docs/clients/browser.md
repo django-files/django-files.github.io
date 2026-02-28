@@ -60,7 +60,7 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 
 &nbsp;
 
-::: tip Upload with Native ShareX Client
+::: tip Upload w/ Native ShareX Client
 
 If you are only uploading images and want to use your locally installed ShareX for processing, ShareX now supports native messaging.
 

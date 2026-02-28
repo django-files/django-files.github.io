@@ -16,7 +16,7 @@ href="https://github.com/django-files/cssnr/zipline-cli"
 src="/images/logos/github.png"
 />
 
-::: warning :warning: New CLI Available
+::: warning New ShareX CLI Available
 
 A new CLI is available and supports any ShareX server.  
 For more details visit: <https://cssnr.github.io/sharex-cli/>  
