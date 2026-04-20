@@ -75,8 +75,14 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/django-files/django-files?tab=readme-ov-file#readme' },
       { icon: 'apple', link: 'https://github.com/django-files/ios-client?tab=readme-ov-file#readme' },
-      { icon: 'googleplay', link: 'https://github.com/django-files/android-client?tab=readme-ov-file#readme' },
-      { icon: 'googlechrome', link: 'https://github.com/django-files/web-extension?tab=readme-ov-file#readme' },
+      {
+        icon: 'googleplay',
+        link: 'https://github.com/django-files/android-client?tab=readme-ov-file#readme',
+      },
+      {
+        icon: 'googlechrome',
+        link: 'https://github.com/django-files/web-extension?tab=readme-ov-file#readme',
+      },
       { icon: 'vitepress', link: settings.docs_repo },
       { icon: 'discord', link: 'https://discord.gg/wXy6m2X8wY' },
     ],
