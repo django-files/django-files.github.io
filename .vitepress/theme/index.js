@@ -16,6 +16,9 @@ import contributors from '../contributors.json'
 import VPSwiper from '@cssnr/vitepress-swiper'
 import '@cssnr/vitepress-swiper/style.css'
 
+import VitePressChat from '@cssnr/vitepress-chat'
+import '@cssnr/vitepress-chat/style.css'
+
 // https://vitepress.dev/guide/extending-default-theme
 // noinspection JSUnusedGlobalSymbols
 /** @type {import('vitepress').Theme} */
@@ -23,6 +26,11 @@ export default {
     ...DefaultTheme,
 
     // Layout: Layout,
+
+    ...VitePressChat(DefaultTheme, {
+        api: 'https://ai-chat.cssnr.com/',
+        headers: { Authorization: 'Basic Y3NzbnI6cGFzc3dvcmQ=' },
+    }),
 
     enhanceApp({ app }) {
         app.component('Badge', VPBadge)
