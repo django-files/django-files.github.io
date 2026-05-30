@@ -6,3 +6,5 @@ dist/
 build/
 node_modules/
 contributors.json
+.env
+.env.development

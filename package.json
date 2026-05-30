@@ -1,5 +1,8 @@
 {
+  "name": "django-files-docs",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "docs": "npm run dev",
     "dev": "vitepress dev .",
@@ -11,8 +14,9 @@
     "postinstall": "npm run get-contributors"
   },
   "dependencies": {
+    "@cssnr/vitepress-chat": "github:smashedr/vitepress-chat#0.0.7",
     "@cssnr/vitepress-plugin-contributors": "^0.2.0",
-    "@cssnr/vitepress-plugin-copybutton": "^0.0.2",
+    "@cssnr/vitepress-plugin-copybutton": "^0.0.3",
     "@cssnr/vitepress-swiper": "^0.3.1",
     "animate.css": "^4.1.1",
     "vitepress": "^1.6.4"

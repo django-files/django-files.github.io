@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import vitePressInstructions from '@cssnr/vitepress-chat/instructions-plugin'
 
 const settings = {
   title: 'Django Files',
@@ -19,9 +20,11 @@ export default defineConfig({
   srcDir: './docs',
   // base: '/path/',
   vite: {
+    envDir: '..',
     server: {
       allowedHosts: true,
     },
+    plugins: [vitePressInstructions({ exclude: ['index.md', 'team.md'] })],
   },
 
   title: settings.title,

@@ -29,6 +29,10 @@ jobs:
       build: "npm run build"
       path: ".vitepress/dist"
       pages: true
+    secrets:
+      webhook: ${{ secrets.DISCORD_WEBHOOK }}
+      ai_chat_api: ${{ secrets.AI_CHAT_API }}
+      ai_chat_auth: ${{ secrets.AI_CHAT_AUTH }}
 
   deploy:
     name: "Deploy"

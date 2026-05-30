@@ -16,25 +16,33 @@ import contributors from '../contributors.json'
 import VPSwiper from '@cssnr/vitepress-swiper'
 import '@cssnr/vitepress-swiper/style.css'
 
+import VitePressChat from '@cssnr/vitepress-chat'
+import '@cssnr/vitepress-chat/style.css'
+
 // https://vitepress.dev/guide/extending-default-theme
 // noinspection JSUnusedGlobalSymbols
 /** @type {import('vitepress').Theme} */
 export default {
-    ...DefaultTheme,
+  ...DefaultTheme,
 
-    // Layout: Layout,
+  // Layout: Layout,
 
-    enhanceApp({ app }) {
-        app.component('Badge', VPBadge)
+  ...VitePressChat(DefaultTheme, {
+    api: import.meta.env.VITE_AI_API,
+    headers: import.meta.env.VITE_AI_AUTH ? { Authorization: import.meta.env.VITE_AI_AUTH } : undefined,
+  }),
 
-        app.component('BrowserIcons', BrowserIcons)
-        app.component('VPCardLink', VPCardLink)
+  enhanceApp({ app }) {
+    app.component('Badge', VPBadge)
 
-        app.component('CB', CopyButton)
+    app.component('BrowserIcons', BrowserIcons)
+    app.component('VPCardLink', VPCardLink)
 
-        app.component('Contributors', Contributors)
-        app.config.globalProperties.$contributors = contributors
+    app.component('CB', CopyButton)
 
-        app.component('VPSwiper', VPSwiper)
-    },
+    app.component('Contributors', Contributors)
+    app.config.globalProperties.$contributors = contributors
+
+    app.component('VPSwiper', VPSwiper)
+  },
 }
