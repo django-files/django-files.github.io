@@ -23,26 +23,26 @@ import '@cssnr/vitepress-chat/style.css'
 // noinspection JSUnusedGlobalSymbols
 /** @type {import('vitepress').Theme} */
 export default {
-    ...DefaultTheme,
+  ...DefaultTheme,
 
-    // Layout: Layout,
+  // Layout: Layout,
 
-    ...VitePressChat(DefaultTheme, {
-        api: 'https://ai-chat.cssnr.com/',
-        headers: { Authorization: 'Basic Y3NzbnI6cGFzc3dvcmQ=' },
-    }),
+  ...VitePressChat(DefaultTheme, {
+    api: import.meta.env.VITE_AI_API,
+    headers: import.meta.env.VITE_AI_AUTH ? { Authorization: import.meta.env.VITE_AI_AUTH } : undefined,
+  }),
 
-    enhanceApp({ app }) {
-        app.component('Badge', VPBadge)
+  enhanceApp({ app }) {
+    app.component('Badge', VPBadge)
 
-        app.component('BrowserIcons', BrowserIcons)
-        app.component('VPCardLink', VPCardLink)
+    app.component('BrowserIcons', BrowserIcons)
+    app.component('VPCardLink', VPCardLink)
 
-        app.component('CB', CopyButton)
+    app.component('CB', CopyButton)
 
-        app.component('Contributors', Contributors)
-        app.config.globalProperties.$contributors = contributors
+    app.component('Contributors', Contributors)
+    app.config.globalProperties.$contributors = contributors
 
-        app.component('VPSwiper', VPSwiper)
-    },
+    app.component('VPSwiper', VPSwiper)
+  },
 }

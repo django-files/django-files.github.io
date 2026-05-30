@@ -20,6 +20,7 @@ export default defineConfig({
   srcDir: './docs',
   // base: '/path/',
   vite: {
+    envDir: '..',
     server: {
       allowedHosts: true,
     },
