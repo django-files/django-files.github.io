@@ -49,7 +49,7 @@ jobs:
         if: ${{ !cancelled() }}
         run: npm run build
 
-      #- name: "ESLint"
+      #- name: "eslint"
       #  if: ${{ !cancelled() }}
       #  run: npm run lint
 
