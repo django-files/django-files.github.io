@@ -30,6 +30,7 @@ export default {
   ...VitePressChat(DefaultTheme, {
     api: import.meta.env.VITE_AI_API,
     headers: import.meta.env.VITE_AI_AUTH ? { Authorization: import.meta.env.VITE_AI_AUTH } : undefined,
+    instructionsFile: 'llms.txt',
   }),
 
   enhanceApp({ app }) {
