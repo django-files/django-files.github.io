@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import vitePressInstructions from '@cssnr/vitepress-chat/instructions-plugin'
+import instructions from 'vitepress-chat/instructions'
 
 const settings = {
   title: 'Django Files',
@@ -24,7 +24,7 @@ export default defineConfig({
     server: {
       allowedHosts: true,
     },
-    plugins: [vitePressInstructions({ exclude: ['index.md', 'team.md'], outputFilename: 'llms.txt' })],
+    plugins: [instructions({ filePath: 'llms.txt', exclude: ['index.md', 'team.md'] })],
   },
 
   title: settings.title,

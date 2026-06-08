@@ -3,7 +3,7 @@ name: "Pages"
 on:
   workflow_dispatch:
   push:
-    branches: [master]
+    branches: [master, main]
     paths:
       - ".github/workflows/pages.yaml"
       - ".vitepress/**"
