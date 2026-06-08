@@ -8,6 +8,18 @@
   --vp-sidebar-width: 240px; /* Custom Sidebar Width */
 }
 
+@supports (scrollbar-gutter: stable) {
+  /* Note: local search is: 768px */
+  @media (min-width: 769px) {
+    html {
+      scrollbar-gutter: stable;
+    }
+    html:has(:fullscreen) {
+      scrollbar-gutter: auto;
+    }
+  }
+}
+
 body {
   overflow-y: scroll;
 }
@@ -22,18 +34,6 @@ table th {
 
 .search-keywords {
   display: none;
-}
-
-@supports (scrollbar-gutter: stable) {
-  /* Note: local search is: 768px */
-  @media (min-width: 769px) {
-    html {
-      scrollbar-gutter: stable;
-    }
-    html:has(:fullscreen) {
-      scrollbar-gutter: auto;
-    }
-  }
 }
 
 .vp-doc p > img,
