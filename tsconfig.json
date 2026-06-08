@@ -4,5 +4,5 @@
     "moduleResolution": "bundler",
     "types": ["vitepress/client", "vue"]
   },
-  "include": [".vitepress/**/*.ts", ".vitepress/**/*.vue"]
+  "include": ["**/.*/**/*.ts", "**/.*/**/*.ts"]
 }
