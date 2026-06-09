@@ -8,6 +8,7 @@
     "dev": "vitepress dev .",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
+    "prettier": "npm run prettier:write",
     "prettier:check": "npx prettier --check .",
     "prettier:write": "npx prettier --write .",
     "get-contributors": "npx get-contributors django-files/django-files",
@@ -19,9 +20,9 @@
     "@cssnr/vitepress-swiper": "^0.3.1",
     "animate.css": "^4.1.1",
     "vitepress": "^1.6.4",
-    "vitepress-chat": "^0.0.1"
+    "vitepress-chat": "^0.0.2"
   },
   "devDependencies": {
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.4"
   }
 }
