@@ -72,18 +72,18 @@ Type `/` in the chat input to see available commands with autocomplete (Tab and 
 
 **All viewers:**
 
-| Command | Description |
-| --- | --- |
+| Command            | Description                                   |
+| ------------------ | --------------------------------------------- |
 | `/set-name <name>` | Set a custom display name (max 32 characters) |
-| `/leave` | Disconnect from chat |
-| `/join` | Rejoin chat after leaving |
-| `/notify` | Toggle notification sound on/off |
+| `/leave`           | Disconnect from chat                          |
+| `/join`            | Rejoin chat after leaving                     |
+| `/notify`          | Toggle notification sound on/off              |
 
 **Stream owner only:**
 
-| Command | Description |
-| --- | --- |
-| `/title <title>` | Update the stream title live |
-| `/description <text>` | Update the stream description live |
-| `/ban <display_name>` | Ban a viewer from chat |
+| Command                               | Description                            |
+| ------------------------------------- | -------------------------------------- |
+| `/title <title>`                      | Update the stream title live           |
+| `/description <text>`                 | Update the stream description live     |
+| `/ban <display_name>`                 | Ban a viewer from chat                 |
 | `/ban-message-cleanup <display_name>` | Ban a viewer and remove their messages |

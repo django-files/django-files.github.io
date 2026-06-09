@@ -15,8 +15,8 @@ services:
   django-files:
     image: ghcr.io/django-files/django-files:latest
     ports:
-      - "80:80"
-      - "1935:1935"   # host port : container port — change the left value if needed
+      - '80:80'
+      - '1935:1935' # host port : container port — change the left value if needed
     volumes:
       - media_dir:/data/media
 ```
@@ -43,11 +43,11 @@ Navigate to **Streams** in the Django Files UI to find your pre-filled Server UR
 
 Or build them manually:
 
-| Field      | Value                                              |
-| ---------- | -------------------------------------------------- |
-| Service    | `Custom...`                                        |
-| Server URL | `rtmp://<your-host>/live?token=<your-api-token>`   |
-| Stream Key | Any name, e.g. `mystream`                          |
+| Field      | Value                                            |
+| ---------- | ------------------------------------------------ |
+| Service    | `Custom...`                                      |
+| Server URL | `rtmp://<your-host>/live?token=<your-api-token>` |
+| Stream Key | Any name, e.g. `mystream`                        |
 
 Your **API token** is shown in your user settings page.
 
@@ -55,12 +55,12 @@ Your **API token** is shown in your user settings page.
 
 Append these to the Server URL to set stream metadata without changing them in the UI each time:
 
-| Parameter      | Description                     | Example                    |
-| -------------- | ------------------------------- | -------------------------- |
-| `title`        | Stream title                    | `title=My+Stream`          |
-| `description`  | Short description               | `description=Gaming+night` |
-| `public`       | Public visibility (`true`/`false`) | `public=false`          |
-| `viewer_limit` | Max concurrent viewers          | `viewer_limit=50`          |
+| Parameter      | Description                        | Example                    |
+| -------------- | ---------------------------------- | -------------------------- |
+| `title`        | Stream title                       | `title=My+Stream`          |
+| `description`  | Short description                  | `description=Gaming+night` |
+| `public`       | Public visibility (`true`/`false`) | `public=false`             |
+| `viewer_limit` | Max concurrent viewers             | `viewer_limit=50`          |
 
 Example full URL:
 
@@ -72,9 +72,9 @@ rtmp://example.com/live?token=abc123&title=My+Stream&public=true
 
 The app auto-detects the hostname for RTMP URLs from the request or `SITE_URL`. Set `RTMP_HOST` to override this — required when the auto-detected value would be wrong, such as when behind a CDN or reverse proxy.
 
-| Variable    | Description                        | Example                      |
-| ----------- | ---------------------------------- | ---------------------------- |
-| `RTMP_HOST` | Hostname used to generate RTMP URLs | `my-df-server.example.com`  |
+| Variable    | Description                         | Example                    |
+| ----------- | ----------------------------------- | -------------------------- |
+| `RTMP_HOST` | Hostname used to generate RTMP URLs | `my-df-server.example.com` |
 
 ## Watching a Stream
 
