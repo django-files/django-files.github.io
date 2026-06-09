@@ -100,6 +100,7 @@ export default defineConfig({
           { text: 'Server Setup', link: '/setup' },
           { text: 'Uploading', link: '/upload' },
           { text: 'Features', link: '/features' },
+          { text: 'Live Streaming', link: '/streaming' },
         ],
       },
       {
