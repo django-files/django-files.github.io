@@ -67,3 +67,10 @@ To configure a database use the following variables.
 | DUO_CLIENT_SECRET         | DUO Secret         | `nmoNmuLM72WB3RsNkwuvnmoNuLM72WB3RsNk` |
 | SENTRY_URL                | Sentry URL         | `https://abc@123.ingest.sentry.io/123` |
 | SENTRY_ENVIRONMENT        | Sentry ENV         | `prod`                                 |
+| RTMP_HOST                 | RTMP hostname override for URL generation | `my-df-server.example.com` |
+
+## Live Streaming
+
+RTMP is built in and enabled by default. Port `1935` must be exposed and reachable — see the [Live Streaming guide](streaming.md) for OBS setup, optional URL parameters, and NAT/firewall notes.
+
+`RTMP_HOST` overrides the hostname used when generating RTMP URLs in the UI. Set this when your server is behind a CDN or reverse proxy where the auto-detected hostname would be wrong — otherwise streaming clients will receive incorrect URLs.
