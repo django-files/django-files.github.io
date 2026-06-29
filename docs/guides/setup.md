@@ -69,6 +69,18 @@ To configure a database use the following variables.
 | SENTRY_ENVIRONMENT        | Sentry ENV                                | `prod`                                 |
 | RTMP_HOST                 | RTMP hostname override for URL generation | `my-df-server.example.com`             |
 
+## Passkeys (WebAuthn)
+
+Passkeys are enabled by default and allow passwordless login, registration, and first-run admin setup using WebAuthn.
+
+**Requirements:**
+
+- `SITE_URL` must be set and match the origin users visit your site from
+- The site must be served over HTTPS (or `http://localhost`)
+- Browser or native clients must support WebAuthn
+
+Passkeys can be disabled in Site Settings (Admin UI) by toggling the **Passkeys** option.
+
 ## Live Streaming
 
 RTMP is built in and enabled by default. Port `1935` must be exposed and reachable — see the [Live Streaming guide](streaming.md) for OBS setup, optional URL parameters, and NAT/firewall notes.
