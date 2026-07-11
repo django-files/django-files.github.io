@@ -24,6 +24,7 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 - [Android Client](../clients/android.md)
 - Customizable UI with light/dark mode
 - OAuth support (Discord, GitHub, Google) & two-factor authentication (Duo)
+- [Webhooks](webhooks.md) — event notifications to Discord or any custom endpoint
 - [Web Extensions](../clients/browser.md) for Chrome and Firefox
 - Public upload support (optional)
 
@@ -54,7 +55,7 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 - Live/offline status badge and real-time viewer count
 - Push notification subscriber count
 - Stream title and description — editable in-place by the stream owner
-- Discord webhook notifications on stream start/end
+- Webhook notifications on stream start/end — Discord or any custom endpoint
 - See the [Live Streaming guide](streaming.md) for setup details
 
 ### Live Chat

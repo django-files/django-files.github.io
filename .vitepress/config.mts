@@ -101,6 +101,7 @@ export default defineConfig({
           { text: 'Uploading', link: '/upload' },
           { text: 'Features', link: '/features' },
           { text: 'Live Streaming', link: '/streaming' },
+          { text: 'Webhooks', link: '/webhooks' },
         ],
       },
       {
