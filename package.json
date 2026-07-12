@@ -20,9 +20,9 @@
     "@cssnr/vitepress-swiper": "^0.3.1",
     "animate.css": "^4.1.1",
     "vitepress": "^1.6.4",
-    "vitepress-chat": "^0.0.2"
+    "vitepress-chat": "^0.0.4"
   },
   "devDependencies": {
-    "prettier": "^3.8.4"
+    "prettier": "^3.9.5"
   }
 }
