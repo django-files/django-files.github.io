@@ -31,6 +31,14 @@ Get it from GitHub or Obtainium.
 
 _Note: Google Play is currently in closed testing._
 
+_The GitHub APK has been registered with Google's [Android developer verification](https://developer.android.com/developer-verification)._
+
+```
+A0:11:F5:75:CA:69:54:E4:0A:97:A0:C9:85:AC:35:FB:99:3F:DA:73:37:0B:97:EA:23:7D:02:F1:0A:41:2F:D0
+```
+
+[_How to Verify an APK Signature_](https://developer.android.com/tools/apksigner#usage-verify)
+
 ## Setup
 
 Navigate to: `User Settings` > `Clients`
