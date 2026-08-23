@@ -26,10 +26,20 @@ Get it from GitHub or Obtainium.
 ::: details View QR Codes 📸
 [![Firefox Android](https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/qr-code-github.png)](https://github.com/django-files/android-client/releases/latest/download/app-release.apk)
 
+<br />
+
 [![Firefox Android](https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/qr-code-obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/django-files/android-client)
 :::
 
 _Note: Google Play is currently in closed testing._
+
+_The GitHub APK has been registered with Google's [Android developer verification](https://developer.android.com/developer-verification)._
+
+```
+A0:11:F5:75:CA:69:54:E4:0A:97:A0:C9:85:AC:35:FB:99:3F:DA:73:37:0B:97:EA:23:7D:02:F1:0A:41:2F:D0
+```
+
+[_How to Verify an APK Signature_](https://developer.android.com/tools/apksigner#usage-verify)
 
 ## Setup
 
