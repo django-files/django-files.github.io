@@ -26,6 +26,8 @@ Get it from GitHub or Obtainium.
 ::: details View QR Codes 📸
 [![Firefox Android](https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/qr-code-github.png)](https://github.com/django-files/android-client/releases/latest/download/app-release.apk)
 
+<br />
+
 [![Firefox Android](https://raw.githubusercontent.com/smashedr/repo-images/refs/heads/master/django-files/android/qr-code-obtainium.png)](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/django-files/android-client)
 :::
 
