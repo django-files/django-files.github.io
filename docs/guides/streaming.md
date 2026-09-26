@@ -86,6 +86,6 @@ The HLS endpoint is also available directly:
 http://<your-host>/hls/<stream-name>/index.m3u8
 ```
 
-## Discord Webhooks
+## Webhook Notifications
 
-Stream start/end notifications can be sent to Discord. Configure webhooks per-stream from the stream's settings page in the Django Files UI.
+Stream start/end notifications can be sent to Discord or any custom endpoint. Subscribe a webhook to the **Stream Live** and **Stream Ended** events under **Settings → Webhooks** — see the [Webhooks guide](webhooks.md) for details.
