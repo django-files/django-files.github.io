@@ -24,16 +24,18 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 - [Android Client](../clients/android.md)
 - Organize with tags — on files, albums, and streams, searchable everywhere
 - Customizable UI with light/dark mode
-- OAuth support (Discord, GitHub, Google) & two-factor authentication (Duo)
+- OAuth support (Discord, GitHub, Google), passkey (WebAuthn) authentication, & two-factor authentication (Duo)
 - [Webhooks](webhooks.md) — event notifications to Discord or any custom endpoint, with per-tag filtering
 - [Web Extensions](../clients/browser.md) for Chrome and Firefox
 - Public upload support (optional)
 
 ## Authentication & Security
 
-- Multi-user support with local & OAuth authentication options
+- Multi-user support with local, passkey (WebAuthn), & OAuth authentication options
+- Passwordless login and signup with passkeys, including invite-based and first-run setup registration
 - Invite system for user onboarding
 - OAuth configuration via Django Admin (no restart required)
+- Passkey and api token management in user settings (name, add, delete)
 
 ## UI & File Management
 
@@ -63,10 +65,10 @@ base-url="https://raw.githubusercontent.com/django-files/repo-images/refs/heads/
 
 - Real-time WebSocket chat with message history on join
 - Viewer list with avatars
-- Color-coded usernames; stream owner messages highlighted distinctly
 - Notification sound toggle (persisted per browser)
 - Owner controls: enable/disable live chat and anonymous chat without stopping the stream
 - Ban system to remove disruptive viewers
+- iOS app support to directly stream screen or cameras
 
 ### Chat Slash Commands
 
