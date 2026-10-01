@@ -29,7 +29,7 @@ Webhooks are managed under **Settings → Webhooks**, where you can add, edit, t
 Only want to hear about some of your content? Files, albums, and streams can all be tagged in Django Files, and any webhook can be limited to the tags you care about:
 
 - `wallpapers, memes` — only fire for content tagged **wallpapers** or **memes**
-- `!private` — fire for everything *except* content tagged **private**
+- `!private` — fire for everything _except_ content tagged **private**
 
 Set the filter in the webhook editor — events that support tag filtering are marked with a small tag icon. Leave it blank and the webhook fires for everything, same as before.
 
